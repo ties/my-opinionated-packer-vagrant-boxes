@@ -14,6 +14,7 @@ Requirements
 Boxes
 =====
 
+* Debian Wheezy 7.1.0 x86_64 (VirtualBox Guest Additions 4.2.12, Chef 11.4.4, Puppet 3.1.1): [debian-7.1.0-amd64.box](https://s3-eu-west-1.amazonaws.com/ffuenf-vagrant-boxes/debian-7.1.0-amd64.box)
 * Debian Wheezy 7.0.0 x86_64 (VirtualBox Guest Additions 4.2.12, Chef 11.4.4, Puppet 3.1.1): [debian-7.0.0-amd64.box](https://s3-eu-west-1.amazonaws.com/ffuenf-vagrant-boxes/debian-7.0.0-amd64.box)
 * Debian Squeeze 6.0.7 x86_64 (VirtualBox Guest Additions 4.2.12, Chef 11.4.4, Puppet 3.1.1): [debian-6.0.7-amd64.box](https://s3-eu-west-1.amazonaws.com/ffuenf-vagrant-boxes/debian-6.0.7-amd64.box)
 

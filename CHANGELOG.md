@@ -2,6 +2,10 @@
 
 This file is used to list changes made in each version of vagrant-boxes.
 
+## 0.0.3:
+
+* added Debian Wheezy 7.1.0 x86_64
+
 ## 0.0.2:
 
 * added Debian Squeeze 6.0.7 x86_64
