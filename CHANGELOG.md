@@ -2,6 +2,10 @@
 
 This file is used to list changes made in each version of vagrant-boxes.
 
+## 0.0.4:
+
+* added templates for [packer](http://www.packer.io/)
+
 ## 0.0.3:
 
 * added Debian Wheezy 7.1.0 x86_64

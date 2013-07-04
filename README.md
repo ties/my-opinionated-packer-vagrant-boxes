@@ -1,14 +1,15 @@
 Description
 ===========
 
-baseboxes build with veewee for use with vagrant.
-This repository includes the veewee templates to build the basebox.
+baseboxes build with veewee/packer for use with vagrant.
+This repository includes the veewee/packer templates to build the basebox.
 The build boxes are available through Amazon S3 (see links below).
 
 Requirements
 ============
 
 * [vagrant](http://vagrantup.com)
+* [veewee](https://github.com/jedi4ever/veewee) or [packer](http://packer.io)
 * [virtualbox](https://www.virtualbox.org/)
 
 Boxes
