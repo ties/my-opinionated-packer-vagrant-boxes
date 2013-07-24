@@ -16,9 +16,6 @@
 			"override": {
 				"virtualbox": {
 					"execute_command": "echo 'vagrant'|sudo -S sh '{{.Path}}'"
-				},
-				"vmware": {
-					"execute_command": "echo 'vagrant'|sudo -S sh '{{.Path}}'"
 				}
 			}
 		}
@@ -46,7 +43,8 @@
 			"disk_size": 10140,
 			"guest_os_type": "Debian_64",
 			"http_directory": "http",
-			"iso_md5": "cc509122349a27bf1958e1ea0ce4065d",
+			"iso_checksum": "cc509122349a27bf1958e1ea0ce4065d",
+			"iso_checksum_type": "md5",
 			"iso_url": "http://cdimage.debian.org/cdimage/archive/6.0.7/amd64/iso-cd/debian-6.0.7-amd64-netinst.iso",
 			"ssh_username": "vagrant",
 			"ssh_password": "vagrant",
@@ -69,6 +67,13 @@
 					"1"
 				]
 			]
+		}
+	],
+	"post-processors": [
+		{
+			"type": "vagrant",
+			"output": "debian-6.0.7-amd64.box",
+			"vagrantfile_template": "scripts/Vagrantfile"
 		}
 	]
 }
