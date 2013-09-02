@@ -2,6 +2,10 @@
 
 This file is used to list changes made in each version of vagrant-boxes.
 
+## 0.0.6:
+
+* fixed error with mixlib-shellout-1.2.0 which caused shellout commands in chef-11.4.0 to fail with [BUG] Segmentation fault. We use mixlib-shellout-1.1.0 instead in Debian Squeeze 6.0.7 x86_64
+
 ## 0.0.5:
 
 ### Features
