@@ -1,25 +1,59 @@
 Description
 ===========
 
-baseboxes build with veewee/packer for use with vagrant.
-This repository includes the veewee/packer templates to build the basebox.
+baseboxes build with packer for use with vagrant.
+This repository includes the packer templates to build the basebox.
 The build boxes are available through Amazon S3 (see links below).
 
 Requirements
 ============
 
 * [vagrant](http://vagrantup.com)
-* [veewee](https://github.com/jedi4ever/veewee) or [packer](http://packer.io)
+* [packer](http://packer.io)
 * [virtualbox](https://www.virtualbox.org/)
 
 Boxes
 =====
 
-* Debian Wheezy 7.1.0 x86_64 (VirtualBox Guest Additions 4.2.16, Chef 11.6.0, Puppet 3.2.3): [debian-7.1.0-amd64.box](https://s3-eu-west-1.amazonaws.com/ffuenf-vagrant-boxes/chef-11.6.0/debian-7.1.0-amd64.box)
-* Debian Wheezy 7.1.0 x86_64 (VirtualBox Guest Additions 4.2.12, Chef 11.4.4, Puppet 3.1.1): [debian-7.1.0-amd64.box](https://s3-eu-west-1.amazonaws.com/ffuenf-vagrant-boxes/debian-7.1.0-amd64.box)
-* Debian Wheezy 7.0.0 x86_64 (VirtualBox Guest Additions 4.2.12, Chef 11.4.4, Puppet 3.1.1): [debian-7.0.0-amd64.box](https://s3-eu-west-1.amazonaws.com/ffuenf-vagrant-boxes/debian-7.0.0-amd64.box)
-* Debian Squeeze 6.0.7 x86_64 (VirtualBox Guest Additions 4.2.16, Chef 11.4.0): [debian-6.0.7-amd64.box](https://s3-eu-west-1.amazonaws.com/ffuenf-vagrant-boxes/chef-11.4.0/debian-6.0.7-amd64.box)
-* Debian Squeeze 6.0.7 x86_64 (VirtualBox Guest Additions 4.2.12, Chef 11.4.4, Puppet 3.1.1): [debian-6.0.7-amd64.box](https://s3-eu-west-1.amazonaws.com/ffuenf-vagrant-boxes/debian-6.0.7-amd64.box)
+### Ubuntu
+#### Ubuntu Raring Ringtail 13.x
+* Ubuntu Raring Ringtail 13.04 Server x86_64 ([ubuntu-13.04-server-amd64.box](https://s3-eu-west-1.amazonaws.com/ffuenf-vagrant-boxes/ubuntu/ubuntu-13.04-server-amd64.box))
+** VirtualBox Guest Additions 4.2.18
+** Chef 11.6.0
+** lxc-docker 0.6.1
+
+#### Ubuntu Precise Pangolin 12.x
+* Ubuntu Precise Pangolin 12.04.3 LTS Server x86_64 ([ubuntu-12.04.3-server-amd64.box](https://s3-eu-west-1.amazonaws.com/ffuenf-vagrant-boxes/ubuntu/ubuntu-12.04.3-server-amd64.box))
+** VirtualBox Guest Additions 4.2.18
+** Chef 11.6.0
+** lxc-docker 0.6.1
+
+### Debian
+#### Debian Wheezy 7.x
+* Debian Wheezy 7.1.0 x86_64 ([debian-7.1.0-amd64.box](https://s3-eu-west-1.amazonaws.com/ffuenf-vagrant-boxes/debian/debian-7.1.0-amd64.box))
+** VirtualBox Guest Additions 4.2.18
+** Chef 11.6.0
+
+* Debian Wheezy 7.1.0 x86_64 ([debian-7.1.0-amd64.box](https://s3-eu-west-1.amazonaws.com/ffuenf-vagrant-boxes/debian/chef-11.4.4/debian-7.1.0-amd64.box))
+** VirtualBox Guest Additions 4.2.12
+** Chef 11.4.4
+** Puppet 3.1.1
+
+* Debian Wheezy 7.0.0 x86_64 ([debian-7.0.0-amd64.box](https://s3-eu-west-1.amazonaws.com/ffuenf-vagrant-boxes/debian/chef-11.4.4/debian-7.0.0-amd64.box))
+** VirtualBox Guest Additions 4.2.12
+** Chef 11.4.4
+** Puppet 3.1.1
+
+#### Debian Squeeze 6.x
+* Debian Squeeze 6.0.7 x86_64 ([debian-6.0.7-amd64.box](https://s3-eu-west-1.amazonaws.com/ffuenf-vagrant-boxes/debian/chef-11.4.0/debian-6.0.7-amd64.box))
+** VirtualBox Guest Additions 4.2.16
+** Chef 11.4.0
+
+* Debian Squeeze 6.0.7 x86_64 ([debian-6.0.7-amd64.box](https://s3-eu-west-1.amazonaws.com/ffuenf-vagrant-boxes/debian/chef-11.4.4/debian-6.0.7-amd64.box))
+** VirtualBox Guest Additions 4.2.12
+** Chef 11.4.4
+** Puppet 3.1.1
+
 
 License and Author
 ==================

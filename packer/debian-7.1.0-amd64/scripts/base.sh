@@ -1,8 +1,8 @@
 # Update the box
-apt-get -y update
-apt-get -y install linux-headers-$(uname -r) build-essential
-apt-get -y install zlib1g-dev libssl-dev libreadline-gplv2-dev
-apt-get -y install curl unzip
+apt-get -y --force-yes update
+apt-get -y --force-yes install linux-headers-$(uname -r) build-essential
+apt-get -y --force-yes install zlib1g-dev libssl-dev libreadline-gplv2-dev
+apt-get -y --force-yes install curl unzip
 
 # Set up sudo
 echo 'vagrant ALL=NOPASSWD:ALL' > /etc/sudoers.d/vagrant
