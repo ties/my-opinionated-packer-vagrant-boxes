@@ -2,6 +2,9 @@
 
 This file is used to list changes made in each version of vagrant-boxes.
 
+## 0.0.8:
+* added Debian Wheezy 7.2.0 x86_64
+
 ## 0.0.7:
 ### Features
 * added Ubuntu Raring Ringtail 13.04 Server x86_64 with [docker.io](http://www.docker.io/) support
