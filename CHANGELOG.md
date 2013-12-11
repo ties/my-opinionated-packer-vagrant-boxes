@@ -2,6 +2,9 @@
 
 This file is used to list changes made in each version of vagrant-boxes.
 
+## 0.0.10:
+* upgraded to Chef 11.8.2 and VirtualBox Guest Additions 4.3.4 on Debian Wheezy 7.2.0 x86_64
+
 ## 0.0.9:
 * upgraded to Chef 11.8.0 on Debian Wheezy 7.2.0 x86_64
 

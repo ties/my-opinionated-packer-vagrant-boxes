@@ -35,8 +35,8 @@ Boxes
 ### Debian
 #### Debian Wheezy 7.x
 ##### Debian Wheezy 7.2.0 x86_64 ([debian-7.2.0-amd64.box](https://s3-eu-west-1.amazonaws.com/ffuenf-vagrant-boxes/debian/debian-7.2.0-amd64.box))
-* VirtualBox Guest Additions 4.3.0
-* Chef 11.8.0
+* VirtualBox Guest Additions 4.3.4
+* Chef 11.8.2
 
 ---
 
