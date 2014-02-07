@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/bin/bash -eux
 
 # install the backported kernel
 apt-get update

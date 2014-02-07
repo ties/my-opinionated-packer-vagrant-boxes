@@ -2,6 +2,17 @@
 
 This file is used to list changes made in each version of vagrant-boxes.
 
+## 0.0.12:
+### Features
+* added Ubuntu Saucy Salamander 13.10 Server x86_64
+* build virtualbox and vmware artifacts in parallel
+* upgraded to Chef 11.10 and VirtualBox Guest Additions 4.3.6 on Debian Wheezy 7.3.0 x86_64
+* added optional puppet recipe on Debian Wheezy 7.3.0 x86_64 in repository (not included in prebuild boxes)
+* EXPERIMENTAL: added optional docker recipe on Debian Wheezy 7.3.0 x86_64 in repository (not included in prebuild boxes)
+### Bugfixes
+* upgrade to packer v0.5.1 (fix all templates)
+* housekeeping
+
 ## 0.0.11:
 * added Debian Wheezy 7.3.0 x86_64
 

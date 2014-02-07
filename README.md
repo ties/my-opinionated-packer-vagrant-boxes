@@ -11,11 +11,20 @@ Requirements
 * [vagrant](http://vagrantup.com)
 * [packer](http://packer.io)
 * [virtualbox](https://www.virtualbox.org/)
+* [VMware Fusion](http://www.vmware.com/de/products/fusion/)
 
 Boxes
 =====
 
 ### Ubuntu
+#### Ubuntu Saucy Salamander 13.1x
+##### Ubuntu Saucy Salamander 13.10 Server x86_64 ([ubuntu-13.10-server-amd64.box](https://s3-eu-west-1.amazonaws.com/ffuenf-vagrant-boxes/ubuntu/ubuntu-13.10-server-amd64_vmware.box))
+* VMware Tools 9.6.1
+* Chef 11.10
+##### Ubuntu Saucy Salamander 13.10 Server x86_64 ([ubuntu-13.10-server-amd64.box](https://s3-eu-west-1.amazonaws.com/ffuenf-vagrant-boxes/ubuntu/ubuntu-13.10-server-amd64_virtualbox.box))
+* VirtualBox Guest Additions 4.3.6
+* Chef 11.10
+
 #### Ubuntu Raring Ringtail 13.x
 ##### Ubuntu Raring Ringtail 13.04 Server x86_64 ([ubuntu-13.04-server-amd64.box](https://s3-eu-west-1.amazonaws.com/ffuenf-vagrant-boxes/ubuntu/ubuntu-13.04-server-amd64.box))
 * VirtualBox Guest Additions 4.2.18
@@ -34,6 +43,13 @@ Boxes
 
 ### Debian
 #### Debian Wheezy 7.x
+##### Debian Wheezy 7.3.0 x86_64 ([debian-7.3.0-amd64_vmware.box](https://s3-eu-west-1.amazonaws.com/ffuenf-vagrant-boxes/debian/debian-7.3.0-amd64_vmware.box))
+* VMware Tools 9.6.1
+* Chef 11.10
+##### Debian Wheezy 7.3.0 x86_64 ([debian-7.3.0-amd64_virtualbox.box](https://s3-eu-west-1.amazonaws.com/ffuenf-vagrant-boxes/debian/debian-7.3.0-amd64_virtualbox.box))
+* VirtualBox Guest Additions 4.3.6
+* Chef 11.10
+
 ##### Debian Wheezy 7.3.0 x86_64 ([debian-7.3.0-amd64.box](https://s3-eu-west-1.amazonaws.com/ffuenf-vagrant-boxes/debian/debian-7.3.0-amd64.box))
 * VirtualBox Guest Additions 4.3.6
 * Chef 11.8.2
@@ -85,7 +101,7 @@ License and Author
 
 - Author:: Achim Rosenhagen (<a.rosenhagen@ffuenf.de>)
 
-- Copyright:: 2013, ffuenf
+- Copyright:: 2014, ffuenf
 
 Licensed under the Apache License, Version 2.0 (the "License");
 you may not use this file except in compliance with the License.

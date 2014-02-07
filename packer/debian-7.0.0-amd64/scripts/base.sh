@@ -1,3 +1,5 @@
+#!/bin/bash -eux
+
 # Update the box
 apt-get -y update
 apt-get -y install linux-headers-$(uname -r) build-essential

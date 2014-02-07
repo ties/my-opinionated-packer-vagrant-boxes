@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/bin/bash -eux
 
 # enable memory and swap cgroup
 perl -p -i -e 's/GRUB_CMDLINE_LINUX=""/GRUB_CMDLINE_LINUX="cgroup_enable=memory swapaccount=1"/g'  /etc/default/grub

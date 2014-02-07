@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/bin/bash -eux
 
 # Set up sudo
 echo %vagrant ALL=NOPASSWD:ALL > /etc/sudoers.d/vagrant
@@ -16,5 +16,5 @@ chmod 600 /home/vagrant/.ssh/authorized_keys
 chown -R vagrant /home/vagrant/.ssh
 
 # Install NFS for Vagrant
-apt-get update
-apt-get install -y nfs-common
+apt-get -y update
+apt-get -y install nfs-common

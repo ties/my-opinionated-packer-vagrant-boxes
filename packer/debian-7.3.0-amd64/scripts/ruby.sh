@@ -1,5 +1,7 @@
+#!/bin/bash -eux
+
 # Install Ruby from packages
-apt-get -y --force-yes install ruby ruby-dev libopenssl-ruby1.8 irb ri rdoc
+apt-get -y install ruby ruby-dev libopenssl-ruby1.8 irb ri rdoc
 
 # Install Rubygems from source
 rg_ver=1.8.22

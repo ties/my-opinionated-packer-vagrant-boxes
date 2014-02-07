@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/bin/bash -eux
 
 # Create the user vagrant with password vagrant
 useradd -G sudo -p $(perl -e'print crypt("vagrant", "vagrant")') -m -s /bin/bash -N vagrant
@@ -16,5 +16,5 @@ chmod 600 /home/vagrant/.ssh/authorized_keys
 chown -R vagrant /home/vagrant/.ssh
 
 # Install NFS for Vagrant
-apt-get -y --force-yes update
-apt-get -y --force-yes install nfs-common
+apt-get -y update
+apt-get -y install nfs-common

@@ -1,8 +1,8 @@
-#!/bin/bash
+#!/bin/bash -eux
 
 # install the backported kernel
-apt-get update
-apt-get install -y linux-image-generic-lts-raring linux-headers-generic-lts-raring
+apt-get -y update
+apt-get -y install linux-image-generic-lts-raring linux-headers-generic-lts-raring
 
 # reboot
 echo "Rebooting the machine..."
