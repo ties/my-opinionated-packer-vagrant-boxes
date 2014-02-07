@@ -21,6 +21,7 @@ Boxes
 ##### Ubuntu Saucy Salamander 13.10 Server x86_64 ([ubuntu-13.10-server-amd64.box](https://s3-eu-west-1.amazonaws.com/ffuenf-vagrant-boxes/ubuntu/ubuntu-13.10-server-amd64_vmware.box))
 * VMware Tools 9.6.1
 * Chef 11.10
+
 ##### Ubuntu Saucy Salamander 13.10 Server x86_64 ([ubuntu-13.10-server-amd64.box](https://s3-eu-west-1.amazonaws.com/ffuenf-vagrant-boxes/ubuntu/ubuntu-13.10-server-amd64_virtualbox.box))
 * VirtualBox Guest Additions 4.3.6
 * Chef 11.10
@@ -46,6 +47,7 @@ Boxes
 ##### Debian Wheezy 7.3.0 x86_64 ([debian-7.3.0-amd64_vmware.box](https://s3-eu-west-1.amazonaws.com/ffuenf-vagrant-boxes/debian/debian-7.3.0-amd64_vmware.box))
 * VMware Tools 9.6.1
 * Chef 11.10
+
 ##### Debian Wheezy 7.3.0 x86_64 ([debian-7.3.0-amd64_virtualbox.box](https://s3-eu-west-1.amazonaws.com/ffuenf-vagrant-boxes/debian/debian-7.3.0-amd64_virtualbox.box))
 * VirtualBox Guest Additions 4.3.6
 * Chef 11.10
