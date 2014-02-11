@@ -2,6 +2,9 @@
 
 This file is used to list changes made in each version of vagrant-boxes.
 
+## 0.0.13:
+* added Debian Wheezy 7.4.0 x86_64 (thanks to [crahan](https://github.com/crahan))
+
 ## 0.0.12:
 ### Features
 * added Ubuntu Saucy Salamander 13.10 Server x86_64
