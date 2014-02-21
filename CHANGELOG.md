@@ -2,6 +2,10 @@
 
 This file is used to list changes made in each version of vagrant-boxes.
 
+## 0.0.14:
+* upgraded to Chef 11.10.4-1 on Debian Wheezy 7.4.0 x86_64
+* upgraded to Chef 11.10.4-1 on Ubuntu Saucy Salamander 13.10 Server x86_64
+
 ## 0.0.13:
 * added Debian Wheezy 7.4.0 x86_64 (thanks to [crahan](https://github.com/crahan))
 
