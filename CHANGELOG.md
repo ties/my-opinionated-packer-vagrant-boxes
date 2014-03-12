@@ -2,6 +2,20 @@
 
 This file is used to list changes made in each version of vagrant-boxes.
 
+## 0.0.15:
+* introduce management of boxes metadata via [Vagrantcloud](https://www.vagrantcloud.com/ffuenf)
+* extend cleanup on Debian Wheezy 7.4.0 x86_64
+* extend cleanup on Debian Wheezy 7.3.0 x86_64
+* extend cleanup on Ubuntu Saucy Salamander 13.10 Server x86_64
+* extend cleanup on Ubuntu Raring Ringtail 13.04 Server x86_64
+* extend cleanup on Ubuntu Precise Pangolin 12.04.4 LTS Server x86_64
+* upgrade Ubuntu Precise Pangolin 12.04.4 LTS Server x86_64
+* upgrade to VirtualBox Guest Additions 4.3.8 on Debian Wheezy 7.4.0 x86_64
+* upgrade to Chef 11.10.4-1 and VirtualBox Guest Additions 4.3.8 on Debian Wheezy 7.3.0 x86_64
+* upgrade to VirtualBox Guest Additions 4.3.8 on Ubuntu Saucy Salamander 13.10 Server x86_64
+* upgrade to Chef 11.10.4-1, lxc-docker-0.9.0 and VirtualBox Guest Additions 4.3.8 on Ubuntu Raring Ringtail 13.04 Server x86_64
+* upgrade to Chef 11.10.4-1, lxc-docker-0.9.0 and VirtualBox Guest Additions 4.3.8 on Ubuntu Precise Pangolin 12.04.4 LTS Server x86_64
+
 ## 0.0.14:
 * upgraded to Chef 11.10.4-1 on Debian Wheezy 7.4.0 x86_64
 * upgraded to Chef 11.10.4-1 on Ubuntu Saucy Salamander 13.10 Server x86_64

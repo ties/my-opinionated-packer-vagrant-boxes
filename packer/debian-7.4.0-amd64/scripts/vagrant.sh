@@ -3,9 +3,9 @@
 # Create the user vagrant with password vagrant
 useradd -G sudo -p $(perl -e'print crypt("vagrant", "vagrant")') -m -s /bin/bash -N vagrant
 
-# Set up sudo
-echo %vagrant ALL=NOPASSWD:ALL > /etc/sudoers.d/vagrant
-chmod 0440 /etc/sudoers.d/vagrant
+# Set up password-less sudo for the vagrant user
+echo 'vagrant ALL=(ALL) NOPASSWD:ALL' > /etc/sudoers.d/99_vagrant
+chmod 440 /etc/sudoers.d/99_vagrant
 
 # Installing vagrant keys
 mkdir /home/vagrant/.ssh

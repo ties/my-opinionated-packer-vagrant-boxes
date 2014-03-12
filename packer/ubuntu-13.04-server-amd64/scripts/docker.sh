@@ -5,12 +5,13 @@ perl -p -i -e 's/GRUB_CMDLINE_LINUX=""/GRUB_CMDLINE_LINUX="cgroup_enable=memory 
 /usr/sbin/update-grub
 
 # add docker group and add vagrant to it
-sudo groupadd docker
-sudo usermod -a -G docker vagrant
+groupadd docker
+gpasswd -a vagrant docker
 
 # install curl
 apt-get -y update
 apt-get -y install curl
+apt-get -y install linux-image-extra-`uname -r`
 
 # add the docker gpg key
 curl https://get.docker.io/gpg | apt-key add -

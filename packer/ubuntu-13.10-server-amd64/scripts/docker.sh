@@ -1,33 +1,26 @@
 #!/bin/bash -eux
 
+# enable memory and swap cgroup
+perl -p -i -e 's/GRUB_CMDLINE_LINUX=""/GRUB_CMDLINE_LINUX="cgroup_enable=memory swapaccount=1"/g'  /etc/default/grub
+/usr/sbin/update-grub
+
+# add docker group and add vagrant to it
+groupadd docker
+gpasswd -a vagrant docker
+
+# install curl
 apt-get -y update
-apt-get -y install golang aufs-tools libdevmapper-dev
+apt-get -y install curl
+apt-get -y install linux-image-extra-`uname -r`
 
-# get rid of interactive prompt
-echo 'lxc lxc/directory string /var/lib/lxc' > /tmp/lxc_debconf
-sudo debconf-set-selections -v /tmp/lxc_debconf
-apt-get -y install lxc
-rm -f /tmp/lxc_debconf
+# add the docker gpg key
+curl https://get.docker.io/gpg | apt-key add -
 
-export GOPATH=~/usr/lib/go
-export PATH=$GOPATH/bin:$PATH
+# Add the Docker repository to your apt sources list.
+echo deb https://get.docker.io/ubuntu docker main > /etc/apt/sources.list.d/docker.list
 
-mkdir -p "$GOPATH"
+# Update your sources
+apt-get -y update
 
-#GO GET docker...
-go get -v github.com/dotcloud/docker
-#rm -rf $GOPATH/src/github.com/dotcloud/docker/vendor/src/code.google.com/p/go.net/ipv6
-
-#GO INSTALL...
-go install -v github.com/dotcloud/docker/
-
-#Mounting...
-echo 'none /sys/fs/cgroup cgroup defaults 0 0' | sudo tee -a /etc/fstab
-sudo mount /sys/fs/cgroup
-
-#Properly installing docker from binaries...
-wget https://get.docker.io/builds/Linux/x86_64/docker-latest -O /usr/local/bin/docker
-chmod +x /usr/local/bin/docker
-
-#RUN...
-#docker run -i -t ubuntu /bin/bash
+# Install. Confirm install.
+apt-get -y install lxc-docker
