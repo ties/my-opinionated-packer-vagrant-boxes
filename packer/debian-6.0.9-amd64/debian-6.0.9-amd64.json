@@ -22,9 +22,9 @@
       "guest_additions_path": "VBoxGuestAdditions_{{.Version}}.iso",
       "guest_os_type": "Debian_64",
       "http_directory": "http",
-      "iso_checksum": "cc509122349a27bf1958e1ea0ce4065d",
+      "iso_checksum": "9b08117cc235f3084948ab75a0f48861",
       "iso_checksum_type": "md5",
-      "iso_url": "http://cdimage.debian.org/cdimage/archive/6.0.7/amd64/iso-cd/debian-6.0.7-amd64-netinst.iso",
+      "iso_url": "http://cdimage.debian.org/cdimage/archive/6.0.9/amd64/iso-cd/debian-6.0.9-amd64-netinst.iso",
       "shutdown_command": "echo 'halt -p' > shutdown.sh; echo 'vagrant'|sudo -S sh 'shutdown.sh'",
       "ssh_password": "vagrant",
       "ssh_port": 22,
@@ -50,7 +50,7 @@
   ],
   "post-processors": [
     {
-      "output": "debian-6.0.7-amd64.box",
+      "output": "debian-6.0.9-amd64.box",
       "type": "vagrant"
     }
   ],
