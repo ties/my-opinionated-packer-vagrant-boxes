@@ -1,6 +1,7 @@
 {
   "builders": [
     {
+      "type": "virtualbox-iso",
       "boot_command": [
         "<esc><wait>",
         "install <wait>",
@@ -9,37 +10,39 @@
         "auto <wait>",
         "locale=en_US <wait>",
         "kbd-chooser/method=us <wait>",
+        "keyboard-configuration/xkb-keymap=us <wait>",
         "netcfg/get_hostname={{ .Name }} <wait>",
         "netcfg/get_domain=vagrantup.com <wait>",
         "fb=false <wait>",
         "debconf/frontend=noninteractive <wait>",
         "console-setup/ask_detect=false <wait>",
         "console-keymaps-at/keymap=us <wait>",
-        "keyboard-configuration/xkb-keymap=us <wait>",
         "<enter><wait>"
       ],
       "boot_wait": "10s",
-      "headless": false,
       "disk_size": 10140,
-      "guest_additions_path": "VBoxGuestAdditions_{{.Version}}.iso",
       "guest_os_type": "Debian_64",
       "http_directory": "http",
       "iso_checksum": "2ed8a7ec7ef3abe59b825f7c8d7176322b87341800277c70dce807c5c9ab1c8f18a9e677766d2a12df334024fe27580cf208a305afaf09e96cfe9e762e4f94df",
       "iso_checksum_type": "sha512",
       "iso_url": "http://cdimage.debian.org/cdimage/archive/7.3.0/amd64/iso-cd/debian-7.3.0-amd64-netinst.iso",
-      "shutdown_command": "echo 'vagrant'|sudo -S /sbin/shutdown -hP now",
+      "ssh_username": "vagrant",
       "ssh_password": "vagrant",
       "ssh_port": 22,
-      "ssh_username": "vagrant",
       "ssh_wait_timeout": "10000s",
-      "type": "virtualbox-iso",
+      "shutdown_command": "echo 'vagrant'|sudo -S /sbin/shutdown -hP now",
+      "guest_additions_path": "VBoxGuestAdditions_{{.Version}}.iso",
+      "virtualbox_version_file": ".vbox_version",
       "vm_name": "debian-7.3.0-amd64",
       "vboxmanage": [
-        ["modifyvm", "{{.Name}}", "--memory", "256"],
-        ["modifyvm", "{{.Name}}", "--cpus", "1"]
+        [ "modifyvm", "{{.Name}}", "--memory", "256" ],
+        [ "modifyvm", "{{.Name}}", "--cpus", "1" ],
+        [ "modifyvm", "{{.Name}}", "--natdnshostresolver1", "on" ],
+        [ "modifyvm", "{{.Name}}", "--natdnsproxy1", "on" ]
       ]
     },
     {
+      "type": "vmware-iso",
       "boot_command": [
         "<esc><wait>",
         "install <wait>",
@@ -48,29 +51,27 @@
         "auto <wait>",
         "locale=en_US <wait>",
         "kbd-chooser/method=us <wait>",
+        "keyboard-configuration/xkb-keymap=us <wait>",
         "netcfg/get_hostname={{ .Name }} <wait>",
         "netcfg/get_domain=vagrantup.com <wait>",
         "fb=false <wait>",
         "debconf/frontend=noninteractive <wait>",
         "console-setup/ask_detect=false <wait>",
         "console-keymaps-at/keymap=us <wait>",
-        "keyboard-configuration/xkb-keymap=us <wait>",
         "<enter><wait>"
       ],
       "boot_wait": "10s",
-      "headless": false,
       "disk_size": 10140,
       "guest_os_type": "debian7-64",
       "http_directory": "http",
       "iso_checksum": "2ed8a7ec7ef3abe59b825f7c8d7176322b87341800277c70dce807c5c9ab1c8f18a9e677766d2a12df334024fe27580cf208a305afaf09e96cfe9e762e4f94df",
       "iso_checksum_type": "sha512",
       "iso_url": "http://cdimage.debian.org/cdimage/archive/7.3.0/amd64/iso-cd/debian-7.3.0-amd64-netinst.iso",
-      "shutdown_command": "echo 'vagrant'|sudo -S /sbin/shutdown -hP now",
+      "ssh_username": "vagrant",
       "ssh_password": "vagrant",
       "ssh_port": 22,
-      "ssh_username": "vagrant",
       "ssh_wait_timeout": "10000s",
-      "type": "vmware-iso",
+      "shutdown_command": "echo 'vagrant'|sudo -S /sbin/shutdown -hP now",
       "tools_upload_flavor": "linux",
       "vm_name": "debian-7.3.0-amd64",
       "vmx_data": {
@@ -82,49 +83,25 @@
   ],
   "post-processors": [
     {
-      "output": "debian-7.3.0-amd64_virtualbox.box",
       "type": "vagrant",
-      "only": ["virtualbox-iso"]
-    },
-    {
-      "output": "debian-7.3.0-amd64_vmware.box",
-      "type": "vagrant",
-      "only": ["vmware-iso"]
+			"compression_level": "9",
+      "output": "debian-7.3.0-amd64_{{.Provider}}.box"
     }
   ],
   "provisioners": [
     {
-      "override": {
-        "virtualbox-iso": {
-          "scripts": [
-            "scripts/base.sh",
-            "scripts/virtualbox.sh",
-            "scripts/vagrant.sh",
-            "scripts/ruby.sh",
-            "scripts/chef.sh",
-            "scripts/cleanup.sh"
-          ]
-        },
-        "vmware-iso": {
-          "scripts": [
-            "scripts/base.sh",
-            "scripts/vmware.sh",
-            "scripts/vagrant.sh",
-            "scripts/ruby.sh",
-            "scripts/chef.sh",
-            "scripts/cleanup.sh"
-          ]
-        }
-      },
+			"type": "shell",
+      "execute_command": "echo 'vagrant' | {{.Vars}} sudo -E -S bash '{{.Path}}'",
       "scripts": [
-        "scripts/base.sh",
+        "scripts/update.sh",
+        "scripts/sshd.sh",
+        "scripts/networking.sh",
+        "scripts/sudoers.sh",
         "scripts/vagrant.sh",
-        "scripts/ruby.sh",
+        "scripts/vmtools.sh",
         "scripts/chef.sh",
         "scripts/cleanup.sh"
-      ],
-      "type": "shell",
-      "execute_command": "echo 'vagrant' | {{.Vars}} sudo -E -S bash '{{.Path}}'"
+      ]
     }
   ]
 }

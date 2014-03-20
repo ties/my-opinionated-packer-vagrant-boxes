@@ -3,7 +3,7 @@ Description
 
 baseboxes build with packer for use with vagrant.
 This repository includes the packer templates to build the basebox.
-The build boxes are available through Amazon S3 and Vagrantcloud.
+The build boxes are available through [DropBox](https://dl.dropboxusercontent.com/u/8398/vagrant-boxes/) and [Vagrantcloud](https://www.vagrantcloud.com/ffuenf).
 
 Requirements
 ============
@@ -16,33 +16,37 @@ Requirements
 Boxes
 =====
 
+[SHA512 Checksums](https://dl.dropboxusercontent.com/u/8398/vagrant-boxes/SHA512SUMS)
+
 ### Ubuntu
 #### Ubuntu Saucy Salamander 13.1x
-##### Ubuntu Saucy Salamander 13.10 Server x86_64 ([ffuenf/ubuntu-13.10-server-amd64](https://www.vagrantcloud.com/ffuenf/ubuntu-13.10-server-amd64) / [ubuntu-13.10-server-amd64.box](https://s3-eu-west-1.amazonaws.com/ffuenf-vagrant-boxes/ubuntu/ubuntu-13.10-server-amd64_vmware.box))
+##### Ubuntu Saucy Salamander 13.10 Server x86_64 ([ffuenf/ubuntu-13.10-server-amd64](https://www.vagrantcloud.com/ffuenf/ubuntu-13.10-server-amd64) / [ubuntu-13.10-server-amd64_vmware.box](https://dl.dropboxusercontent.com/u/8398/vagrant-boxes/ubuntu-13.10-server-amd64_vmware.box))
 * VMware Tools 9.6.1
 * Chef 11.10.4-1
 
-##### Ubuntu Saucy Salamander 13.10 Server x86_64 ([ffuenf/ubuntu-13.10-server-amd64](https://www.vagrantcloud.com/ffuenf/ubuntu-13.10-server-amd64) / [ubuntu-13.10-server-amd64.box](https://s3-eu-west-1.amazonaws.com/ffuenf-vagrant-boxes/ubuntu/ubuntu-13.10-server-amd64_virtualbox.box))
+##### Ubuntu Saucy Salamander 13.10 Server x86_64 ([ffuenf/ubuntu-13.10-server-amd64](https://www.vagrantcloud.com/ffuenf/ubuntu-13.10-server-amd64) / [ubuntu-13.10-server-amd64_virtualbox.box](https://dl.dropboxusercontent.com/u/8398/vagrant-boxes/ubuntu-13.10-server-amd64_virtualbox.box))
 * VirtualBox Guest Additions 4.3.8
 * Chef 11.10.4-1
 
 #### Ubuntu Raring Ringtail 13.x
-##### Ubuntu Raring Ringtail 13.04 Server x86_64 ([ffuenf/ubuntu-13.04-server-amd64](https://www.vagrantcloud.com/ffuenf/ubuntu-13.04-server-amd64) / [ubuntu-13.04-server-amd64.box](https://s3-eu-west-1.amazonaws.com/ffuenf-vagrant-boxes/ubuntu/ubuntu-13.04-server-amd64_vmware.box))
+##### Ubuntu Raring Ringtail 13.04 Server x86_64 ([ffuenf/ubuntu-13.04-server-amd64](https://www.vagrantcloud.com/ffuenf/ubuntu-13.04-server-amd64) / [ubuntu-13.04-server-amd64_vmware.box](https://dl.dropboxusercontent.com/u/8398/vagrant-boxes/ubuntu-13.04-server-amd64_vmware.box))
 * VMware Tools 9.6.1
 * Chef 11.10.4-1
 
-##### Ubuntu Raring Ringtail 13.04 Server x86_64 ([ffuenf/ubuntu-13.04-server-amd64](https://www.vagrantcloud.com/ffuenf/ubuntu-13.04-server-amd64) / [ubuntu-13.04-server-amd64.box](https://s3-eu-west-1.amazonaws.com/ffuenf-vagrant-boxes/ubuntu/ubuntu-13.04-server-amd64_virtualbox.box))
+##### Ubuntu Raring Ringtail 13.04 Server x86_64 ([ffuenf/ubuntu-13.04-server-amd64](https://www.vagrantcloud.com/ffuenf/ubuntu-13.04-server-amd64) / [ubuntu-13.04-server-amd64_virtualbox.box](https://dl.dropboxusercontent.com/u/8398/vagrant-boxes/ubuntu-13.04-server-amd64_virtualbox.box))
 * VirtualBox Guest Additions 4.3.8
 * Chef 11.10.4-1
 
 ---
 
 #### Ubuntu Precise Pangolin 12.x
-##### Ubuntu Precise Pangolin 12.04.4 LTS Server x86_64 ([ffuenf/ubuntu-12.04.4-server-amd64](https://www.vagrantcloud.com/ffuenf/ubuntu-12.04.4-server-amd64) / [ubuntu-12.04.4-server-amd64.box](https://s3-eu-west-1.amazonaws.com/ffuenf-vagrant-boxes/ubuntu/ubuntu-12.04.4-server-amd64_vmware.box))
+##### Ubuntu Precise Pangolin 12.04.4 LTS Server x86_64
+([ffuenf/ubuntu-12.04.4-server-amd64](https://www.vagrantcloud.com/ffuenf/ubuntu-12.04.4-server-amd64) / [ubuntu-13.04-server-amd64_vmware.box](https://dl.dropboxusercontent.com/u/8398/vagrant-boxes/ubuntu-12.04.4-server-amd64_vmware.box))
 * VMware Tools 9.6.1
 * Chef 11.10.4-1
 
-##### Ubuntu Precise Pangolin 12.04.4 LTS Server x86_64 ([ffuenf/ubuntu-12.04.4-server-amd64](https://www.vagrantcloud.com/ffuenf/ubuntu-12.04.4-server-amd64) / [ubuntu-12.04.4-server-amd64.box](https://s3-eu-west-1.amazonaws.com/ffuenf-vagrant-boxes/ubuntu/ubuntu-12.04.4-server-amd64_virtualbox.box))
+##### Ubuntu Precise Pangolin 12.04.4 LTS Server x86_64 
+([ffuenf/ubuntu-12.04.4-server-amd64](https://www.vagrantcloud.com/ffuenf/ubuntu-12.04.4-server-amd64) / [ubuntu-13.04-server-amd64_virtualbox.box](https://dl.dropboxusercontent.com/u/8398/vagrant-boxes/ubuntu-12.04.4-server-amd64_virtualbox.box))
 * VirtualBox Guest Additions 4.3.8
 * Chef 11.10.4-1
 
@@ -50,65 +54,35 @@ Boxes
 
 ### Debian
 #### Debian Wheezy 7.x
-##### Debian Wheezy 7.4.0 x86_64 ([ffuenf/debian-7.4.0-amd64](https://www.vagrantcloud.com/ffuenf/debian-7.4.0-amd64) / [debian-7.4.0-amd64_vmware.box](https://s3-eu-west-1.amazonaws.com/ffuenf-vagrant-boxes/debian/debian-7.4.0-amd64_vmware.box))
+##### Debian Wheezy 7.4.0 x86_64 ([ffuenf/debian-7.4.0-amd64](https://www.vagrantcloud.com/ffuenf/debian-7.4.0-amd64) / [debian-7.4.0-amd64_vmware.box](https://dl.dropboxusercontent.com/u/8398/vagrant-boxes/debian-7.4.0-amd64_vmware.box))
 * VMware Tools 9.6.1
 * Chef 11.10.4-1
 
-##### Debian Wheezy 7.4.0 x86_64 ([ffuenf/debian-7.4.0-amd64](https://www.vagrantcloud.com/ffuenf/debian-7.4.0-amd64) / [debian-7.4.0-amd64_virtualbox.box](https://s3-eu-west-1.amazonaws.com/ffuenf-vagrant-boxes/debian/debian-7.4.0-amd64_virtualbox.box))
+##### Debian Wheezy 7.4.0 x86_64 ([ffuenf/debian-7.4.0-amd64](https://www.vagrantcloud.com/ffuenf/debian-7.4.0-amd64) / [debian-7.4.0-amd64_virtualbox.box](https://dl.dropboxusercontent.com/u/8398/vagrant-boxes/debian-7.4.0-amd64_virtualbox.box))
 * VirtualBox Guest Additions 4.3.8
 * Chef 11.10.4-1
 
-##### Debian Wheezy 7.3.0 x86_64 ([ffuenf/debian-7.3.0-amd64](https://www.vagrantcloud.com/ffuenf/debian-7.3.0-amd64) / [debian-7.3.0-amd64_vmware.box](https://s3-eu-west-1.amazonaws.com/ffuenf-vagrant-boxes/debian/debian-7.3.0-amd64_vmware.box))
+##### Debian Wheezy 7.3.0 x86_64 ([ffuenf/debian-7.3.0-amd64](https://www.vagrantcloud.com/ffuenf/debian-7.3.0-amd64) / [debian-7.3.0-amd64_vmware.box](https://dl.dropboxusercontent.com/u/8398/vagrant-boxes/debian-7.3.0-amd64_vmware.box))
 * VMware Tools 9.6.1
 * Chef 11.10.4-1
 
-##### Debian Wheezy 7.3.0 x86_64 ([ffuenf/debian-7.3.0-amd64](https://www.vagrantcloud.com/ffuenf/debian-7.3.0-amd64) / [debian-7.3.0-amd64_virtualbox.box](https://s3-eu-west-1.amazonaws.com/ffuenf-vagrant-boxes/debian/debian-7.3.0-amd64_virtualbox.box))
+##### Debian Wheezy 7.3.0 x86_64 ([ffuenf/debian-7.3.0-amd64](https://www.vagrantcloud.com/ffuenf/debian-7.3.0-amd64) / [debian-7.3.0-amd64_virtualbox.box](https://dl.dropboxusercontent.com/u/8398/vagrant-boxes/debian-7.3.0-amd64_virtualbox.box))
 * VirtualBox Guest Additions 4.3.8
 * Chef 11.10.4-1
-
-##### Debian Wheezy 7.3.0 x86_64 ([debian-7.3.0-amd64.box](https://s3-eu-west-1.amazonaws.com/ffuenf-vagrant-boxes/debian/debian-7.3.0-amd64.box))
-* VirtualBox Guest Additions 4.3.6
-* Chef 11.8.2
-
----
-
-##### Debian Wheezy 7.2.0 x86_64 ([ffuenf/debian-7.2.0-amd64](https://www.vagrantcloud.com/ffuenf/debian-7.2.0-amd64) / [debian-7.2.0-amd64.box](https://s3-eu-west-1.amazonaws.com/ffuenf-vagrant-boxes/debian/debian-7.2.0-amd64.box))
-* VirtualBox Guest Additions 4.3.4
-* Chef 11.8.2
-
----
-
-##### Debian Wheezy 7.1.0 x86_64 ([ffuenf/debian-7.1.0-amd64](https://www.vagrantcloud.com/ffuenf/debian-7.1.0-amd64) / [debian-7.1.0-amd64.box](https://s3-eu-west-1.amazonaws.com/ffuenf-vagrant-boxes/debian/debian-7.1.0-amd64.box))
-* VirtualBox Guest Additions 4.2.18
-* Chef 11.6.0
-
----
-
-##### Debian Wheezy 7.1.0 x86_64 ([debian-7.1.0-amd64.box](https://s3-eu-west-1.amazonaws.com/ffuenf-vagrant-boxes/debian/chef-11.4.4/debian-7.1.0-amd64.box))
-* VirtualBox Guest Additions 4.2.12
-* Chef 11.4.4
-* Puppet 3.1.1
-
----
-
-##### Debian Wheezy 7.0.0 x86_64 ([ffuenf/debian-7.0.0-amd64](https://www.vagrantcloud.com/ffuenf/debian-7.0.0-amd64) / [debian-7.0.0-amd64.box](https://s3-eu-west-1.amazonaws.com/ffuenf-vagrant-boxes/debian/chef-11.4.4/debian-7.0.0-amd64.box))
-* VirtualBox Guest Additions 4.2.12
-* Chef 11.4.4
-* Puppet 3.1.1
 
 ---
 
 #### Debian Squeeze 6.x
-##### Debian Squeeze 6.0.7 x86_64 ([ffuenf/debian-6.0.7-amd64](https://www.vagrantcloud.com/ffuenf/debian-6.0.7-amd64) / [debian-6.0.7-amd64.box](https://s3-eu-west-1.amazonaws.com/ffuenf-vagrant-boxes/debian/chef-11.4.0/debian-6.0.7-amd64.box))
-* VirtualBox Guest Additions 4.2.16
-* Chef 11.4.0
+##### Debian Squeeze 6.0.9 x86_64 ([ffuenf/debian-6.0.9-amd64](https://www.vagrantcloud.com/ffuenf/debian-6.0.9-amd64) / [debian-6.0.9-amd64_vmware.box](https://dl.dropboxusercontent.com/u/8398/vagrant-boxes/debian-6.0.9-amd64_vmware.box))
+* VMware Tools 9.6.1
+* Chef 11.10.4-1
 
 ---
 
-##### Debian Squeeze 6.0.7 x86_64 ([debian-6.0.7-amd64.box](https://s3-eu-west-1.amazonaws.com/ffuenf-vagrant-boxes/debian/chef-11.4.4/debian-6.0.7-amd64.box))
-* VirtualBox Guest Additions 4.2.12
-* Chef 11.4.4
-* Puppet 3.1.1
+##### Debian Squeeze 6.0.9 x86_64
+([ffuenf/debian-6.0.9-amd64](https://www.vagrantcloud.com/ffuenf/debian-6.0.9-amd64) / [debian-6.0.9-amd64_virtualbox.box](https://dl.dropboxusercontent.com/u/8398/vagrant-boxes/debian-6.0.9-amd64_virtualbox.box))
+* VirtualBox Guest Additions 4.3.8
+* Chef 11.10.4-1
 
 ---
 

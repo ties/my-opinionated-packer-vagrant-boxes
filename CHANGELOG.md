@@ -2,6 +2,18 @@
 
 This file is used to list changes made in each version of vagrant-boxes.
 
+## 0.0.16:
+* depreciate Debian Wheezy 7.2.0 x86_64
+* depreciate Debian Wheezy 7.1.0 x86_64
+* depreciate Debian Wheezy 7.0.0 x86_64
+* upgrade Debian Squeeze 6.0.7 x86_64 to Debian Squeeze 6.0.9 x86_64
+* upgrade to Chef 11.10.4-1 and VirtualBox Guest Additions 4.3.8 on Debian Squeeze 6.0.9 x86_64
+* extend cleanup on Debian Squeeze 6.0.9 x86_64
+* remove lxc-docker-0.9.0 on Ubuntu Raring Ringtail 13.04 Server x86_64
+* remove lxc-docker-0.9.0 on Ubuntu Precise Pangolin 12.04.4 LTS Server x86_64
+* move prebuild boxes from Amazon S3 to [DropBox](https://www.dropbox.com/sh/xqyeht0vdivoxcl/iYO49Wd3p3/vagrant-boxes)
+* introduce [SHA512SUMS](https://www.dropbox.com/sh/xqyeht0vdivoxcl/iYO49Wd3p3/vagrant-boxes/SHA512SUMS) for all prebuild boxes
+
 ## 0.0.15:
 * introduce management of boxes metadata via [Vagrantcloud](https://www.vagrantcloud.com/ffuenf)
 * extend cleanup on Debian Wheezy 7.4.0 x86_64

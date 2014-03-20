@@ -34,7 +34,7 @@
       "iso_checksum": "edf1194d7bc99b64dca177deecade9e13f0a8c3339c9fd8832471a2e7ed1dda5",
       "iso_checksum_type": "sha256",
       "iso_url": "http://releases.ubuntu.com/13.04/ubuntu-13.04-server-amd64.iso",
-      "shutdown_command": "echo 'vagrant'|sudo -S /sbin/shutdown -hP now",
+      "shutdown_command": "echo 'vagrant'|sudo -S shutdown -P now",
       "ssh_password": "vagrant",
       "ssh_port": 22,
       "ssh_username": "vagrant",
@@ -44,7 +44,8 @@
       "vboxmanage": [
         ["modifyvm", "{{.Name}}", "--memory", "256"],
         ["modifyvm", "{{.Name}}", "--cpus", "1"]
-      ]
+      ],
+      "virtualbox_version_file": ".vbox_version"
     },
     {
       "boot_command": [
@@ -72,72 +73,49 @@
         "<enter><wait>"
       ],
       "boot_wait": "10s",
-      "headless": false,
       "disk_size": 10140,
+      "guest_os_type": "ubuntu-64",
+      "headless": false,
       "http_directory": "http",
       "iso_checksum": "edf1194d7bc99b64dca177deecade9e13f0a8c3339c9fd8832471a2e7ed1dda5",
       "iso_checksum_type": "sha256",
       "iso_url": "http://releases.ubuntu.com/13.04/ubuntu-13.04-server-amd64.iso",
-      "shutdown_command": "echo 'vagrant'|sudo -S /sbin/shutdown -hP now",
+      "shutdown_command": "echo 'vagrant'|sudo -S shutdown -P now",
       "ssh_password": "vagrant",
       "ssh_port": 22,
       "ssh_username": "vagrant",
       "ssh_wait_timeout": "10000s",
-      "type": "vmware-iso",
       "tools_upload_flavor": "linux",
+      "type": "vmware-iso",
       "vm_name": "ubuntu-13.04-server-amd64",
       "vmx_data": {
+        "cpuid.coresPerSocket": "1",
         "memsize": "256",
-        "numvcpus": "1",
-        "cpuid.coresPerSocket": "1"
+        "numvcpus": "1"
       }
     }
   ],
   "post-processors": [
     {
-      "output": "ubuntu-13.04-server-amd64_virtualbox.box",
-      "type": "vagrant",
-      "only": ["virtualbox-iso"]
-    },
-    {
-      "output": "ubuntu-13.04-server-amd64_vmware.box",
-      "type": "vagrant",
-      "only": ["vmware-iso"]
+      "output": "ubuntu-13.04-server-amd64_{{.Provider}}.box",
+      "type": "vagrant"
     }
   ],
   "provisioners": [
     {
-      "override": {
-        "virtualbox-iso": {
-          "scripts": [
-            "scripts/base.sh",
-            "scripts/virtualbox.sh",
-            "scripts/vagrant.sh",
-            "scripts/ruby.sh",
-            "scripts/chef.sh",
-            "scripts/cleanup.sh"
-          ]
-        },
-        "vmware-iso": {
-          "scripts": [
-            "scripts/base.sh",
-            "scripts/vmware.sh",
-            "scripts/vagrant.sh",
-            "scripts/ruby.sh",
-            "scripts/chef.sh",
-            "scripts/cleanup.sh"
-          ]
-        }
-      },
+      "execute_command": "echo 'vagrant'|{{.Vars}} sudo -S -E bash '{{.Path}}'",
       "scripts": [
-        "scripts/base.sh",
+        "scripts/update.sh",
+        "scripts/sshd.sh",
+        "scripts/networking.sh",
+        "scripts/sudoers.sh",
         "scripts/vagrant.sh",
-        "scripts/ruby.sh",
+        "scripts/vmtools.sh",
         "scripts/chef.sh",
         "scripts/cleanup.sh"
       ],
-      "type": "shell",
-      "execute_command": "echo 'vagrant' | {{.Vars}} sudo -E -S bash '{{.Path}}'"
+      "type": "shell"
     }
   ]
 }
+
