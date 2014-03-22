@@ -2,6 +2,10 @@
 
 This file is used to list changes made in each version of vagrant-boxes.
 
+## 0.0.17:
+* added Debian Wheezy 7.4.0 x86_64 with [lxc-docker](http://www.docker.io/) support
+* added Ubuntu Saucy Salamander 13.10 Server x86_64 with [lxc-docker](http://www.docker.io/) support
+
 ## 0.0.16:
 * depreciate Debian Wheezy 7.2.0 x86_64
 * depreciate Debian Wheezy 7.1.0 x86_64

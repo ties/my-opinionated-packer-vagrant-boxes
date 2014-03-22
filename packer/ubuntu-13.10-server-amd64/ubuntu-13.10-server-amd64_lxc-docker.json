@@ -97,7 +97,7 @@
   ],
   "post-processors": [
     {
-      "output": "ubuntu-13.10-server-amd64_{{.Provider}}.box",
+      "output": "ubuntu-13.10-server-amd64_lxc-docker_{{.Provider}}.box",
       "type": "vagrant"
     }
   ],
