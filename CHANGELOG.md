@@ -2,6 +2,10 @@
 
 This file is used to list changes made in each version of vagrant-boxes.
 
+## 0.0.18:
+* upgrade to VirtualBox Guest Additions 4.3.10 on prebuild boxes
+* upgrade to lxc-docker 0.9.1 on prebuild boxes
+
 ## 0.0.17:
 * added Debian Wheezy 7.4.0 x86_64 with [lxc-docker](http://www.docker.io/) support
 * added Ubuntu Saucy Salamander 13.10 Server x86_64 with [lxc-docker](http://www.docker.io/) support

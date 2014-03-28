@@ -112,7 +112,6 @@
         "scripts/vagrant.sh",
         "scripts/vmtools.sh",
         "scripts/chef.sh",
-        "scripts/docker.sh",
         "scripts/cleanup.sh"
       ],
       "type": "shell"
