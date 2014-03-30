@@ -3,6 +3,11 @@
 This file is used to list changes made in each version of vagrant-boxes.
 
 ## 0.0.18:
+* fix VirtualBox Guest Additions 4.3.10 on prebuild boxes (#8)
+* fix installation of insecure vagrant.pub (use curl instead of wget)
+* remove superfluous content
+
+## 0.0.18:
 * upgrade to VirtualBox Guest Additions 4.3.10 on prebuild boxes
 * upgrade to lxc-docker 0.9.1 on prebuild boxes
 

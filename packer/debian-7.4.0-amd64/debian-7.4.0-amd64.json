@@ -36,9 +36,7 @@
       "vm_name": "debian-7.4.0-amd64",
       "vboxmanage": [
         [ "modifyvm", "{{.Name}}", "--memory", "256" ],
-        [ "modifyvm", "{{.Name}}", "--cpus", "1" ],
-        [ "modifyvm", "{{.Name}}", "--natdnshostresolver1", "on" ],
-        [ "modifyvm", "{{.Name}}", "--natdnsproxy1", "on" ]
+        [ "modifyvm", "{{.Name}}", "--cpus", "1" ]
       ]
     },
     {
