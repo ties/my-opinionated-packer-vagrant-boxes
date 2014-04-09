@@ -82,13 +82,13 @@
   "post-processors": [
     {
       "type": "vagrant",
-			"compression_level": "9",
+      "compression_level": "9",
       "output": "debian-7.4.0-amd64_{{.Provider}}.box"
     }
   ],
   "provisioners": [
     {
-			"type": "shell",
+      "type": "shell",
       "execute_command": "echo 'vagrant' | {{.Vars}} sudo -E -S bash '{{.Path}}'",
       "scripts": [
         "scripts/update.sh",
@@ -97,6 +97,7 @@
         "scripts/sudoers.sh",
         "scripts/vagrant.sh",
         "scripts/vmtools.sh",
+	"scripts/ruby.sh",
         "scripts/chef.sh",
         "scripts/cleanup.sh"
       ]

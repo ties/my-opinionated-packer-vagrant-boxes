@@ -2,7 +2,14 @@
 
 This file is used to list changes made in each version of vagrant-boxes.
 
-## 0.0.18:
+## 0.0.20:
+* [fix Heartbleed Bug (CVE-2014-0160)](http://heartbleed.com)
+* upgrade to Chef 11.12.0-1
+* introduce ruby and rubygems
+* depreciate Debian Wheezy 7.3.0 x86_64
+* discontinue lxc-docker prebuild boxes (install it via provisioning instead)
+
+## 0.0.19:
 * fix VirtualBox Guest Additions 4.3.10 on prebuild boxes (#8)
 * fix installation of insecure vagrant.pub (use curl instead of wget)
 * remove superfluous content
