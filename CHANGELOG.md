@@ -2,6 +2,10 @@
 
 This file is used to list changes made in each version of vagrant-boxes.
 
+## 0.0.21:
+* upgrade to Chef 11.12.2-1
+* add optional scripts for [packer](http://www.packer.io), [serf](http://www.serfdom.io) and [docker](http://www.docker.io)
+
 ## 0.0.20:
 * [fix Heartbleed Bug (CVE-2014-0160)](http://heartbleed.com)
 * upgrade to Chef 11.12.0-1
