@@ -19,6 +19,19 @@ Boxes
 [SHA512 Checksums](https://googledrive.com/host/0B83ZToJ3fGtDWkZET3FnZ0xzQkE/SHA512SUMS)
 
 ### Ubuntu
+#### Ubuntu Trusty Tahr 14.x
+##### Ubuntu Trusty Tahr 14.04 Server x86_64 ([ffuenf/ubuntu-14.04-server-amd64](https://www.vagrantcloud.com/ffuenf/ubuntu-14.04-server-amd64) / [ubuntu-14.04-server-amd64_vmware.box](https://googledrive.com/host/0B83ZToJ3fGtDMFFNbnFsVjVKVmc/ubuntu-14.04-server-amd64_vmware.box))
+* VMware Tools 9.6.2
+* Chef 11.12.2-1
+* Ruby 1.9.3.484
+* Rubygems 2.2.2
+
+##### Ubuntu Trusty Tahr 14.04 Server x86_64 ([ffuenf/ubuntu-14.04-server-amd64](https://www.vagrantcloud.com/ffuenf/ubuntu-14.04-server-amd64) / [ubuntu-14.04-server-amd64_virtualbox.box](https://googledrive.com/host/0B83ZToJ3fGtDMFFNbnFsVjVKVmc/ubuntu-14.04-server-amd64_virtualbox.box))
+* VirtualBox Guest Additions 4.3.10
+* Chef 11.12.2-1
+* Ruby 1.9.3.484
+* Rubygems 2.2.2
+
 #### Ubuntu Saucy Salamander 13.1x
 ##### Ubuntu Saucy Salamander 13.10 Server x86_64 ([ffuenf/ubuntu-13.10-server-amd64](https://www.vagrantcloud.com/ffuenf/ubuntu-13.10-server-amd64) / [ubuntu-13.10-server-amd64_vmware.box](https://googledrive.com/host/0B83ZToJ3fGtDcVBKLU1HNTR1bXc/ubuntu-13.10-server-amd64_vmware.box))
 * VMware Tools 9.6.1

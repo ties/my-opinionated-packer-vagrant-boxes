@@ -2,6 +2,9 @@
 
 This file is used to list changes made in each version of vagrant-boxes.
 
+## 0.0.22:
+* added Ubuntu Trusty Tahr 14.04 Server x86_64
+
 ## 0.0.21:
 * upgrade to Chef 11.12.2-1
 * add optional scripts for [packer](http://www.packer.io), [serf](http://www.serfdom.io) and [docker](http://www.docker.io)
