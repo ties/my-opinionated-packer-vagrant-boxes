@@ -42,8 +42,8 @@
       "type": "virtualbox-iso",
       "vm_name": "ubuntu-13.10-server-amd64",
       "vboxmanage": [
-        ["modifyvm", "{{.Name}}", "--memory", "256"],
-        ["modifyvm", "{{.Name}}", "--cpus", "1"]
+        ["modifyvm", "{{.Name}}", "--memory", "384"],
+        ["modifyvm", "{{.Name}}", "--cpus", "2"]
       ],
       "virtualbox_version_file": ".vbox_version"
     },
@@ -90,8 +90,8 @@
       "vm_name": "ubuntu-13.10-server-amd64",
       "vmx_data": {
         "cpuid.coresPerSocket": "1",
-        "memsize": "256",
-        "numvcpus": "1"
+        "memsize": "384",
+        "numvcpus": "2"
       }
     }
   ],
