@@ -79,6 +79,21 @@ Boxes
 
 ### Debian
 #### Debian Wheezy 7.x
+
+##### Debian Wheezy 7.5.0 x86_64 ([ffuenf/debian-7.5.0-amd64](https://www.vagrantcloud.com/ffuenf/debian-7.5.0-amd64) / [debian-7.5.0-amd64_vmware.box](https://googledrive.com/host/0B83ZToJ3fGtDVC1DeVVzc3lkc0U/debian-7.5.0-amd64_vmware.box)
+* VMware Tools 9.6.2
+* Chef 11.12.2-1
+* Ruby 1.9.3.194-8.1+deb7u2
+* Rubygems 2.2.2
+
+##### Debian Wheezy 7.5.0 x86_64 ([ffuenf/debian-7.5.0-amd64](https://www.vagrantcloud.com/ffuenf/debian-7.5.0-amd64) / [debian-7.5.0-amd64_virtualbox.box](https://googledrive.com/host/0B83ZToJ3fGtDVC1DeVVzc3lkc0U/debian-7.5.0-amd64_virtualbox.box)
+* VirtualBox Guest Additions 4.3.10
+* Chef 11.12.2-1
+* Ruby 1.9.3.194-8.1+deb7u2
+* Rubygems 2.2.2
+
+---
+
 ##### Debian Wheezy 7.4.0 x86_64 ([ffuenf/debian-7.4.0-amd64](https://www.vagrantcloud.com/ffuenf/debian-7.4.0-amd64) / [debian-7.4.0-amd64_vmware.box](https://googledrive.com/host/0B83ZToJ3fGtDVC1DeVVzc3lkc0U/debian-7.4.0-amd64_vmware.box))
 * VMware Tools 9.6.2
 * Chef 11.12.2-1

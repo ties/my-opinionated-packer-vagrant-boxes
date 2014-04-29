@@ -2,6 +2,9 @@
 
 This file is used to list changes made in each version of vagrant-boxes.
 
+## 0.0.23:
+* added Debian Wheezy 7.5.0 x86_64
+
 ## 0.0.22:
 * added Ubuntu Trusty Tahr 14.04 Server x86_64
 
