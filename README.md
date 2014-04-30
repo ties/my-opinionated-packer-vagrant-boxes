@@ -23,13 +23,13 @@ Boxes
 ##### Ubuntu Trusty Tahr 14.04 Server x86_64 ([ffuenf/ubuntu-14.04-server-amd64](https://www.vagrantcloud.com/ffuenf/ubuntu-14.04-server-amd64) / [ubuntu-14.04-server-amd64_vmware.box](https://googledrive.com/host/0B83ZToJ3fGtDMFFNbnFsVjVKVmc/ubuntu-14.04-server-amd64_vmware.box))
 * VMware Tools 9.6.2
 * Chef 11.12.2-1
-* Ruby 1.9.3.484
+* Ruby 1.9.3.484-2
 * Rubygems 2.2.2
 
 ##### Ubuntu Trusty Tahr 14.04 Server x86_64 ([ffuenf/ubuntu-14.04-server-amd64](https://www.vagrantcloud.com/ffuenf/ubuntu-14.04-server-amd64) / [ubuntu-14.04-server-amd64_virtualbox.box](https://googledrive.com/host/0B83ZToJ3fGtDMFFNbnFsVjVKVmc/ubuntu-14.04-server-amd64_virtualbox.box))
 * VirtualBox Guest Additions 4.3.10
 * Chef 11.12.2-1
-* Ruby 1.9.3.484
+* Ruby 1.9.3.484-2
 * Rubygems 2.2.2
 
 #### Ubuntu Saucy Salamander 13.1x
@@ -45,14 +45,14 @@ Boxes
 * Ruby 1.9.3.194-8.1ubuntu2.1
 * Rubygems 2.2.2
 
-#### Ubuntu Raring Ringtail 13.x
-##### Ubuntu Raring Ringtail 13.04 Server x86_64 ([ffuenf/ubuntu-13.04-server-amd64](https://www.vagrantcloud.com/ffuenf/ubuntu-13.04-server-amd64) / [ubuntu-13.04-server-amd64_vmware.box](https://googledrive.com/host/0B83ZToJ3fGtDMHNUc25jZkR2OWc/ubuntu-13.04-server-amd64_vmware.box))
+#### Ubuntu Raring Ringtail 13.x (DEPRECIATED!)
+##### Ubuntu Raring Ringtail 13.04 Server x86_64 (DEPRECIATED!) ([ffuenf/ubuntu-13.04-server-amd64](https://www.vagrantcloud.com/ffuenf/ubuntu-13.04-server-amd64) / [ubuntu-13.04-server-amd64_vmware.box](https://googledrive.com/host/0B83ZToJ3fGtDMHNUc25jZkR2OWc/ubuntu-13.04-server-amd64_vmware.box))
 * VMware Tools 9.6.1
 * Chef 11.12.2-1
 * Ruby 1.9.3.194
 * Rubygems 2.2.2
 
-##### Ubuntu Raring Ringtail 13.04 Server x86_64 ([ffuenf/ubuntu-13.04-server-amd64](https://www.vagrantcloud.com/ffuenf/ubuntu-13.04-server-amd64) / [ubuntu-13.04-server-amd64_virtualbox.box](https://googledrive.com/host/0B83ZToJ3fGtDMHNUc25jZkR2OWc/ubuntu-13.04-server-amd64_virtualbox.box))
+##### Ubuntu Raring Ringtail 13.04 Server x86_64 (DEPRECIATED!) ([ffuenf/ubuntu-13.04-server-amd64](https://www.vagrantcloud.com/ffuenf/ubuntu-13.04-server-amd64) / [ubuntu-13.04-server-amd64_virtualbox.box](https://googledrive.com/host/0B83ZToJ3fGtDMHNUc25jZkR2OWc/ubuntu-13.04-server-amd64_virtualbox.box))
 * VirtualBox Guest Additions 4.3.10
 * Chef 11.12.2-1
 * Ruby 1.9.3.194
@@ -60,15 +60,15 @@ Boxes
 
 ---
 
-#### Ubuntu Precise Pangolin 12.x
-##### Ubuntu Precise Pangolin 12.04.4 LTS Server x86_64
+#### Ubuntu Precise Pangolin 12.x (DEPRECIATED!)
+##### Ubuntu Precise Pangolin 12.04.4 LTS Server x86_64 (DEPRECIATED!)
 ([ffuenf/ubuntu-12.04.4-server-amd64](https://www.vagrantcloud.com/ffuenf/ubuntu-12.04.4-server-amd64) / [ubuntu-13.04-server-amd64_vmware.box](https://googledrive.com/host/0B83ZToJ3fGtDYng0RGV1NkZSNU0/ubuntu-12.04.4-server-amd64_vmware.box))
 * VMware Tools 9.6.1
 * Chef 11.12.2-1
 * Ruby 1.9.3.0
 * Rubygems 2.2.2
 
-##### Ubuntu Precise Pangolin 12.04.4 LTS Server x86_64 
+##### Ubuntu Precise Pangolin 12.04.4 LTS Server x86_64 (DEPRECIATED!)
 ([ffuenf/ubuntu-12.04.4-server-amd64](https://www.vagrantcloud.com/ffuenf/ubuntu-12.04.4-server-amd64) / [ubuntu-13.04-server-amd64_virtualbox.box](https://googledrive.com/host/0B83ZToJ3fGtDYng0RGV1NkZSNU0/ubuntu-12.04.4-server-amd64_virtualbox.box))
 * VirtualBox Guest Additions 4.3.10
 * Chef 11.12.2-1
@@ -82,25 +82,25 @@ Boxes
 
 ##### Debian Wheezy 7.5.0 x86_64 ([ffuenf/debian-7.5.0-amd64](https://www.vagrantcloud.com/ffuenf/debian-7.5.0-amd64) / [debian-7.5.0-amd64_vmware.box](https://googledrive.com/host/0B83ZToJ3fGtDVC1DeVVzc3lkc0U/debian-7.5.0-amd64_vmware.box)
 * VMware Tools 9.6.2
-* Chef 11.12.2-1
+* Chef 11.12.4-1
 * Ruby 1.9.3.194-8.1+deb7u2
 * Rubygems 2.2.2
 
 ##### Debian Wheezy 7.5.0 x86_64 ([ffuenf/debian-7.5.0-amd64](https://www.vagrantcloud.com/ffuenf/debian-7.5.0-amd64) / [debian-7.5.0-amd64_virtualbox.box](https://googledrive.com/host/0B83ZToJ3fGtDVC1DeVVzc3lkc0U/debian-7.5.0-amd64_virtualbox.box)
 * VirtualBox Guest Additions 4.3.10
-* Chef 11.12.2-1
+* Chef 11.12.4-1
 * Ruby 1.9.3.194-8.1+deb7u2
 * Rubygems 2.2.2
 
 ---
 
-##### Debian Wheezy 7.4.0 x86_64 ([ffuenf/debian-7.4.0-amd64](https://www.vagrantcloud.com/ffuenf/debian-7.4.0-amd64) / [debian-7.4.0-amd64_vmware.box](https://googledrive.com/host/0B83ZToJ3fGtDVC1DeVVzc3lkc0U/debian-7.4.0-amd64_vmware.box))
+##### Debian Wheezy 7.4.0 x86_64 (DEPRECIATED!) ([ffuenf/debian-7.4.0-amd64](https://www.vagrantcloud.com/ffuenf/debian-7.4.0-amd64) / [debian-7.4.0-amd64_vmware.box](https://googledrive.com/host/0B83ZToJ3fGtDVC1DeVVzc3lkc0U/debian-7.4.0-amd64_vmware.box))
 * VMware Tools 9.6.2
 * Chef 11.12.2-1
 * Ruby 1.9.3.194-8.1+deb7u2
 * Rubygems 2.2.2
 
-##### Debian Wheezy 7.4.0 x86_64 ([ffuenf/debian-7.4.0-amd64](https://www.vagrantcloud.com/ffuenf/debian-7.4.0-amd64) / [debian-7.4.0-amd64_virtualbox.box](https://googledrive.com/host/0B83ZToJ3fGtDVC1DeVVzc3lkc0U/debian-7.4.0-amd64_virtualbox.box))
+##### Debian Wheezy 7.4.0 x86_64 (DEPRECIATED!) ([ffuenf/debian-7.4.0-amd64](https://www.vagrantcloud.com/ffuenf/debian-7.4.0-amd64) / [debian-7.4.0-amd64_virtualbox.box](https://googledrive.com/host/0B83ZToJ3fGtDVC1DeVVzc3lkc0U/debian-7.4.0-amd64_virtualbox.box))
 * VirtualBox Guest Additions 4.3.10
 * Chef 11.12.2-1
 * Ruby 1.9.3.194-8.1+deb7u2
@@ -110,9 +110,9 @@ Boxes
 
 #### Debian Squeeze 6.x
 ##### Debian Squeeze 6.0.9 x86_64 ([ffuenf/debian-6.0.9-amd64](https://www.vagrantcloud.com/ffuenf/debian-6.0.9-amd64) / [debian-6.0.9-amd64_vmware.box](https://googledrive.com/host/0B83ZToJ3fGtDeE9KWm1sWndZdGs/debian-6.0.9-amd64_vmware.box))
-* VMware Tools 9.6.1
-* Chef 11.12.2-1
-* Ruby 1.9.3.194
+* VMware Tools 9.6.2
+* Chef 11.12.4-1
+* Ruby 1.9.2.0-2+deb6u2
 * Rubygems 2.2.2
 
 ---
@@ -120,8 +120,8 @@ Boxes
 ##### Debian Squeeze 6.0.9 x86_64
 ([ffuenf/debian-6.0.9-amd64](https://www.vagrantcloud.com/ffuenf/debian-6.0.9-amd64) / [debian-6.0.9-amd64_virtualbox.box](https://googledrive.com/host/0B83ZToJ3fGtDeE9KWm1sWndZdGs/debian-6.0.9-amd64_virtualbox.box))
 * VirtualBox Guest Additions 4.3.10
-* Chef 11.12.2-1
-* Ruby 1.9.3.194
+* Chef 11.12.4-1
+* Ruby 1.9.2.0-2+deb6u2
 * Rubygems 2.2.2
 
 ---

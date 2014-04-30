@@ -2,6 +2,13 @@
 
 This file is used to list changes made in each version of vagrant-boxes.
 
+## 0.0.24:
+* upgrade to Chef 11.12.4-1
+* Update vagrant.sh to handle redirection at github [#10]
+* depreciate Debian Wheezy 7.4.0 x86_64
+* depreciate Ubuntu Raring Ringtail 13.04 Server x86_64
+* depreciate Ubuntu Precise Pangolin 12.04.4 LTS Server x86_64
+
 ## 0.0.23:
 * added Debian Wheezy 7.5.0 x86_64
 
