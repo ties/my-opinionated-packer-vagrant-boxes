@@ -2,6 +2,9 @@
 
 This file is used to list changes made in each version of vagrant-boxes.
 
+## 0.0.25:
+* addressing [CVE-2014-0196](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2014-0196) on prebuild boxes
+
 ## 0.0.24:
 * upgrade to Chef 11.12.4-1
 * Update vagrant.sh to handle redirection at github [#10]
