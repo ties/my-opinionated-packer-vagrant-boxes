@@ -2,6 +2,11 @@
 
 This file is used to list changes made in each version of vagrant-boxes.
 
+## 0.0.26:
+* addressing [CVE-2014-0224 / CVE-2014-0221 / CVE-2014-0195 / CVE-2014-0198 / CVE-2010-5298 / CVE-2014-3470](https://www.openssl.org/news/secadv_20140605.txt) on prebuild boxes
+* upgrade Chef 11.12.8-1
+* upgrade VirtualBox Guest Additions 4.3.12
+
 ## 0.0.25:
 * addressing [CVE-2014-0196](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2014-0196) on prebuild boxes
 
