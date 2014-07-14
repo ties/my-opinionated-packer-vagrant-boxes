@@ -2,6 +2,11 @@
 
 This file is used to list changes made in each version of vagrant-boxes.
 
+## 0.0.27:
+* added Debian Wheezy 7.6.0 x86_64
+* upgrade Chef 11.12.8-2
+* upgrade Rubygems 2.3.0
+
 ## 0.0.26:
 * addressing [CVE-2014-0224 / CVE-2014-0221 / CVE-2014-0195 / CVE-2014-0198 / CVE-2010-5298 / CVE-2014-3470](https://www.openssl.org/news/secadv_20140605.txt) on prebuild boxes
 * upgrade Chef 11.12.8-1
