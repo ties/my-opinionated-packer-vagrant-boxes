@@ -2,6 +2,9 @@
 
 This file is used to list changes made in each version of vagrant-boxes.
 
+## 0.0.28:
+* upgrade Debian Squeeze 6.0.9 x86_64 to Debian Squeeze 6.0.10 x86_64
+
 ## 0.0.27:
 * added Debian Wheezy 7.6.0 x86_64
 * upgrade Chef 11.12.8-2
