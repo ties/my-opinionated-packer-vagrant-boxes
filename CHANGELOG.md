@@ -2,6 +2,9 @@
 
 This file is used to list changes made in each version of vagrant-boxes.
 
+## 0.0.29:
+* upgrade Ubuntu Trusty Tahr 14.04.1 Server x86_64
+
 ## 0.0.28:
 * upgrade Debian Squeeze 6.0.9 x86_64 to Debian Squeeze 6.0.10 x86_64
 
