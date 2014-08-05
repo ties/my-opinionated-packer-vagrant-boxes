@@ -3,6 +3,10 @@
 This file is used to list changes made in each version of vagrant-boxes.
 
 ## 0.0.29:
+* upgrade Chef 11.14.2-1
+* upgrade Rubygems 2.4.1
+
+## 0.0.29:
 * upgrade Ubuntu Trusty Tahr 14.04.1 Server x86_64
 
 ## 0.0.28:
