@@ -2,9 +2,17 @@
 
 This file is used to list changes made in each version of vagrant-boxes.
 
-## 0.0.29:
+## 0.0.33:
+* upgrade Chef 11.16.0-1
+* upgrade VMware Tools 9.8.3
+* upgrade VirtualBox Guest Additions 4.3.14
+* upgrade packer 0.6.1
+* depreciate Debian Wheezy 7.5.0 x86_64
+
+## 0.0.32:
 * upgrade Chef 11.14.2-1
 * upgrade Rubygems 2.4.1
+* install rsync by default
 
 ## 0.0.29:
 * upgrade Ubuntu Trusty Tahr 14.04.1 Server x86_64

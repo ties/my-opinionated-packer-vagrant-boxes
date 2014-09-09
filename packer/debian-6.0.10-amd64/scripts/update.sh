@@ -5,3 +5,6 @@ apt-get -y upgrade
 
 # install curl to fix broken wget while retrieving content from secured sites
 apt-get -y install curl
+
+# install rsync
+apt-get -y install rsync

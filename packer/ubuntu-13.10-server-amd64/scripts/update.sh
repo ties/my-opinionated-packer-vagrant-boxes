@@ -9,6 +9,9 @@ apt-get -y install linux-headers-$(uname -r)
 # install curl to fix broken wget while retrieving content from secured sites
 apt-get -y install curl
 
+# install rsync
+apt-get -y install rsync
+
 # update package index on boot
 cat <<EOF > /etc/init/refresh-apt.conf
 description "update package index"
