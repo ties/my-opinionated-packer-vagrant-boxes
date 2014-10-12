@@ -2,6 +2,10 @@
 
 This file is used to list changes made in each version of vagrant-boxes.
 
+## 0.0.36:
+* upgrade Rubygems 2.4.2
+* upgrade Chef 11.16.4-1
+
 ## 0.0.35:
 * mitigate USN-2362-1 / DSA 3032-1 aka Shellshock
 

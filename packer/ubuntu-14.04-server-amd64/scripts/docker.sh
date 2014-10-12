@@ -11,3 +11,5 @@ apt-get install -q -y --force-yes lxc-docker
 usermod -a -G docker vagrant
 docker version
 su - vagrant -c 'echo alias d=docker >> ~/.bash_aliases'
+ln -sf /usr/bin/docker.io /usr/local/bin/docker
+sed -i '$acomplete -F _docker docker' /etc/bash_completion.d/docker.io
