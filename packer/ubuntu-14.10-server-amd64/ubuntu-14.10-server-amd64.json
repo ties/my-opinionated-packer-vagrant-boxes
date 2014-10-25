@@ -1,6 +1,6 @@
 {
   "variables": {
-    "BOX_NAME": "ubuntu-13.10-server-amd64",
+    "BOX_NAME": "ubuntu-14.10-server-amd64",
     "VC_VERSION": "0.0.37",
     "AWS_ACCESS_KEY_ID": "{{env `AWS_ACCESS_KEY_ID`}}",
     "AWS_SECRET_ACCESS_KEY": "{{env `AWS_SECRET_ACCESS_KEY`}}"
@@ -37,9 +37,9 @@
       "guest_additions_path": "VBoxGuestAdditions_{{.Version}}.iso",
       "guest_os_type": "Ubuntu_64",
       "http_directory": "http",
-      "iso_checksum": "2bead0f1f451734461ff88f913f4b02ba9e873b15f097a5c231bdb3763ea42e3",
+      "iso_checksum": "f79edea19575e2cabb5ff9aeca787ea821fcfdbf81ce89823c26b020d9940956",
       "iso_checksum_type": "sha256",
-      "iso_url": "http://releases.ubuntu.com/13.10/{{ user `BOX_NAME` }}.iso",
+      "iso_url": "http://releases.ubuntu.com/14.10/{{ user `BOX_NAME` }}.iso",
       "shutdown_command": "echo 'vagrant'|sudo -S shutdown -P now",
       "ssh_password": "vagrant",
       "ssh_port": 22,
@@ -83,9 +83,9 @@
       "guest_os_type": "ubuntu-64",
       "headless": false,
       "http_directory": "http",
-      "iso_checksum": "2bead0f1f451734461ff88f913f4b02ba9e873b15f097a5c231bdb3763ea42e3",
+      "iso_checksum": "f79edea19575e2cabb5ff9aeca787ea821fcfdbf81ce89823c26b020d9940956",
       "iso_checksum_type": "sha256",
-      "iso_url": "http://releases.ubuntu.com/13.10/{{ user `BOX_NAME` }}.iso",
+      "iso_url": "http://releases.ubuntu.com/14.10/{{ user `BOX_NAME` }}.iso",
       "shutdown_command": "echo 'vagrant'|sudo -S shutdown -P now",
       "ssh_password": "vagrant",
       "ssh_port": 22,
@@ -127,9 +127,9 @@
       },
       {
         "type": "vagrant-s3",
-        "bucket": "ffuenf-vagrantboxes",
+        "bucket": "ffuenf-vagrant-boxes",
         "manifest": "ubuntu/{{ user `BOX_NAME` }}.manifest.json",
-        "box_name": "ubuntu-13.10-server-amd64",
+        "box_name": "{{ user `BOX_NAME` }}",
         "box_dir": "debian",
         "version": "{{ user `VC_VERSION` }}",
         "access_key": "{{ user `AWS_ACCESS_KEY_ID` }}",

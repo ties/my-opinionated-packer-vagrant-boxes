@@ -2,6 +2,12 @@
 
 This file is used to list changes made in each version of vagrant-boxes.
 
+## 0.0.37:
+* added Ubuntu Utopic Unicorn 14.10 Server x86_64
+* added Debian Wheezy 7.7.0 x86_64
+* bump version naming for Ubuntu Trusty Tahr 14.04.1 Server x86_64
+* add hosting on Amazon S3 eu-central-1 (Frankfurt)
+
 ## 0.0.36:
 * upgrade Rubygems 2.4.2
 * upgrade Chef 11.16.4-1

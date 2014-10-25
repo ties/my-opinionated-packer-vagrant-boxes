@@ -1,6 +1,7 @@
 {
   "variables": {
-    "VC_VERSION": "0.0.36",
+    "BOX_NAME": "ubuntu-14.04.1-server-amd64",
+    "VC_VERSION": "0.0.37",
     "AWS_ACCESS_KEY_ID": "{{env `AWS_ACCESS_KEY_ID`}}",
     "AWS_SECRET_ACCESS_KEY": "{{env `AWS_SECRET_ACCESS_KEY`}}"
   },
@@ -38,14 +39,14 @@
       "http_directory": "http",
       "iso_checksum": "946a6077af6f5f95a51f82fdc44051c7aa19f9cfc5f737954845a6050543d7c2",
       "iso_checksum_type": "sha256",
-      "iso_url": "http://releases.ubuntu.com/14.04.1/ubuntu-14.04.1-server-amd64.iso",
+      "iso_url": "http://releases.ubuntu.com/14.04.1/{{ user `BOX_NAME` }}.iso",
       "shutdown_command": "echo 'vagrant'|sudo -S shutdown -P now",
       "ssh_password": "vagrant",
       "ssh_port": 22,
       "ssh_username": "vagrant",
       "ssh_wait_timeout": "10000s",
       "type": "virtualbox-iso",
-      "vm_name": "ubuntu-14.04.1-server-amd64",
+      "vm_name": "{{ user `BOX_NAME` }}",
       "vboxmanage": [
         ["modifyvm", "{{.Name}}", "--memory", "384"],
         ["modifyvm", "{{.Name}}", "--cpus", "2"]
@@ -84,7 +85,7 @@
       "http_directory": "http",
       "iso_checksum": "946a6077af6f5f95a51f82fdc44051c7aa19f9cfc5f737954845a6050543d7c2",
       "iso_checksum_type": "sha256",
-      "iso_url": "http://releases.ubuntu.com/14.04.1/ubuntu-14.04.1-server-amd64.iso",
+      "iso_url": "http://releases.ubuntu.com/14.04.1/{{ user `BOX_NAME` }}.iso",
       "shutdown_command": "echo 'vagrant'|sudo -S shutdown -P now",
       "ssh_password": "vagrant",
       "ssh_port": 22,
@@ -92,7 +93,7 @@
       "ssh_wait_timeout": "10000s",
       "tools_upload_flavor": "linux",
       "type": "vmware-iso",
-      "vm_name": "ubuntu-14.04.1-server-amd64",
+      "vm_name": "{{ user `BOX_NAME` }}",
       "vmx_data": {
         "cpuid.coresPerSocket": "1",
         "memsize": "384",
@@ -122,13 +123,13 @@
       {
         "type": "vagrant",
         "compression_level": "9",
-        "output": "ubuntu-14.04.1-server-amd64_{{.Provider}}.box"
+        "output": "{{ user `BOX_NAME` }}_{{.Provider}}.box"
       },
       {
         "type": "vagrant-s3",
         "bucket": "ffuenf-vagrant-boxes",
-        "manifest": "ubuntu/ubuntu-14.04.1-server-amd64.manifest.json",
-        "box_name": "ubuntu-14.04.1-server-amd64",
+        "manifest": "ubuntu/{{ user `BOX_NAME` }}.manifest.json",
+        "box_name": "{{ user `BOX_NAME` }}",
         "box_dir": "debian",
         "version": "{{ user `VC_VERSION` }}",
         "access_key": "{{ user `AWS_ACCESS_KEY_ID` }}",
