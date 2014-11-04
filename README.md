@@ -26,6 +26,43 @@ Tools
 * [AWS Command Line Interface](http://aws.amazon.com/cli/)
 * [Thor](http://whatisthor.com/)
 
+Usage
+=====
+
+Make sure you have the above tools installed.
+
+The following env vars must be present:
+* `PACKER_VC_TOKEN` Vagrantcloud API Token
+* `AWS_ACCESS_KEY_ID` Amazon Webservices KEY-ID
+* `AWS_SECRET_ACCESS_KEY` Amazon Webservices ACCESS-KEY
+
+You have to adjust the Thorfile line 50 to match your own S3 bucket.
+
+run the following command to build/upload individual boxes:
+```
+$ bundle exec thor packer:build \
+  --gh_version=1.0.0 \                    # Github version tag
+  --vc_version=7 \                        # Vagrantcloud internal version
+  --os=debian \                           # os distribution (debian/ubuntu)
+  --os_version=6.0.10 \                   # os version
+  --providers=virtualbox,vmware,parallels # providers to build
+```
+
+run the following command to build/upload ALL boxes sequentially:
+```
+$ ./build_boxes.sh
+```
+
+run the following command to delete temporary artifacts
+```
+$ bundle exec thor packer:clean cache
+```
+
+run the following command to delete all local box files
+```
+$ bundle exec thor packer:clean boxes
+```
+
 Boxes
 =====
 
@@ -144,7 +181,7 @@ Boxes
 ---
 
 Testing
--------
+=======
 
 The following Thor tasks are provided for automated testing of the cookbook:
 
