@@ -2,6 +2,16 @@
 
 This file is used to list changes made in each version of vagrant-boxes.
 
+## v1.0.1:
+* upgrade VMware Tools 9.9.0
+* upgrade VirtualBox Guest Additions 4.3.20
+* upgrade Rubygems 2.4.5
+* upgrade Chef 12.0.1-1
+* upgrade packer 0.7.5
+* move Vagrantcloud/Atlas logic to Thor (remove post-processor)
+* Vagrantcloud is now Atlas
+* getchef.com is now chef.io
+
 ## v1.0.0:
 * upgrade VMware Tools 9.8.4
 * upgrade VirtualBox Guest Additions 4.3.18

@@ -2,7 +2,7 @@
 
 apt-get -q -y install unzip
 
-packer_version=0.7.2
+packer_version=0.7.5
 wget -q "https://dl.bintray.com/mitchellh/packer/${packer_version}_linux_amd64.zip" \
      -O /tmp/packer-${packer_version}.zip
 (cd /tmp && unzip -o -qq packer-$packer_version.zip -d /usr/local/bin/)
