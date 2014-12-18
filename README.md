@@ -71,7 +71,7 @@ Boxes
 * VMware Tools 9.9.0
 * VirtualBox Guest Additions 4.3.20
 * Parallels Guest Tools
-* Chef 12.0.1-1
+* Chef 12.0.3-1
 * Ruby 1.9.3.194-8.1ubuntu2.1
 * Rubygems 2.4.5
 
@@ -89,7 +89,7 @@ Boxes
 * VMware Tools 9.9.0
 * VirtualBox Guest Additions 4.3.20
 * Parallels Guest Tools
-* Chef 12.0.1-1
+* Chef 12.0.3-1
 * Ruby 1.9.3.484-2
 * Rubygems 2.4.5
 
@@ -108,7 +108,7 @@ Boxes
 * VMware Tools 9.9.0
 * VirtualBox Guest Additions 4.3.20
 * Parallels Guest Tools
-* Chef 12.0.1-1
+* Chef 12.0.3-1
 * Ruby 1.9.3.194-8.1ubuntu2.1
 * Rubygems 2.4.5
 
@@ -129,7 +129,7 @@ Boxes
 * VMware Tools 9.9.0
 * VirtualBox Guest Additions 4.3.20
 * Parallels Guest Tools
-* Chef 12.0.1-1
+* Chef 12.0.3-1
 * Ruby 1.9.3.194-8.1+deb7u2
 * Rubygems 2.4.5
 
@@ -147,7 +147,7 @@ Boxes
 * VMware Tools 9.9.0
 * VirtualBox Guest Additions 4.3.20
 * Parallels Guest Tools
-* Chef 12.0.1-1
+* Chef 12.0.3-1
 * Ruby 1.9.3.194-8.1+deb7u2
 * Rubygems 2.4.5
 
@@ -166,7 +166,7 @@ Boxes
 * VMware Tools 9.9.0
 * VirtualBox Guest Additions 4.3.20
 * Parallels Guest Tools
-* Chef 12.0.1-1
+* Chef 12.0.3-1
 * Ruby 1.9.2.0-2+deb6u2
 * Rubygems 2.4.5
 
