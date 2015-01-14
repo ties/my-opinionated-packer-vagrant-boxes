@@ -9,13 +9,13 @@ bundle exec thor packer:build \
 bundle exec thor packer:build \
   --atlas_version=1.0.2 \
   --os=debian \
-  --os_version=7.6.0 \
+  --os_version=7.7.0 \
   --providers=virtualbox,vmware,parallels
 
 bundle exec thor packer:build \
-  --atlas_version=1.0.2 \
+  --atlas_version=1.0.3 \
   --os=debian \
-  --os_version=7.7.0 \
+  --os_version=7.8.0 \
   --providers=virtualbox,vmware,parallels
 
 bundle exec thor packer:build \

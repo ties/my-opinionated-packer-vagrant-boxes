@@ -2,6 +2,9 @@
 
 This file is used to list changes made in each version of vagrant-boxes.
 
+## v1.0.3:
+* added Debian Wheezy 7.8.0 x86_64
+
 ## v1.0.2:
 * upgrade Chef 12.0.3-1
 
