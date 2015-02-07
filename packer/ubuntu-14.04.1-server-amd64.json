@@ -158,11 +158,13 @@
       "execute_command": "echo 'vagrant'|{{.Vars}} sudo -S -E bash '{{.Path}}'",
       "scripts": [
         "scripts/update.sh",
+        "scripts/release_specific/trusty_lts_kernel.sh",
         "scripts/sshd.sh",
         "scripts/networking.sh",
         "scripts/sudoers.sh",
         "scripts/vagrant.sh",
         "scripts/vmtools.sh",
+        "scripts/puppet.sh",
         "scripts/ruby.sh",
         "scripts/chef.sh",
         "scripts/cleanup.sh"

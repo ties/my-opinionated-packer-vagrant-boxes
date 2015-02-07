@@ -1,2 +1,5 @@
 packer/packer_cache/
 *.box
+/packer/output*
+/vendor/
+Gemfile.lock

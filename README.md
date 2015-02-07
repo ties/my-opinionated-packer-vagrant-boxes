@@ -1,3 +1,20 @@
+A fork of the ffuenf vagrant boxes with some personal tweaks
+============================================================
+  * Enable puppet
+  * Use lts-generic-utopic kernel on Ubuntu 14.04.1
+  * Use a dutch Ubuntu mirror. Debian should pick the correct mirror by itself.
+
+Also:
+  * Removed the slack notifications for ffuenf.
+
+Build only the Parallels Trusty box:
+====================================
+====================================
+```
+bundle install --path vendor
+bundle exec thor packer:build --os=ubuntu --os_version=14.04.1-server --providers=parallels
+```
+
 vagrant-boxes
 =============
 [![GitHub tag](http://img.shields.io/github/tag/ffuenf/vagrant-boxes.svg)][tag]
