@@ -2,7 +2,9 @@ A fork of the ffuenf vagrant boxes with some personal tweaks
 ============================================================
   * Enable puppet
   * Use lts-generic-utopic kernel on Ubuntu 14.04.1
-  * Use a dutch Ubuntu mirror. Debian should pick the correct mirror by itself.
+  * Use a Dutch Ubuntu mirror. Debian should pick the correct mirror by itself.
+  * Enable ACL's on the filesystem and use the discard flag
+  * `/tmp` on tmpfs
 
 Also:
   * Removed the slack notifications for ffuenf.

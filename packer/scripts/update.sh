@@ -19,3 +19,6 @@ apt-get -y install curl
 
 # install rsync
 apt-get -y install rsync
+
+# install ACL utilities
+apt-get install -y acl

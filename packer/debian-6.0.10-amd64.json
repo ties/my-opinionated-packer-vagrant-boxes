@@ -135,6 +135,7 @@
       "type": "shell",
       "execute_command": "echo 'vagrant' | {{.Vars}} sudo -E -S bash '{{.Path}}'",
       "scripts": [
+        "scripts/filesystem.sh",
         "scripts/update.sh",
         "scripts/sshd.sh",
         "scripts/networking.sh",
