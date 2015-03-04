@@ -2,6 +2,14 @@
 
 This file is used to list changes made in each version of vagrant-boxes.
 
+## v1.0.4:
+* update Ubuntu Trusty Tahr 14.04.2 Server x86_64
+* upgrade VirtualBox Guest Additions 4.3.22
+* upgrade Chef 12.1.0-1
+* upgrade Rubygems 2.4.6
+* upgrade serf 0.6.4
+* depreciate Debian Wheezy 7.6.0 x86_64
+
 ## v1.0.3:
 * added Debian Wheezy 7.8.0 x86_64
 
