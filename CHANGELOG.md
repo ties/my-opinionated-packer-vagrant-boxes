@@ -2,6 +2,10 @@
 
 This file is used to list changes made in each version of vagrant-boxes.
 
+## v1.0.5:
+* upgrade VirtualBox Guest Additions 4.3.24
+* upgrade Chef 12.1.1-1
+
 ## v1.0.4:
 * update Ubuntu Trusty Tahr 14.04.2 Server x86_64
 * upgrade VirtualBox Guest Additions 4.3.22

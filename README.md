@@ -69,9 +69,9 @@ Boxes
 #### Ubuntu Utopic Unicorn 14.10 Server x86_64
 
 * VMware Tools 9.9.0
-* VirtualBox Guest Additions 4.3.22
+* VirtualBox Guest Additions 4.3.24
 * Parallels Guest Tools
-* Chef 12.1.0-1
+* Chef 12.1.1-1
 * Ruby 1.9.3.194-8.1ubuntu2.1
 * Rubygems 2.4.6
 
@@ -87,9 +87,9 @@ Boxes
 #### Ubuntu Trusty Tahr 14.04.2 Server x86_64
 
 * VMware Tools 9.9.0
-* VirtualBox Guest Additions 4.3.22
+* VirtualBox Guest Additions 4.3.24
 * Parallels Guest Tools
-* Chef 12.1.0-1
+* Chef 12.1.1-1
 * Ruby 1.9.3.484-2
 * Rubygems 2.4.6
 
@@ -106,9 +106,9 @@ Boxes
 ##### Ubuntu Saucy Salamander 13.10 Server x86_64
 
 * VMware Tools 9.9.0
-* VirtualBox Guest Additions 4.3.22
+* VirtualBox Guest Additions 4.3.24
 * Parallels Guest Tools
-* Chef 12.1.0-1
+* Chef 12.1.1-1
 * Ruby 1.9.3.194-8.1ubuntu2.1
 * Rubygems 2.4.6
 
@@ -127,9 +127,9 @@ Boxes
 ##### Debian Wheezy 7.8.0 x86_64
 
 * VMware Tools 9.9.0
-* VirtualBox Guest Additions 4.3.22
+* VirtualBox Guest Additions 4.3.24
 * Parallels Guest Tools
-* Chef 12.1.0-1
+* Chef 12.1.1-1
 * Ruby 1.9.3.194-8.1+deb7u2
 * Rubygems 2.4.6
 
@@ -145,9 +145,9 @@ Boxes
 ##### Debian Wheezy 7.7.0 x86_64
 
 * VMware Tools 9.9.0
-* VirtualBox Guest Additions 4.3.22
+* VirtualBox Guest Additions 4.3.24
 * Parallels Guest Tools
-* Chef 12.1.0-1
+* Chef 12.1.1-1
 * Ruby 1.9.3.194-8.1+deb7u2
 * Rubygems 2.4.6
 
@@ -164,9 +164,9 @@ Boxes
 ##### Debian Squeeze 6.0.10 x86_64
 
 * VMware Tools 9.9.0
-* VirtualBox Guest Additions 4.3.22
+* VirtualBox Guest Additions 4.3.24
 * Parallels Guest Tools
-* Chef 12.1.0-1
+* Chef 12.1.1-1
 * Ruby 1.9.2.0-2+deb6u2
 * Rubygems 2.4.6
 
