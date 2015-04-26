@@ -66,6 +66,24 @@ Boxes
 =====
 
 ### Ubuntu
+#### Ubuntu Vivid Vervet 15.04Server x86_64
+
+* VMware Tools 9.9.0
+* VirtualBox Guest Additions 4.3.26
+* Parallels Guest Tools
+* Chef 12.2.1-1
+* Ruby 1.9.3.194-8.1ubuntu2.1
+* Rubygems 2.4.6
+
+| Provider      | URL                                                                                                                                                                                                                                                                                                                                                                                                             |
+| ------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Atlas         | [ffuenf/ubuntu-15.04-server-amd64](https://atlas.hashicorp.com/ffuenf/ubuntu-15.04-server-amd64)                                                                                                                                                                                                                                                                                                                |
+| Virtualbox    | [ubuntu-15.04-server-amd64_virtualbox.box](https://s3.eu-central-1.amazonaws.com/ffuenf-vagrantboxes/ubuntu/ubuntu-15.04-server-amd64_virtualbox.box) [SHA256SUM](https://s3.eu-central-1.amazonaws.com/ffuenf-vagrantboxes/ubuntu/ubuntu-15.04-server-amd64_virtualbox_SHA256SUM) [SHA512SUM](https://s3.eu-central-1.amazonaws.com/ffuenf-vagrantboxes/ubuntu/ubuntu-15.04-server-amd64_virtualbox_SHA512SUM) |
+| VMWare Fusion | [ubuntu-15.04-server-amd64_vmware.box](https://s3.eu-central-1.amazonaws.com/ffuenf-vagrantboxes/ubuntu/ubuntu-15.04-server-amd64_vmware.box) [SHA256SUM](https://s3.eu-central-1.amazonaws.com/ffuenf-vagrantboxes/ubuntu/ubuntu-15.04-server-amd64_vmware_SHA256SUM) [SHA512SUM](https://s3.eu-central-1.amazonaws.com/ffuenf-vagrantboxes/ubuntu/ubuntu-15.04-server-amd64_vmware_SHA512SUM)                 |
+| Parallels     | [ubuntu-15.04-server-amd64_parallels.box](https://s3.eu-central-1.amazonaws.com/ffuenf-vagrantboxes/ubuntu/ubuntu-15.04-server-amd64_parallels.box) [SHA256SUM](https://s3.eu-central-1.amazonaws.com/ffuenf-vagrantboxes/ubuntu/ubuntu-15.04-server-amd64_parallels_SHA256SUM) [SHA512SUM](https://s3.eu-central-1.amazonaws.com/ffuenf-vagrantboxes/ubuntu/ubuntu-15.04-server-amd64_parallels_SHA512SUM)     |
+
+---
+
 #### Ubuntu Utopic Unicorn 14.10 Server x86_64
 
 * VMware Tools 9.9.0
@@ -122,6 +140,24 @@ Boxes
 ---
 
 ### Debian
+#### Debian Jessie 8.x
+
+##### Debian Jessie 8.0.0 x86_64
+
+* VMware Tools 9.9.0
+* VirtualBox Guest Additions 4.3.26
+* Parallels Guest Tools
+* Chef 12.2.1-1
+* Ruby 1.9.3.194-8.1+deb7u2
+* Rubygems 2.4.6
+
+| Provider      | URL                                                                                                                                                                                                                                                                                                                                                                                 |
+| ------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Atlas         | [ffuenf/debian-8.0.0-amd64](https://atlas.hashicorp.com/ffuenf/debian-8.0.0-amd64)                                                                                                                                                                                                                                                                                                  |
+| Virtualbox    | [debian-8.0.0-amd64_virtualbox.box](https://s3.eu-central-1.amazonaws.com/ffuenf-vagrantboxes/debian/debian-8.0.0-amd64_virtualbox.box) [SHA256SUM](https://s3.eu-central-1.amazonaws.com/ffuenf-vagrantboxes/debian/debian-8.0.0-amd64_virtualbox_SHA256SUM) [SHA512SUM](https://s3.eu-central-1.amazonaws.com/ffuenf-vagrantboxes/debian/debian-8.0.0-amd64_virtualbox_SHA512SUM) |
+| VMWare Fusion | [debian-8.0.0-amd64_vmware.box](https://s3.eu-central-1.amazonaws.com/ffuenf-vagrantboxes/debian/debian-8.0.0-amd64_vmware.box) [SHA256SUM](https://s3.eu-central-1.amazonaws.com/ffuenf-vagrantboxes/debian/debian-8.0.0-amd64_vmware_SHA256SUM) [SHA512SUM](https://s3.eu-central-1.amazonaws.com/ffuenf-vagrantboxes/debian/debian-8.0.0-amd64_vmware_SHA512SUM)                 |
+| Parallels     | [debian-8.0.0-amd64_parallels.box](https://s3.eu-central-1.amazonaws.com/ffuenf-vagrantboxes/debian/debian-8.0.0-amd64_parallels.box) [SHA256SUM](https://s3.eu-central-1.amazonaws.com/ffuenf-vagrantboxes/debian/debian-8.0.0-amd64_parallels_SHA256SUM) [SHA512SUM](https://s3.eu-central-1.amazonaws.com/ffuenf-vagrantboxes/debian/debian-8.0.0-amd64_parallels_SHA512SUM)     |
+
 #### Debian Wheezy 7.x
 
 ##### Debian Wheezy 7.8.0 x86_64

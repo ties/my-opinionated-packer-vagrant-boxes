@@ -2,6 +2,12 @@
 
 This file is used to list changes made in each version of vagrant-boxes.
 
+## v1.0.7:
+* added Debian Jessie 8.0.0 x86_64
+* added Ubuntu Vivid Vervet 15.04Server x86_64
+* Enable ACL's on the filesystem and use the discard flag (from [ties](https://github.com/ties/my-opinionated-packer-vagrant-boxes))
+* /tmp on tmpfs (from [ties](https://github.com/ties/my-opinionated-packer-vagrant-boxes))
+
 ## v1.0.6:
 * upgrade VirtualBox Guest Additions 4.3.26
 * upgrade Chef 12.2.1-1

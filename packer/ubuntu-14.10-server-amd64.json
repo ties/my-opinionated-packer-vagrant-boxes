@@ -165,6 +165,7 @@
         "scripts/vmtools.sh",
         "scripts/ruby.sh",
         "scripts/chef.sh",
+        "scripts/filesystem.sh",
         "scripts/cleanup.sh"
       ],
       "type": "shell"
