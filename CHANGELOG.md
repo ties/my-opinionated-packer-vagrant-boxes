@@ -2,6 +2,13 @@
 
 This file is used to list changes made in each version of vagrant-boxes.
 
+## v1.0.8:
+* upgrade Chef 12.3.0-1
+* depreciate Debian Wheezy 7.7.0 x86_64
+* depreciate Ubuntu Trusty Tahr 14.04.1 Server x86_64
+* depreciate Ubuntu Saucy Salamander 13.10 Server x86_64
+* revert /tmp on tmpfs from previous version as /tmp may grow above 512M
+
 ## v1.0.7:
 * added Debian Jessie 8.0.0 x86_64
 * added Ubuntu Vivid Vervet 15.04Server x86_64
