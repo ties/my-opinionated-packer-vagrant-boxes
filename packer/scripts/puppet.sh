@@ -9,5 +9,5 @@ dpkg -i puppetlabs-release-${LSB_RELEASE}.deb
 apt-get -y update
 
 # Install puppet/facter
-apt-get -y install puppet facter
+apt-get -y install puppet
 rm -f puppetlabs-release-${LSB_RELEASE}.deb
