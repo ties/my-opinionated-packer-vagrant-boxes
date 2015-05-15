@@ -69,7 +69,7 @@ Boxes
 #### Ubuntu Vivid Vervet 15.04 Server x86_64
 
 * VMware Tools 9.9.0
-* VirtualBox Guest Additions 4.3.26
+* VirtualBox Guest Additions 4.3.28
 * Parallels Guest Tools
 * Chef 12.3.0-1
 * Ruby 1.9.3.194-8.1ubuntu2.1
@@ -87,7 +87,7 @@ Boxes
 #### Ubuntu Utopic Unicorn 14.10 Server x86_64
 
 * VMware Tools 9.9.0
-* VirtualBox Guest Additions 4.3.26
+* VirtualBox Guest Additions 4.3.28
 * Parallels Guest Tools
 * Chef 12.3.0-1
 * Ruby 1.9.3.194-8.1ubuntu2.1
@@ -105,7 +105,7 @@ Boxes
 #### Ubuntu Trusty Tahr 14.04.2 Server x86_64
 
 * VMware Tools 9.9.0
-* VirtualBox Guest Additions 4.3.26
+* VirtualBox Guest Additions 4.3.28
 * Parallels Guest Tools
 * Chef 12.3.0-1
 * Ruby 1.9.3.484-2
@@ -126,7 +126,7 @@ Boxes
 ##### Debian Jessie 8.0.0 x86_64
 
 * VMware Tools 9.9.0
-* VirtualBox Guest Additions 4.3.26
+* VirtualBox Guest Additions 4.3.28
 * Parallels Guest Tools
 * Chef 12.3.0-1
 * Ruby 1.9.3.194-8.1+deb7u2
@@ -144,7 +144,7 @@ Boxes
 ##### Debian Wheezy 7.8.0 x86_64
 
 * VMware Tools 9.9.0
-* VirtualBox Guest Additions 4.3.26
+* VirtualBox Guest Additions 4.3.28
 * Parallels Guest Tools
 * Chef 12.3.0-1
 * Ruby 1.9.3.194-8.1+deb7u2
@@ -163,7 +163,7 @@ Boxes
 ##### Debian Squeeze 6.0.10 x86_64
 
 * VMware Tools 9.9.0
-* VirtualBox Guest Additions 4.3.26
+* VirtualBox Guest Additions 4.3.28
 * Parallels Guest Tools
 * Chef 12.3.0-1
 * Ruby 1.9.2.0-2+deb6u2

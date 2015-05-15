@@ -41,7 +41,7 @@ class Packer < Thor
       templates = Dir.glob("#{options[:os]}-#{options[:os_version]}-amd64.json")
       templates.each do |template|
         name = template.chomp('.json').split('-')
-        system "curl -s \"https://atlas.hashicorp.com/api/v1/box/ffuenf/#{options[:os]}-#{options[:os_version]}-amd64/versions\" -X POST -d version[version]=\"#{options[:atlas_version]}\" -d version[description]=\"### tools\n* VMware Tools 9.9.0\n* Parallels Guest Tools\n* VirtualBox Guest Additions 4.3.26\n* Chef 12.2.1-1\n* Ruby 1.9.3.194-8.1+deb7u2\n* Rubygems 2.4.6\n\r### source\n[packer templates on github](https://github.com/ffuenf/vagrant-boxes)\" -d access_token=\"$PACKER_ATLAS_TOKEN\""
+        system "curl -s \"https://atlas.hashicorp.com/api/v1/box/ffuenf/#{options[:os]}-#{options[:os_version]}-amd64/versions\" -X POST -d version[version]=\"#{options[:atlas_version]}\" -d version[description]=\"### tools\n* VMware Tools 9.9.0\n* Parallels Guest Tools\n* VirtualBox Guest Additions 4.3.28\n* Chef 12.3.0-1\n* Ruby 1.9.3.194-8.1+deb7u2\n* Rubygems 2.4.6\n\r### source\n[packer templates on github](https://github.com/ffuenf/vagrant-boxes)\" -d access_token=\"$PACKER_ATLAS_TOKEN\""
         providers = options[:providers].split(",")
         providers.each do |provider|
           system "packer build --only=#{provider}-iso -var 'PACKER_ATLAS_VERSION=#{options[:atlas_version]}' #{template}"

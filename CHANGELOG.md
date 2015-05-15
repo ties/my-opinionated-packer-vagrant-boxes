@@ -2,6 +2,9 @@
 
 This file is used to list changes made in each version of vagrant-boxes.
 
+## v1.0.9:
+* upgrade VirtualBox Guest Additions 4.3.28
+
 ## v1.0.8:
 * upgrade Chef 12.3.0-1
 * depreciate Debian Wheezy 7.7.0 x86_64
