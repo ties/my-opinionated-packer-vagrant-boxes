@@ -172,7 +172,6 @@
         "scripts/vmtools.sh",
         "scripts/puppet_pc1.sh",
         "scripts/ruby.sh",
-        "scripts/chef.sh",
         "scripts/cleanup.sh"
       ],
       "type": "shell"
