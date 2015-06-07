@@ -149,7 +149,13 @@
       "vm_name": "{{ user `PACKER_BOX_NAME` }}",
       "prlctl": [
         ["set", "{{.Name}}", "--memsize", "2048"],
-        ["set", "{{.Name}}", "--cpus", "2"]
+        ["set", "{{.Name}}", "--cpus", "2"],
+        ["set", "{{.Name}}", "--sh-app-host-to-guest", "off"],
+        ["set", "{{.Name}}", "--sh-app-guest-to-host", "off"],
+        ["set", "{{.Name}}", "--sync-host-printers", "off"],
+        ["set", "{{.Name}}", "--auto-share-camera", "off"],
+        ["set", "{{.Name}}", "--shared-profile", "off"],
+        ["set", "{{.Name}}", "--isolate-vm", "off"]
       ]
     }
   ],
