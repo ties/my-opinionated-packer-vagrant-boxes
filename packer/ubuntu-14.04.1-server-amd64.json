@@ -152,6 +152,9 @@
         ["set", "{{.Name}}", "--cpus", "2"]
         ["set", "{{.Name}}", "--sh-app-host-to-guest", "off"],
         ["set", "{{.Name}}", "--sh-app-guest-to-host", "off"],
+        ["set", "{{.Name}}", "--shared-cloud", "off"],
+        ["set", "{{.Name}}", "--shared-profile", "off"],
+        ["set", "{{.Name}}", "--shared-profile", "off"],
         ["set", "{{.Name}}", "--sync-host-printers", "off"],
         ["set", "{{.Name}}", "--auto-share-camera", "off"],
         ["set", "{{.Name}}", "--shared-profile", "off"],
