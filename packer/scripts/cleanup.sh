@@ -48,10 +48,16 @@ rm -rf /usr/src/vboxguest*
 rm -rf /usr/share/man/??
 rm -rf /usr/share/man/??_*
 
-# Zero out the free space to save space in the final image:
+# Discard flag is enabled, but we did not remount/reboot
+# Zero out the free space to save space in the final image,
 echo "Zeroing device to make space..."
 dd if=/dev/zero of=/EMPTY bs=1M
 rm -f /EMPTY
+
+# Run fstrim 'just to be sure' trim works
+echo "trim + 5 second wait"
+fstrim -a
+sleep 5
 
 # Remove history file
 unset HISTFILE

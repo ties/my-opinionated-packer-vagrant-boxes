@@ -44,7 +44,8 @@ class Packer < Thor
         system "curl -s \"https://atlas.hashicorp.com/api/v1/box/ffuenf/#{options[:os]}-#{options[:os_version]}-amd64/versions\" -X POST -d version[version]=\"#{options[:atlas_version]}\" -d version[description]=\"### tools\n* VMware Tools 9.9.0\n* Parallels Guest Tools\n* VirtualBox Guest Additions 4.3.20\n* Chef 12.0.3-1\n* Ruby 1.9.3.194-8.1+deb7u2\n* Rubygems 2.4.5\n\r### source\n[packer templates on github](https://github.com/ffuenf/vagrant-boxes)\" -d access_token=\"$PACKER_ATLAS_TOKEN\""
         providers = options[:providers].split(",")
         providers.each do |provider|
-          system "packer build --only=#{provider}-iso -var 'PACKER_ATLAS_VERSION=#{options[:atlas_version]}' #{template}"
+	  provider_name = if provider != "qemu" then "#{provider}-iso" else provider end
+          system "packer build --only=#{provider_name} -var 'PACKER_ATLAS_VERSION=#{options[:atlas_version]}' #{template}"
           system "shasum -a 256 ../builds/#{provider}/#{options[:os]}-#{options[:os_version]}-amd64_#{provider}.box > ../builds/#{provider}/#{options[:os]}-#{options[:os_version]}-amd64_#{provider}_SHA256SUM"
           system "shasum -a 512 ../builds/#{provider}/#{options[:os]}-#{options[:os_version]}-amd64_#{provider}.box > ../builds/#{provider}/#{options[:os]}-#{options[:os_version]}-amd64_#{provider}_SHA512SUM"
           system "aws s3 cp ../builds/#{provider}/ s3://ffuenf-vagrantboxes/#{options[:os]}/ --recursive --exclude '*' --include '#{options[:os]}-#{options[:os_version]}-amd64_#{provider}.box' --include '#{options[:os]}-#{options[:os_version]}-amd64_#{provider}_SHA256SUM' --include '#{options[:os]}-#{options[:os_version]}-amd64_#{provider}_SHA512SUM' --profile=vagrantboxes"
