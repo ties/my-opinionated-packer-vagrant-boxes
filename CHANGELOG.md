@@ -2,6 +2,13 @@
 
 This file is used to list changes made in each version of vagrant-boxes.
 
+## v1.0.10:
+* retire Parallels Desktop support
+* added Debian Jessie 8.1.0 x86_64
+* upgrade Chef 12.4.0-1
+* upgrade VMware Tools 9.9.3
+* upgrade Rubygems 2.4.8
+
 ## v1.0.9:
 * upgrade VirtualBox Guest Additions 4.3.28
 
