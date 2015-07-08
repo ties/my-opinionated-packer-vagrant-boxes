@@ -165,6 +165,7 @@
     {
       "type": "qemu",
       "format": "qcow2",
+      "machine_type": "q35",
       "accelerator": "kvm",
       "boot_command": [
         "<esc><wait>",
@@ -194,7 +195,9 @@
       "headless": true,
       "disk_size": 10140,
       "disk_discard": "unmap",
-      "qemuargs": [["-controller", "scsi,model=virtio-scsi"]],
+      "disk_interface": "scsi",
+      "qemuargs": [["-device", "virtio-scsi-pci,id=scsi0"],
+                   ["-device", "virtio-net,netdev=user.0"]],
       "http_directory": "http",
       "iso_checksum": "8acd2f56bfcba2f7ac74a7e4a5e565ce68c024c38525c0285573e41c86ae90c0",
       "iso_checksum_type": "sha256",

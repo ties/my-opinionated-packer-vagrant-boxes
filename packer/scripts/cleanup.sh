@@ -50,13 +50,17 @@ rm -rf /usr/share/man/??_*
 
 # Discard flag is enabled, but we did not remount/reboot
 # Zero out the free space to save space in the final image,
-echo "Zeroing device to make space..."
-dd if=/dev/zero of=/EMPTY bs=1M
-rm -f /EMPTY
+if [ $PACKER_BUILDER_TYPE != 'qemu' ]; then
+	echo "Zeroing device to make space..."
+	dd if=/dev/zero of=/EMPTY bs=1M
+	rm -f /EMPTY
+else
+	echo "Full disk write would expand the QCOW2 image - skipping"
+fi
 
 # Run fstrim 'just to be sure' trim works
 echo "trim + 5 second wait"
-fstrim -a
+fstrim /
 sleep 5
 
 # Remove history file
