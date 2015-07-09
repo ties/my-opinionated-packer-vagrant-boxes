@@ -9,12 +9,18 @@ A fork of the ffuenf vagrant boxes with some personal tweaks
 Also:
   * Removed the slack notifications for ffuenf.
 
+2015-06-27:
+===================================
+===================================
+  * remove many shared folders from Parallels boxes
+  * `libvirt` provider
+
 Build only the Parallels Trusty box:
 ====================================
 ====================================
 ```
 bundle install --path vendor
-bundle exec thor packer:build --os=ubuntu --os_version=14.04.1-server --providers=parallels
+bundle exec thor packer:build --os=ubuntu --os_version=14.04.2-server --providers=parallels
 ```
 
 vagrant-boxes
