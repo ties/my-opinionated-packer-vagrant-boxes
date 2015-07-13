@@ -2,6 +2,10 @@
 
 This file is used to list changes made in each version of vagrant-boxes.
 
+## v1.0.11:
+* upgrade VirtualBox Guest Additions 5.0.0
+* upgrade Chef 12.4.1-1
+
 ## v1.0.10:
 * retire Parallels Desktop support
 * added Debian Jessie 8.1.0 x86_64
