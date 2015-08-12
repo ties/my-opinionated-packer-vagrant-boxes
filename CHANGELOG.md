@@ -2,6 +2,13 @@
 
 This file is used to list changes made in each version of vagrant-boxes.
 
+## v1.0.12:
+* added Ubuntu Trusty Tahr 14.04.3 Server x86_64
+* depreciate Ubuntu Trusty Tahr 14.04.2 Server x86_64
+* fix README (versions)
+* fix preseed of Debian Jessie 8.1.0 x86_64
+* increase disc size of VMs to 25G
+
 ## v1.0.11:
 * upgrade VirtualBox Guest Additions 5.0.0
 * upgrade Chef 12.4.1-1

@@ -67,12 +67,11 @@ Boxes
 ### Ubuntu
 #### Ubuntu Vivid Vervet 15.04 Server x86_64
 
-* VMware Tools 9.9.0
-* VirtualBox Guest Additions 4.3.28
-* Parallels Guest Tools
-* Chef 12.4.0-1
+* VMware Tools 9.9.3
+* VirtualBox Guest Additions 5.0.0
+* Chef 12.4.1-1
 * Ruby 1.9.3.194-8.1ubuntu2.1
-* Rubygems 2.4.6
+* Rubygems 2.4.8
 
 | Provider      | URL                                                                                                                                                                                                                                                                                                                                                                                                             |
 | ------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
@@ -84,12 +83,11 @@ Boxes
 
 #### Ubuntu Utopic Unicorn 14.10 Server x86_64
 
-* VMware Tools 9.9.0
-* VirtualBox Guest Additions 4.3.28
-* Parallels Guest Tools
-* Chef 12.4.0-1
+* VMware Tools 9.9.3
+* VirtualBox Guest Additions 5.0.0
+* Chef 12.4.1-1
 * Ruby 1.9.3.194-8.1ubuntu2.1
-* Rubygems 2.4.6
+* Rubygems 2.4.8
 
 | Provider      | URL                                                                                                                                                                                                                                                                                                                                                                                                             |
 | ------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
@@ -99,20 +97,19 @@ Boxes
 
 ---
 
-#### Ubuntu Trusty Tahr 14.04.2 Server x86_64
+#### Ubuntu Trusty Tahr 14.04.3 Server x86_64
 
-* VMware Tools 9.9.0
-* VirtualBox Guest Additions 4.3.28
-* Parallels Guest Tools
-* Chef 12.4.0-1
+* VMware Tools 9.9.3
+* VirtualBox Guest Additions 5.0.0
+* Chef 12.4.1-1
 * Ruby 1.9.3.484-2
-* Rubygems 2.4.6
+* Rubygems 2.4.8
 
 | Provider      | URL                                                                                                                                                                                                                                                                                                                                                                                                                     |
 | ------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Atlas         | [ffuenf/ubuntu-14.04.2-server-amd64](https://atlas.hashicorp.com/ffuenf/ubuntu-14.04.2-server-amd64)                                                                                                                                                                                                                                                                                                                    |
-| Virtualbox    | [ubuntu-14.04.2-server-amd64_virtualbox.box](https://s3.eu-central-1.amazonaws.com/ffuenf-vagrantboxes/ubuntu/ubuntu-14.04.2-server-amd64_virtualbox.box) [SHA256SUM](https://s3.eu-central-1.amazonaws.com/ffuenf-vagrantboxes/ubuntu/ubuntu-14.04.2-server-amd64_virtualbox_SHA256SUM) [SHA512SUM](https://s3.eu-central-1.amazonaws.com/ffuenf-vagrantboxes/ubuntu/ubuntu-14.04.1-server-amd64_virtualbox_SHA512SUM) |
-| VMWare Fusion | [ubuntu-14.04.2-server-amd64_vmware.box](https://s3.eu-central-1.amazonaws.com/ffuenf-vagrantboxes/ubuntu/ubuntu-14.04.2-server-amd64_vmware.box) [SHA256SUM](https://s3.eu-central-1.amazonaws.com/ffuenf-vagrantboxes/ubuntu/ubuntu-14.04.2-server-amd64_vmware_SHA256SUM) [SHA512SUM](https://s3.eu-central-1.amazonaws.com/ffuenf-vagrantboxes/ubuntu/ubuntu-14.04.1-server-amd64_vmware_SHA512SUM)                 |
+| Atlas         | [ffuenf/ubuntu-14.04.3-server-amd64](https://atlas.hashicorp.com/ffuenf/ubuntu-14.04.3-server-amd64)                                                                                                                                                                                                                                                                                                                    |
+| Virtualbox    | [ubuntu-14.04.3-server-amd64_virtualbox.box](https://s3.eu-central-1.amazonaws.com/ffuenf-vagrantboxes/ubuntu/ubuntu-14.04.3-server-amd64_virtualbox.box) [SHA256SUM](https://s3.eu-central-1.amazonaws.com/ffuenf-vagrantboxes/ubuntu/ubuntu-14.04.3-server-amd64_virtualbox_SHA256SUM) [SHA512SUM](https://s3.eu-central-1.amazonaws.com/ffuenf-vagrantboxes/ubuntu/ubuntu-14.04.3-server-amd64_virtualbox_SHA512SUM) |
+| VMWare Fusion | [ubuntu-14.04.3-server-amd64_vmware.box](https://s3.eu-central-1.amazonaws.com/ffuenf-vagrantboxes/ubuntu/ubuntu-14.04.3-server-amd64_vmware.box) [SHA256SUM](https://s3.eu-central-1.amazonaws.com/ffuenf-vagrantboxes/ubuntu/ubuntu-14.04.3-server-amd64_vmware_SHA256SUM) [SHA512SUM](https://s3.eu-central-1.amazonaws.com/ffuenf-vagrantboxes/ubuntu/ubuntu-14.04.3-server-amd64_vmware_SHA512SUM)                 |
 
 ---
 
@@ -121,12 +118,11 @@ Boxes
 
 ##### Debian Jessie 8.1.0 x86_64
 
-* VMware Tools 9.9.0
-* VirtualBox Guest Additions 4.3.28
-* Parallels Guest Tools
-* Chef 12.4.0-1
+* VMware Tools 9.9.3
+* VirtualBox Guest Additions 5.0.0
+* Chef 12.4.1-1
 * Ruby 1.9.3.194-8.1+deb7u2
-* Rubygems 2.4.6
+* Rubygems 2.4.8
 
 | Provider      | URL                                                                                                                                                                                                                                                                                                                                                                                 |
 | ------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
@@ -136,12 +132,11 @@ Boxes
 
 ##### Debian Jessie 8.0.0 x86_64
 
-* VMware Tools 9.9.0
-* VirtualBox Guest Additions 4.3.28
-* Parallels Guest Tools
-* Chef 12.4.0-1
+* VMware Tools 9.9.3
+* VirtualBox Guest Additions 5.0.0
+* Chef 12.4.1-1
 * Ruby 1.9.3.194-8.1+deb7u2
-* Rubygems 2.4.6
+* Rubygems 2.4.8
 
 | Provider      | URL                                                                                                                                                                                                                                                                                                                                                                                 |
 | ------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
@@ -153,12 +148,11 @@ Boxes
 
 ##### Debian Wheezy 7.8.0 x86_64
 
-* VMware Tools 9.9.0
-* VirtualBox Guest Additions 4.3.28
-* Parallels Guest Tools
-* Chef 12.4.0-1
+* VMware Tools 9.9.3
+* VirtualBox Guest Additions 5.0.0
+* Chef 12.4.1-1
 * Ruby 1.9.3.194-8.1+deb7u2
-* Rubygems 2.4.6
+* Rubygems 2.4.8
 
 | Provider      | URL                                                                                                                                                                                                                                                                                                                                                                                 |
 | ------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
@@ -171,12 +165,11 @@ Boxes
 #### Debian Squeeze 6.x
 ##### Debian Squeeze 6.0.10 x86_64
 
-* VMware Tools 9.9.0
-* VirtualBox Guest Additions 4.3.28
-* Parallels Guest Tools
-* Chef 12.4.0-1
+* VMware Tools 9.9.3
+* VirtualBox Guest Additions 5.0.0
+* Chef 12.4.1-1
 * Ruby 1.9.2.0-2+deb6u2
-* Rubygems 2.4.6
+* Rubygems 2.4.8
 
 | Provider      | URL                                                                                                                                                                                                                                                                                                                                                                                     |
 | ------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
