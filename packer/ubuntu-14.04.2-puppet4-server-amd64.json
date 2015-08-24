@@ -214,6 +214,7 @@
         "scripts/update.sh",
         "scripts/sshd.sh",
         "scripts/networking.sh",
+        "scripts/rc_local.sh",
         "scripts/sudoers.sh",
         "scripts/vagrant.sh",
         "scripts/vmtools.sh",

@@ -222,6 +222,7 @@
         "scripts/vagrant.sh",
         "scripts/vmtools.sh",
         "scripts/puppet.sh",
+        "scripts/rc_local.sh",
         "scripts/ruby.sh",
         "scripts/cleanup.sh"
       ],
