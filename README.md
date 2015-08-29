@@ -20,7 +20,8 @@ Build only the Parallels Trusty box:
 ====================================
 ```
 bundle install --path vendor
-bundle exec thor packer:build --os=ubuntu --os_version=14.04.2-server --providers=parallels
+bundle exec thor packer:build --os=ubuntu --os_version=14.04-server --providers=parallels
+
 ```
 
 vagrant-boxes
