@@ -2,6 +2,15 @@
 
 This file is used to list changes made in each version of vagrant-boxes.
 
+## v1.0.13:
+* switch from VMware Tools to open-vm-tools
+* upgrade open-vm-tools 2:8.8.0+2012.05.21-724730-1+nmu2+deb7u1
+* added Debian Wheezy 8.2.0 x86_64
+* added Debian Wheezy 7.9.0 x86_64
+* depreciate Debian Wheezy 7.8.0 x86_64
+* depreciate Debian Wheezy 8.1.0 x86_64
+* depreciate Debian Wheezy 8.0.0 x86_64
+
 ## v1.0.12:
 * added Ubuntu Trusty Tahr 14.04.3 Server x86_64
 * depreciate Ubuntu Trusty Tahr 14.04.2 Server x86_64

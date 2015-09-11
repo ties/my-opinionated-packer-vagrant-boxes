@@ -13,19 +13,7 @@ virtualbox-iso|virtualbox-ovf)
     ln -s /opt/VBoxGuestAdditions-*/lib/VBoxGuestAdditions /usr/lib/VBoxGuestAdditions
     ;;
 
-vmware-iso|vmware-ovf) 
-    mkdir /tmp/vmfusion
-    mkdir /tmp/vmfusion-archive
-    mount -o loop /home/vagrant/linux.iso /tmp/vmfusion
-    tar xzf /tmp/vmfusion/VMwareTools-*.tar.gz -C /tmp/vmfusion-archive
-    /tmp/vmfusion-archive/vmware-tools-distrib/vmware-install.pl --default
-    umount /tmp/vmfusion
-    rm -rf  /tmp/vmfusion
-    rm -rf  /tmp/vmfusion-archive
-    rm /home/vagrant/*.iso
-    ;;
-
-vmware-iso|vmware-vmx)
+vmware-iso|vmware-ovf|vmware-vmx)
     PLATFORM=$(grep -e "^ID=" /etc/os-release 2> /dev/null | cut -d= -f2)
     VERSION=$(grep -e "^VERSION_ID=" /etc/os-release 2> /dev/null | cut -d= -f2)
     if [[ "$PLATFORM" != "" ]]; then

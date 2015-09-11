@@ -67,7 +67,7 @@ Boxes
 ### Ubuntu
 #### Ubuntu Vivid Vervet 15.04 Server x86_64
 
-* VMware Tools 9.9.3
+* open-vm-tools 2:8.8.0+2012.05.21-724730-1+nmu2+deb7u1
 * VirtualBox Guest Additions 5.0.0
 * Chef 12.4.1-1
 * Ruby 1.9.3.194-8.1ubuntu2.1
@@ -83,7 +83,7 @@ Boxes
 
 #### Ubuntu Utopic Unicorn 14.10 Server x86_64
 
-* VMware Tools 9.9.3
+* open-vm-tools 2:8.8.0+2012.05.21-724730-1+nmu2+deb7u1
 * VirtualBox Guest Additions 5.0.0
 * Chef 12.4.1-1
 * Ruby 1.9.3.194-8.1ubuntu2.1
@@ -99,7 +99,7 @@ Boxes
 
 #### Ubuntu Trusty Tahr 14.04.3 Server x86_64
 
-* VMware Tools 9.9.3
+* open-vm-tools 2:8.8.0+2012.05.21-724730-1+nmu2+deb7u1
 * VirtualBox Guest Additions 5.0.0
 * Chef 12.4.1-1
 * Ruby 1.9.3.484-2
@@ -116,9 +116,9 @@ Boxes
 ### Debian
 #### Debian Jessie 8.x
 
-##### Debian Jessie 8.1.0 x86_64
+##### Debian Jessie 8.2.0 x86_64
 
-* VMware Tools 9.9.3
+* open-vm-tools 2:8.8.0+2012.05.21-724730-1+nmu2+deb7u1
 * VirtualBox Guest Additions 5.0.0
 * Chef 12.4.1-1
 * Ruby 1.9.3.194-8.1+deb7u2
@@ -126,29 +126,15 @@ Boxes
 
 | Provider      | URL                                                                                                                                                                                                                                                                                                                                                                                 |
 | ------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Atlas         | [ffuenf/debian-8.1.0-amd64](https://atlas.hashicorp.com/ffuenf/debian-8.1.0-amd64)                                                                                                                                                                                                                                                                                                  |
-| Virtualbox    | [debian-8.1.0-amd64_virtualbox.box](https://s3.eu-central-1.amazonaws.com/ffuenf-vagrantboxes/debian/debian-8.1.0-amd64_virtualbox.box) [SHA256SUM](https://s3.eu-central-1.amazonaws.com/ffuenf-vagrantboxes/debian/debian-8.1.0-amd64_virtualbox_SHA256SUM) [SHA512SUM](https://s3.eu-central-1.amazonaws.com/ffuenf-vagrantboxes/debian/debian-8.1.0-amd64_virtualbox_SHA512SUM) |
-| VMWare Fusion | [debian-8.1.0-amd64_vmware.box](https://s3.eu-central-1.amazonaws.com/ffuenf-vagrantboxes/debian/debian-8.1.0-amd64_vmware.box) [SHA256SUM](https://s3.eu-central-1.amazonaws.com/ffuenf-vagrantboxes/debian/debian-8.1.0-amd64_vmware_SHA256SUM) [SHA512SUM](https://s3.eu-central-1.amazonaws.com/ffuenf-vagrantboxes/debian/debian-8.1.0-amd64_vmware_SHA512SUM)                 |
-
-##### Debian Jessie 8.0.0 x86_64
-
-* VMware Tools 9.9.3
-* VirtualBox Guest Additions 5.0.0
-* Chef 12.4.1-1
-* Ruby 1.9.3.194-8.1+deb7u2
-* Rubygems 2.4.8
-
-| Provider      | URL                                                                                                                                                                                                                                                                                                                                                                                 |
-| ------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Atlas         | [ffuenf/debian-8.0.0-amd64](https://atlas.hashicorp.com/ffuenf/debian-8.0.0-amd64)                                                                                                                                                                                                                                                                                                  |
-| Virtualbox    | [debian-8.0.0-amd64_virtualbox.box](https://s3.eu-central-1.amazonaws.com/ffuenf-vagrantboxes/debian/debian-8.0.0-amd64_virtualbox.box) [SHA256SUM](https://s3.eu-central-1.amazonaws.com/ffuenf-vagrantboxes/debian/debian-8.0.0-amd64_virtualbox_SHA256SUM) [SHA512SUM](https://s3.eu-central-1.amazonaws.com/ffuenf-vagrantboxes/debian/debian-8.0.0-amd64_virtualbox_SHA512SUM) |
-| VMWare Fusion | [debian-8.0.0-amd64_vmware.box](https://s3.eu-central-1.amazonaws.com/ffuenf-vagrantboxes/debian/debian-8.0.0-amd64_vmware.box) [SHA256SUM](https://s3.eu-central-1.amazonaws.com/ffuenf-vagrantboxes/debian/debian-8.0.0-amd64_vmware_SHA256SUM) [SHA512SUM](https://s3.eu-central-1.amazonaws.com/ffuenf-vagrantboxes/debian/debian-8.0.0-amd64_vmware_SHA512SUM)                 |
+| Atlas         | [ffuenf/debian-8.2.0-amd64](https://atlas.hashicorp.com/ffuenf/debian-8.2.0-amd64)                                                                                                                                                                                                                                                                                                  |
+| Virtualbox    | [debian-8.2.0-amd64_virtualbox.box](https://s3.eu-central-1.amazonaws.com/ffuenf-vagrantboxes/debian/debian-8.2.0-amd64_virtualbox.box) [SHA256SUM](https://s3.eu-central-1.amazonaws.com/ffuenf-vagrantboxes/debian/debian-8.2.0-amd64_virtualbox_SHA256SUM) [SHA512SUM](https://s3.eu-central-1.amazonaws.com/ffuenf-vagrantboxes/debian/debian-8.2.0-amd64_virtualbox_SHA512SUM) |
+| VMWare Fusion | [debian-8.2.0-amd64_vmware.box](https://s3.eu-central-1.amazonaws.com/ffuenf-vagrantboxes/debian/debian-8.2.0-amd64_vmware.box) [SHA256SUM](https://s3.eu-central-1.amazonaws.com/ffuenf-vagrantboxes/debian/debian-8.2.0-amd64_vmware_SHA256SUM) [SHA512SUM](https://s3.eu-central-1.amazonaws.com/ffuenf-vagrantboxes/debian/debian-8.2.0-amd64_vmware_SHA512SUM)                 |
 
 #### Debian Wheezy 7.x
 
-##### Debian Wheezy 7.8.0 x86_64
+##### Debian Wheezy 7.9.0 x86_64
 
-* VMware Tools 9.9.3
+* open-vm-tools 2:8.8.0+2012.05.21-724730-1+nmu2+deb7u1
 * VirtualBox Guest Additions 5.0.0
 * Chef 12.4.1-1
 * Ruby 1.9.3.194-8.1+deb7u2
@@ -156,16 +142,16 @@ Boxes
 
 | Provider      | URL                                                                                                                                                                                                                                                                                                                                                                                 |
 | ------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Atlas         | [ffuenf/debian-7.8.0-amd64](https://atlas.hashicorp.com/ffuenf/debian-7.8.0-amd64)                                                                                                                                                                                                                                                                                                  |
-| Virtualbox    | [debian-7.8.0-amd64_virtualbox.box](https://s3.eu-central-1.amazonaws.com/ffuenf-vagrantboxes/debian/debian-7.8.0-amd64_virtualbox.box) [SHA256SUM](https://s3.eu-central-1.amazonaws.com/ffuenf-vagrantboxes/debian/debian-7.8.0-amd64_virtualbox_SHA256SUM) [SHA512SUM](https://s3.eu-central-1.amazonaws.com/ffuenf-vagrantboxes/debian/debian-7.8.0-amd64_virtualbox_SHA512SUM) |
-| VMWare Fusion | [debian-7.8.0-amd64_vmware.box](https://s3.eu-central-1.amazonaws.com/ffuenf-vagrantboxes/debian/debian-7.8.0-amd64_vmware.box) [SHA256SUM](https://s3.eu-central-1.amazonaws.com/ffuenf-vagrantboxes/debian/debian-7.8.0-amd64_vmware_SHA256SUM) [SHA512SUM](https://s3.eu-central-1.amazonaws.com/ffuenf-vagrantboxes/debian/debian-7.8.0-amd64_vmware_SHA512SUM)                 |
+| Atlas         | [ffuenf/debian-7.9.0-amd64](https://atlas.hashicorp.com/ffuenf/debian-7.9.0-amd64)                                                                                                                                                                                                                                                                                                  |
+| Virtualbox    | [debian-7.9.0-amd64_virtualbox.box](https://s3.eu-central-1.amazonaws.com/ffuenf-vagrantboxes/debian/debian-7.9.0-amd64_virtualbox.box) [SHA256SUM](https://s3.eu-central-1.amazonaws.com/ffuenf-vagrantboxes/debian/debian-7.9.0-amd64_virtualbox_SHA256SUM) [SHA512SUM](https://s3.eu-central-1.amazonaws.com/ffuenf-vagrantboxes/debian/debian-7.9.0-amd64_virtualbox_SHA512SUM) |
+| VMWare Fusion | [debian-7.9.0-amd64_vmware.box](https://s3.eu-central-1.amazonaws.com/ffuenf-vagrantboxes/debian/debian-7.9.0-amd64_vmware.box) [SHA256SUM](https://s3.eu-central-1.amazonaws.com/ffuenf-vagrantboxes/debian/debian-7.9.0-amd64_vmware_SHA256SUM) [SHA512SUM](https://s3.eu-central-1.amazonaws.com/ffuenf-vagrantboxes/debian/debian-7.9.0-amd64_vmware_SHA512SUM)                 |
 
 ---
 
 #### Debian Squeeze 6.x
 ##### Debian Squeeze 6.0.10 x86_64
 
-* VMware Tools 9.9.3
+* open-vm-tools 2:8.8.0+2012.05.21-724730-1+nmu2+deb7u1
 * VirtualBox Guest Additions 5.0.0
 * Chef 12.4.1-1
 * Ruby 1.9.2.0-2+deb6u2
