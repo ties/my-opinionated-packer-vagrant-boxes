@@ -2,6 +2,12 @@
 
 This file is used to list changes made in each version of vagrant-boxes.
 
+## v1.0.14:
+* switch back from open-vm-tools to VMware Tools
+* upgrade VMware Tools 10.0.0 build-2977863
+* upgrade Chef 12.4.3-1
+* make disk size configurable
+
 ## v1.0.13:
 * switch from VMware Tools to open-vm-tools
 * upgrade open-vm-tools 2:8.8.0+2012.05.21-724730-1+nmu2+deb7u1

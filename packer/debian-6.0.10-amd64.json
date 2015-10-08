@@ -5,7 +5,8 @@
     "AWS_ACCESS_KEY_ID": "{{env `AWS_ACCESS_KEY_ID`}}",
     "AWS_SECRET_ACCESS_KEY": "{{env `AWS_SECRET_ACCESS_KEY`}}",
     "PACKER_ATLAS_TOKEN": "{{env `PACKER_ATLAS_TOKEN`}}",
-    "PACKER_ATLAS_VERSION": ""
+    "PACKER_ATLAS_VERSION": "",
+    "DISK_SIZE": "25140"
   },
   "builders": [
     {
@@ -29,7 +30,7 @@
       ],
       "boot_wait": "10s",
       "headless": true,
-      "disk_size": 25140,
+      "disk_size": "{{ user `DISK_SIZE` }}",
       "guest_os_type": "Debian_64",
       "http_directory": "http",
       "iso_checksum": "7b87bdabaf41cb732ca0b9294cbd1617a9fd7b76a8345be9d6e2a69c3b0ec560243b0cc7c7f6c22d909e1c28613cdc40dc49ab07ac5e017403fe606b420ffe45",
@@ -69,7 +70,7 @@
       ],
       "boot_wait": "10s",
       "headless": true,
-      "disk_size": 25140,
+      "disk_size": "{{ user `DISK_SIZE` }}",
       "guest_os_type": "debian7-64",
       "http_directory": "http",
       "iso_checksum": "7b87bdabaf41cb732ca0b9294cbd1617a9fd7b76a8345be9d6e2a69c3b0ec560243b0cc7c7f6c22d909e1c28613cdc40dc49ab07ac5e017403fe606b420ffe45",
