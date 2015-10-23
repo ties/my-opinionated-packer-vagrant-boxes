@@ -5,6 +5,7 @@ This file is used to list changes made in each version of vagrant-boxes.
 ## v1.0.15:
 * upgrade VirtualBox Guest Additions 5.0.6
 * upgrade Chef 12.5.1-1
+* added Ubuntu Wily Werewolf 15.10 Server x86_64
 
 ## v1.0.14:
 * switch back from open-vm-tools to VMware Tools

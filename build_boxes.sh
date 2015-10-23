@@ -35,3 +35,9 @@ bundle exec thor packer:build \
   --os=ubuntu \
   --os_version=15.04-server \
   --providers=virtualbox,vmware
+
+bundle exec thor packer:build \
+  --atlas_version=1.0.15 \
+  --os=ubuntu \
+  --os_version=15.10-server \
+  --providers=virtualbox,vmware
