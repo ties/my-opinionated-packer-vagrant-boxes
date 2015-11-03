@@ -2,6 +2,12 @@
 
 This file is used to list changes made in each version of vagrant-boxes.
 
+## v1.0.16:
+* upgrade VirtualBox Guest Additions 5.0.8
+* upgrade VMware Tools 10.0.1 build-3160059
+* added proper boot command for Ubuntu Wily Werewolf 15.10 Server x86_64
+* update hashicorps download locations
+
 ## v1.0.15:
 * upgrade VirtualBox Guest Additions 5.0.6
 * upgrade Chef 12.5.1-1

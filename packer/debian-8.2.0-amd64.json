@@ -69,7 +69,7 @@
         "<enter><wait>"
       ],
       "boot_wait": "10s",
-      "headless": false,
+      "headless": true,
       "disk_size": "{{ user `DISK_SIZE` }}",
       "guest_os_type": "debian7-64",
       "http_directory": "http",
