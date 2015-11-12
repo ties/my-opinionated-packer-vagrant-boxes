@@ -68,7 +68,7 @@ Boxes
 #### Ubuntu Wily Werewolf 15.10 Server x86_64
 
 * VMware Tools 10.0.1 build-3160059
-* VirtualBox Guest Additions 5.0.8
+* VirtualBox Guest Additions 5.0.10
 * Chef 12.5.1-1
 * Ruby 1.9.3.194-8.1ubuntu2.1
 * Rubygems 2.4.8
@@ -84,7 +84,7 @@ Boxes
 #### Ubuntu Vivid Vervet 15.04 Server x86_64
 
 * VMware Tools 10.0.1 build-3160059
-* VirtualBox Guest Additions 5.0.8
+* VirtualBox Guest Additions 5.0.10
 * Chef 12.5.1-1
 * Ruby 1.9.3.194-8.1ubuntu2.1
 * Rubygems 2.4.8
@@ -97,26 +97,10 @@ Boxes
 
 ---
 
-#### Ubuntu Utopic Unicorn 14.10 Server x86_64
-
-* VMware Tools 10.0.1 build-3160059
-* VirtualBox Guest Additions 5.0.8
-* Chef 12.5.1-1
-* Ruby 1.9.3.194-8.1ubuntu2.1
-* Rubygems 2.4.8
-
-| Provider      | URL                                                                                                                                                                                                                                                                                                                                                                                                             |
-| ------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Atlas         | [ffuenf/ubuntu-14.10-server-amd64](https://atlas.hashicorp.com/ffuenf/ubuntu-14.10-server-amd64)                                                                                                                                                                                                                                                                                                                |
-| Virtualbox    | [ubuntu-14.10-server-amd64_virtualbox.box](https://s3.eu-central-1.amazonaws.com/ffuenf-vagrantboxes/ubuntu/ubuntu-14.10-server-amd64_virtualbox.box) [SHA256SUM](https://s3.eu-central-1.amazonaws.com/ffuenf-vagrantboxes/ubuntu/ubuntu-14.10-server-amd64_virtualbox_SHA256SUM) [SHA512SUM](https://s3.eu-central-1.amazonaws.com/ffuenf-vagrantboxes/ubuntu/ubuntu-14.10-server-amd64_virtualbox_SHA512SUM) |
-| VMWare Fusion | [ubuntu-14.10-server-amd64_vmware.box](https://s3.eu-central-1.amazonaws.com/ffuenf-vagrantboxes/ubuntu/ubuntu-14.10-server-amd64_vmware.box) [SHA256SUM](https://s3.eu-central-1.amazonaws.com/ffuenf-vagrantboxes/ubuntu/ubuntu-14.10-server-amd64_vmware_SHA256SUM) [SHA512SUM](https://s3.eu-central-1.amazonaws.com/ffuenf-vagrantboxes/ubuntu/ubuntu-14.10-server-amd64_vmware_SHA512SUM)                 |
-
----
-
 #### Ubuntu Trusty Tahr 14.04.3 Server x86_64
 
 * VMware Tools 10.0.1 build-3160059
-* VirtualBox Guest Additions 5.0.8
+* VirtualBox Guest Additions 5.0.10
 * Chef 12.5.1-1
 * Ruby 1.9.3.484-2
 * Rubygems 2.4.8
@@ -135,7 +119,7 @@ Boxes
 ##### Debian Jessie 8.2.0 x86_64
 
 * VMware Tools 10.0.1 build-3160059
-* VirtualBox Guest Additions 5.0.8
+* VirtualBox Guest Additions 5.0.10
 * Chef 12.5.1-1
 * Ruby 1.9.3.194-8.1+deb7u2
 * Rubygems 2.4.8
@@ -151,7 +135,7 @@ Boxes
 ##### Debian Wheezy 7.9.0 x86_64
 
 * VMware Tools 10.0.1 build-3160059
-* VirtualBox Guest Additions 5.0.8
+* VirtualBox Guest Additions 5.0.10
 * Chef 12.5.1-1
 * Ruby 1.9.3.194-8.1+deb7u2
 * Rubygems 2.4.8
@@ -168,7 +152,7 @@ Boxes
 ##### Debian Squeeze 6.0.10 x86_64
 
 * VMware Tools 10.0.1 build-3160059
-* VirtualBox Guest Additions 5.0.8
+* VirtualBox Guest Additions 5.0.10
 * Chef 12.5.1-1
 * Ruby 1.9.2.0-2+deb6u2
 * Rubygems 2.4.8
