@@ -1,12 +1,13 @@
+<a href="http://www.ffuenf.de" title="ffuenf - code • design • e-commerce"><img src="https://github.com/ffuenf/Ffuenf_Common/blob/master/skin/adminhtml/default/default/ffuenf/ffuenf.png" alt="ffuenf - code • design • e-commerce" /></a>
+
 vagrant-boxes
 =============
 [![GitHub tag](http://img.shields.io/github/tag/ffuenf/vagrant-boxes.svg)][tag]
 [![Build Status](http://img.shields.io/travis/ffuenf/vagrant-boxes.svg)][travis]
-[![Gittip](http://img.shields.io/gittip/arosenhagen.svg)][gittip]
-
+[![PayPal Donate](https://img.shields.io/badge/paypal-donate-blue.svg)][paypal_donate]
 [tag]: https://github.com/ffuenf/vagrant-boxes/tags
 [travis]: https://travis-ci.org/ffuenf/vagrant-boxes
-[gittip]: https://www.gittip.com/arosenhagen
+[paypal_donate]: https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=J2PQS2WLT2Y8W&item_name=dop%3a%20vagrant-boxes&item_number=vagrant-boxes&currency_code=EUR
 
 baseboxes build with packer for use with vagrant.
 This repository includes the packer templates to build the baseboxes.
@@ -46,7 +47,7 @@ $ bundle exec thor packer:build \
   --providers=virtualbox,vmware_desktop,parallels # providers to build
 ```
 
-run the following command to build/upload ALL boxes sequentially:
+run the following command to build/upload ALL boxes synchronously:
 ```
 $ ./build_boxes.sh
 ```
