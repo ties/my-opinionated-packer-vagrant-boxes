@@ -6,6 +6,7 @@ This file is used to list changes made in each version of vagrant-boxes.
 * upgrade Chef 12.6.0-1
 * upgrade Rubygems 2.5.1
 * upgrade VMware Tools 10.0.5 build-3228253
+* install https transport for apt
 
 ## v1.0.17:
 * upgrade VirtualBox Guest Additions 5.0.10
