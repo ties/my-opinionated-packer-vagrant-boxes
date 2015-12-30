@@ -67,7 +67,7 @@ Boxes
 ### Ubuntu
 #### Ubuntu Wily Werewolf 15.10 Server x86_64
 
-* VMware Tools 10.0.1 build-3160059
+* VMware Tools 10.0.5 build-3228253
 * VirtualBox Guest Additions 5.0.10
 * Chef 12.5.1-1
 * Ruby 1.9.3.194-8.1ubuntu2.1
@@ -83,7 +83,7 @@ Boxes
 
 #### Ubuntu Vivid Vervet 15.04 Server x86_64
 
-* VMware Tools 10.0.1 build-3160059
+* VMware Tools 10.0.5 build-3228253
 * VirtualBox Guest Additions 5.0.10
 * Chef 12.5.1-1
 * Ruby 1.9.3.194-8.1ubuntu2.1
@@ -99,7 +99,7 @@ Boxes
 
 #### Ubuntu Trusty Tahr 14.04.3 Server x86_64
 
-* VMware Tools 10.0.1 build-3160059
+* VMware Tools 10.0.5 build-3228253
 * VirtualBox Guest Additions 5.0.10
 * Chef 12.5.1-1
 * Ruby 1.9.3.484-2
@@ -118,7 +118,7 @@ Boxes
 
 ##### Debian Jessie 8.2.0 x86_64
 
-* VMware Tools 10.0.1 build-3160059
+* VMware Tools 10.0.5 build-3228253
 * VirtualBox Guest Additions 5.0.10
 * Chef 12.5.1-1
 * Ruby 1.9.3.194-8.1+deb7u2
@@ -134,7 +134,7 @@ Boxes
 
 ##### Debian Wheezy 7.9.0 x86_64
 
-* VMware Tools 10.0.1 build-3160059
+* VMware Tools 10.0.5 build-3228253
 * VirtualBox Guest Additions 5.0.10
 * Chef 12.5.1-1
 * Ruby 1.9.3.194-8.1+deb7u2
@@ -151,7 +151,7 @@ Boxes
 #### Debian Squeeze 6.x
 ##### Debian Squeeze 6.0.10 x86_64
 
-* VMware Tools 10.0.1 build-3160059
+* VMware Tools 10.0.5 build-3228253
 * VirtualBox Guest Additions 5.0.10
 * Chef 12.5.1-1
 * Ruby 1.9.2.0-2+deb6u2
