@@ -7,6 +7,7 @@ This file is used to list changes made in each version of vagrant-boxes.
 * upgrade Rubygems 2.5.1
 * upgrade VMware Tools 10.0.5 build-3228253
 * install https transport for apt
+* suspend Ubuntu Wily Werewolf 15.10 Server x86_64 for VMware Fusion due to https://github.com/ffuenf/vagrant-boxes/pull/22
 
 ## v1.0.17:
 * upgrade VirtualBox Guest Additions 5.0.10
