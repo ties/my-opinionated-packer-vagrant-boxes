@@ -1,11 +1,12 @@
 {
   "variables": {
     "PACKER_OS_FLAVOUR": "debian",
-    "PACKER_BOX_NAME": "debian-7.7.0-amd64",
+    "PACKER_BOX_NAME": "debian-8.2.0-amd64",
     "AWS_ACCESS_KEY_ID": "{{env `AWS_ACCESS_KEY_ID`}}",
     "AWS_SECRET_ACCESS_KEY": "{{env `AWS_SECRET_ACCESS_KEY`}}",
     "PACKER_ATLAS_TOKEN": "{{env `PACKER_ATLAS_TOKEN`}}",
-    "PACKER_ATLAS_VERSION": ""
+    "PACKER_ATLAS_VERSION": "",
+    "DISK_SIZE": "25140"
   },
   "builders": [
     {
@@ -29,12 +30,12 @@
       ],
       "boot_wait": "10s",
       "headless": true,
-      "disk_size": 10140,
+      "disk_size": "{{ user `DISK_SIZE` }}",
       "guest_os_type": "Debian_64",
       "http_directory": "http",
-      "iso_checksum": "5cb6e4fea55fbb5173f90c3a545b843c6c193e29c3aa32b3306c9bbdfb1ad6a6a36ae8be50e91af9d03d5f21c472bd05d04d3508172e0b519e76714333c7c74b",
+      "iso_checksum": "923cd1bfbfa62d78aecaa92d919ee54a95c8fca834b427502847228cf06155e7243875f59279b0bf6bfd1b579cbe2f1bc80528a265dafddee9a9d2a197ef3806",
       "iso_checksum_type": "sha512",
-      "iso_url": "http://cdimage.debian.org/cdimage/archive/7.7.0/amd64/iso-cd/{{ user `PACKER_BOX_NAME` }}-netinst.iso",
+      "iso_url": "http://cdimage.debian.org/cdimage/release/8.2.0/amd64/iso-cd/{{ user `PACKER_BOX_NAME` }}-netinst.iso",
       "ssh_username": "vagrant",
       "ssh_password": "vagrant",
       "ssh_port": 22,
@@ -69,12 +70,12 @@
       ],
       "boot_wait": "10s",
       "headless": true,
-      "disk_size": 10140,
+      "disk_size": "{{ user `DISK_SIZE` }}",
       "guest_os_type": "debian7-64",
       "http_directory": "http",
-      "iso_checksum": "5cb6e4fea55fbb5173f90c3a545b843c6c193e29c3aa32b3306c9bbdfb1ad6a6a36ae8be50e91af9d03d5f21c472bd05d04d3508172e0b519e76714333c7c74b",
+      "iso_checksum": "923cd1bfbfa62d78aecaa92d919ee54a95c8fca834b427502847228cf06155e7243875f59279b0bf6bfd1b579cbe2f1bc80528a265dafddee9a9d2a197ef3806",
       "iso_checksum_type": "sha512",
-      "iso_url": "http://cdimage.debian.org/cdimage/archive/7.7.0/amd64/iso-cd/{{ user `PACKER_BOX_NAME` }}-netinst.iso",
+      "iso_url": "http://cdimage.debian.org/cdimage/release/8.2.0/amd64/iso-cd/{{ user `PACKER_BOX_NAME` }}-netinst.iso",
       "ssh_username": "vagrant",
       "ssh_password": "vagrant",
       "ssh_port": 22,
@@ -87,47 +88,6 @@
         "numvcpus": "2",
         "cpuid.coresPerSocket": "1"
       }
-    },
-    {
-      "type": "parallels-iso",
-      "boot_command": [
-        "<esc><wait>",
-        "install <wait>",
-        "preseed/url=http://{{ .HTTPIP }}:{{ .HTTPPort }}/{{ user `PACKER_BOX_NAME` }}/preseed.cfg <wait>",
-        "debian-installer=en_US <wait>",
-        "auto <wait>",
-        "locale=en_US <wait>",
-        "kbd-chooser/method=us <wait>",
-        "keyboard-configuration/xkb-keymap=us <wait>",
-        "netcfg/get_hostname={{ .Name }} <wait>",
-        "netcfg/get_domain=vagrantup.com <wait>",
-        "fb=false <wait>",
-        "debconf/frontend=noninteractive <wait>",
-        "console-setup/ask_detect=false <wait>",
-        "console-keymaps-at/keymap=us <wait>",
-        "<enter><wait>"
-      ],
-      "boot_wait": "10s",
-      "headless": true,
-      "disk_size": 10140,
-      "guest_os_type": "debian",
-      "http_directory": "http",
-      "iso_checksum": "5cb6e4fea55fbb5173f90c3a545b843c6c193e29c3aa32b3306c9bbdfb1ad6a6a36ae8be50e91af9d03d5f21c472bd05d04d3508172e0b519e76714333c7c74b",
-      "iso_checksum_type": "sha512",
-      "iso_url": "http://cdimage.debian.org/cdimage/archive/7.7.0/amd64/iso-cd/{{ user `PACKER_BOX_NAME` }}-netinst.iso",
-      "ssh_username": "vagrant",
-      "ssh_password": "vagrant",
-      "ssh_port": 22,
-      "ssh_wait_timeout": "10000s",
-      "shutdown_command": "echo 'vagrant'|sudo -S /sbin/shutdown -hP now",
-      "parallels_tools_flavor": "lin",
-      "parallels_tools_guest_path": "prl-tools-{{.Flavor}}.iso",
-      "prlctl_version_file": ".prlctl_version",
-      "vm_name": "{{ user `PACKER_BOX_NAME` }}",
-      "prlctl": [
-        ["set", "{{.Name}}", "--memsize", "1024"],
-        ["set", "{{.Name}}", "--cpus", "2"]
-      ]
     }
   ],
   "provisioners": [
@@ -145,6 +105,7 @@
         "scripts/ruby.sh",
         "scripts/chef.sh",
         "scripts/puppet.sh",
+        "scripts/filesystem.sh",
         "scripts/cleanup.sh"
       ]
     }
@@ -153,7 +114,7 @@
     [
       {
         "type": "vagrant",
-        "compression_level": "9",
+        "compression_level": 9,
         "output": "../builds/{{.Provider}}/{{ user `PACKER_BOX_NAME` }}_{{.Provider}}.box"
       }
     ]

@@ -2,6 +2,93 @@
 
 This file is used to list changes made in each version of vagrant-boxes.
 
+## v1.0.18:
+* upgrade Chef 12.6.0-1
+* upgrade Rubygems 2.5.1
+* upgrade VMware Tools 10.0.5 build-3228253
+* install https transport for apt
+* suspend Ubuntu Wily Werewolf 15.10 Server x86_64 for VMware Fusion due to https://github.com/ffuenf/vagrant-boxes/pull/22
+
+## v1.0.17:
+* upgrade VirtualBox Guest Additions 5.0.10
+* depreciate Ubuntu Utopic Unicorn 14.10 Server x86_64 (build/installer fails actually)
+
+## v1.0.16:
+* upgrade VirtualBox Guest Additions 5.0.8
+* upgrade VMware Tools 10.0.1 build-3160059
+* added proper boot command for Ubuntu Wily Werewolf 15.10 Server x86_64
+* update hashicorps download locations
+
+## v1.0.15:
+* upgrade VirtualBox Guest Additions 5.0.6
+* upgrade Chef 12.5.1-1
+* added Ubuntu Wily Werewolf 15.10 Server x86_64
+
+## v1.0.14:
+* switch back from open-vm-tools to VMware Tools
+* upgrade VMware Tools 10.0.0 build-2977863
+* upgrade Chef 12.4.3-1
+* make disk size configurable
+
+## v1.0.13:
+* switch from VMware Tools to open-vm-tools
+* upgrade open-vm-tools 2:8.8.0+2012.05.21-724730-1+nmu2+deb7u1
+* added Debian Wheezy 8.2.0 x86_64
+* added Debian Wheezy 7.9.0 x86_64
+* depreciate Debian Wheezy 7.8.0 x86_64
+* depreciate Debian Wheezy 8.1.0 x86_64
+* depreciate Debian Wheezy 8.0.0 x86_64
+
+## v1.0.12:
+* added Ubuntu Trusty Tahr 14.04.3 Server x86_64
+* depreciate Ubuntu Trusty Tahr 14.04.2 Server x86_64
+* fix README (versions)
+* fix preseed of Debian Jessie 8.1.0 x86_64
+* increase disc size of VMs to 25G
+
+## v1.0.11:
+* upgrade VirtualBox Guest Additions 5.0.0
+* upgrade Chef 12.4.1-1
+
+## v1.0.10:
+* retire Parallels Desktop support
+* added Debian Jessie 8.1.0 x86_64
+* upgrade Chef 12.4.0-1
+* upgrade VMware Tools 9.9.3
+* upgrade Rubygems 2.4.8
+
+## v1.0.9:
+* upgrade VirtualBox Guest Additions 4.3.28
+
+## v1.0.8:
+* upgrade Chef 12.3.0-1
+* depreciate Debian Wheezy 7.7.0 x86_64
+* depreciate Ubuntu Trusty Tahr 14.04.1 Server x86_64
+* depreciate Ubuntu Saucy Salamander 13.10 Server x86_64
+* revert /tmp on tmpfs from previous version as /tmp may grow above 512M
+
+## v1.0.7:
+* added Debian Jessie 8.0.0 x86_64
+* added Ubuntu Vivid Vervet 15.04Server x86_64
+* Enable ACL's on the filesystem and use the discard flag (from [ties](https://github.com/ties/my-opinionated-packer-vagrant-boxes))
+* /tmp on tmpfs (from [ties](https://github.com/ties/my-opinionated-packer-vagrant-boxes))
+
+## v1.0.6:
+* upgrade VirtualBox Guest Additions 4.3.26
+* upgrade Chef 12.2.1-1
+
+## v1.0.5:
+* upgrade VirtualBox Guest Additions 4.3.24
+* upgrade Chef 12.1.1-1
+
+## v1.0.4:
+* update Ubuntu Trusty Tahr 14.04.2 Server x86_64
+* upgrade VirtualBox Guest Additions 4.3.22
+* upgrade Chef 12.1.0-1
+* upgrade Rubygems 2.4.6
+* upgrade serf 0.6.4
+* depreciate Debian Wheezy 7.6.0 x86_64
+
 ## v1.0.3:
 * added Debian Wheezy 7.8.0 x86_64
 

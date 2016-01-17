@@ -1,11 +1,11 @@
 #!/bin/bash
 
-case "$PACKER_BUILDER_TYPE" in 
+case "$PACKER_BUILDER_TYPE" in
 
-virtualbox-iso|virtualbox-ovf) 
+virtualbox-iso|virtualbox-ovf)
     mkdir /tmp/vbox
     VER=$(cat /home/vagrant/.vbox_version)
-    mount -o loop /home/vagrant/VBoxGuestAdditions_$VER.iso /tmp/vbox 
+    mount -o loop /home/vagrant/VBoxGuestAdditions_$VER.iso /tmp/vbox
     sh /tmp/vbox/VBoxLinuxAdditions.run
     umount /tmp/vbox
     rmdir /tmp/vbox
@@ -13,30 +13,34 @@ virtualbox-iso|virtualbox-ovf)
     ln -s /opt/VBoxGuestAdditions-*/lib/VBoxGuestAdditions /usr/lib/VBoxGuestAdditions
     ;;
 
-vmware-iso|vmware-ovf) 
-    mkdir /tmp/vmfusion
-    mkdir /tmp/vmfusion-archive
-    mount -o loop /home/vagrant/linux.iso /tmp/vmfusion
-    tar xzf /tmp/vmfusion/VMwareTools-*.tar.gz -C /tmp/vmfusion-archive
-    /tmp/vmfusion-archive/vmware-tools-distrib/vmware-install.pl --default
-    umount /tmp/vmfusion
-    rm -rf  /tmp/vmfusion
-    rm -rf  /tmp/vmfusion-archive
-    rm /home/vagrant/*.iso
+vmware-iso|vmware-vmx)
+    mkdir -p /tmp/vmfusion;
+    mkdir -p /tmp/vmfusion-archive;
+    mount -o loop /home/vagrant/linux.iso /tmp/vmfusion;
+    tar xzf /tmp/vmfusion/VMwareTools-*.tar.gz -C /tmp/vmfusion-archive;
+    /tmp/vmfusion-archive/vmware-tools-distrib/vmware-install.pl --force-install;
+    umount /tmp/vmfusion;
+    rm -rf  /tmp/vmfusion;
+    rm -rf  /tmp/vmfusion-archive;
+    rm -f /home/vagrant/*.iso;
     ;;
+qemu)
+    echo "GRUB_CMDLINE_LINUX=\"serial=tty0 console=ttyS0,115200n8\"" >> /etc/default/grub
+cat <<EOF > /etc/init/ttyS0.conf
+# ttyS0 - getty
+#
+# This service maintains a getty on ttyS0 from the point the system is
+# started until it is shut down again.
 
-parallels-iso|parallels-pvm)
-    mkdir /tmp/parallels
-    mount -o loop /home/vagrant/prl-tools-lin.iso /tmp/parallels
-    /tmp/parallels/install --install-unattended-with-deps
-    umount /tmp/parallels
-    rmdir /tmp/parallels
-    rm /home/vagrant/*.iso
-    ;;
+start on stopped rc RUNLEVEL=[2345]
+stop on runlevel [!2345]
 
+respawn
+exec /sbin/getty -L 115200 ttyS0 xterm
+EOF
 *)
     echo "Unknown Packer Builder Type >>$PACKER_BUILDER_TYPE<< selected."
-    echo "Known are virtualbox-iso|virtualbox-ovf|vmware-iso|vmware-ovf."
+    echo "Known are virtualbox-iso|virtualbox-ovf|vmware-iso|vmware-ovf|qemu."
     ;;
 
 esac
