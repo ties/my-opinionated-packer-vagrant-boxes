@@ -18,10 +18,10 @@ Also:
 Build only the Parallels Trusty box:
 ====================================
 ====================================
+If the libvirt gem fails to install, check [vagrant-libvirt#346](https://github.com/pradels/vagrant-libvirt/issues/346)
 ```
 bundle install --path vendor
 bundle exec thor packer:build --os=ubuntu --os_version=14.04-server --providers=parallels
-
 ```
 
 vagrant-boxes
