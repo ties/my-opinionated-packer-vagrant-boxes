@@ -25,19 +25,20 @@ vmware-iso|vmware-vmx)
     rm -f /home/vagrant/*.iso;
     ;;
 qemu)
-    echo "GRUB_CMDLINE_LINUX=\"serial=tty0 console=ttyS0,115200n8\"" >> /etc/default/grub
-cat <<EOF > /etc/init/ttyS0.conf
-# ttyS0 - getty
-#
-# This service maintains a getty on ttyS0 from the point the system is
-# started until it is shut down again.
-
-start on stopped rc RUNLEVEL=[2345]
-stop on runlevel [!2345]
-
-respawn
-exec /sbin/getty -L 115200 ttyS0 xterm
-EOF
+    echo "GRUB_CMDLINE_LINUX=\"serial=tty0 console=ttyS0,115200n8\"" >> /etc/default/grub;
+    cat > /etc/init/ttyS0.conf <<-EOD
+    # ttyS0 - getty
+    #
+    # This service maintains a getty on ttyS0 from the point the system is
+    # started until it is shut down again.
+    
+    start on stopped rc RUNLEVEL=[2345]
+    stop on runlevel [!2345]
+    
+    respawn
+    exec /sbin/getty -L 115200 ttyS0 xterm
+EOD
+    ;;
 *)
     echo "Unknown Packer Builder Type >>$PACKER_BUILDER_TYPE<< selected."
     echo "Known are virtualbox-iso|virtualbox-ovf|vmware-iso|vmware-ovf|qemu."
