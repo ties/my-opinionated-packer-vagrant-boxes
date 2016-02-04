@@ -2,6 +2,12 @@
 
 This file is used to list changes made in each version of vagrant-boxes.
 
+## v1.0.20:
+* added Debian Jessie 8.3.0 x86_64
+* depreciate Debian Jessie 8.2.0 x86_64
+* upgrade Rubygems 2.5.2
+* re-introduce Parallels Desktop support
+
 ## v1.0.19:
 * upgrade VirtualBox Guest Additions 5.0.14
 
