@@ -1,31 +1,29 @@
 #!/bin/bash -eux
 
 # Clean up
-apt-get -y --purge remove linux-headers-$(uname -r) build-essential
-apt-get -y --purge autoremove
-apt-get -y purge $(dpkg --list |grep '^rc' |awk '{print $2}')
-apt-get -y purge $(dpkg --list |egrep 'linux-image-[0-9]' |awk '{print $3,$2}' |sort -nr |tail -n +2 |grep -v $(uname -r) |awk '{ print $2}')
-apt-get -y clean
-
-find /var/lib/apt/lists \! -name lock -type f -delete
+apt-get -qy --purge remove linux-headers-$(uname -r) build-essential
+apt-get -qy --purge autoremove
+apt-get -qy purge $(dpkg --list |grep '^rc' |awk '{print $2}')
+apt-get -qy purge $(dpkg --list |egrep 'linux-image-[0-9]' |awk '{print $3,$2}' |sort -nr |tail -n +2 |grep -v $(uname -r) |awk '{ print $2}')
+apt-get -qy clean
 
 # delete linux source
-dpkg --list | awk '{ print $2 }' | grep linux-source | xargs apt-get -y purge
+dpkg --list | awk '{ print $2 }' | grep linux-source | xargs apt-get -qy purge
 
 # delete development packages
-dpkg --list | awk '{ print $2 }' | grep -- '-dev$' | xargs apt-get -y purge
+dpkg --list | awk '{ print $2 }' | grep -- '-dev$' | xargs apt-get -qy purge
 
 # delete compilers and other development tools
-apt-get -y purge cpp gcc g++
+apt-get -qy purge cpp gcc g++
 
 # delete X11 libraries
-apt-get -y purge libx11-data xauth libxmuu1 libxcb1 libx11-6 libxext6
+apt-get -qy purge libx11-data xauth libxmuu1 libxcb1 libx11-6 libxext6
 
 # delete obsolete networking
-apt-get -y purge ppp pppconfig pppoeconf
+apt-get -qy purge ppp pppconfig pppoeconf
 
 # delete oddities
-apt-get -y purge popularity-contest
+apt-get -qy purge popularity-contest
 
 # Cleanup Virtualbox
 rm -rf VBoxGuestAdditions_*.iso VBoxGuestAdditions_*.iso.?
@@ -50,15 +48,35 @@ rm -rf /usr/src/vboxguest*
 rm -rf /usr/share/man/??
 rm -rf /usr/share/man/??_*
 
-# Zero out the free space to save space in the final image:
-echo "Zeroing device to make space..."
-dd if=/dev/zero of=/EMPTY bs=1M
-rm -f /EMPTY
+# remove files from cache
+find /var/cache -type f -delete
+
+# delete out of date apt caches
+find /var/lib/apt/lists \! -name lock -type f -delete
 
 # Remove history file
 unset HISTFILE
-rm ~/.bash_history /home/vagrant/.bash_history
+rm -f ~/.bash_history /home/vagrant/.bash_history
 
+set +e
+swapuuid="`/sbin/blkid -o value -l -s UUID -t TYPE=swap`";
+case "$?" in
+    2|0) ;;
+    *) exit 1 ;;
+esac
+set -e
+
+if [ "x${swapuuid}" != "x" ]; then
+    # Whiteout the swap partition to reduce box size
+    # Swap is disabled till reboot
+    swappart="`readlink -f /dev/disk/by-uuid/$swapuuid`";
+    /sbin/swapoff "$swappart";
+    dd if=/dev/zero of="$swappart" bs=1M || echo "dd exit code $? is suppressed";
+    /sbin/mkswap -U "$swapuuid" "$swappart";
+fi
+
+dd if=/dev/zero of=/EMPTY bs=1M || echo "dd exit code $? is suppressed";
+rm -f /EMPTY;
 # Block until the empty file has been removed, otherwise, Packer
 # will try to kill the box while the disk is still full and that's bad
-sync
+sync;
