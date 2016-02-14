@@ -1,5 +1,8 @@
 #!/bin/bash -eux
 
+# Use compressed APT indexes (from: <https://github.com/tianon/docker-brew-ubuntu-core/issues/1>)
+echo 'Acquire::GzipIndexes "true"; Acquire::CompressionTypes::Order:: "gz";' > /etc/apt/apt.conf.d/02compress-indexes
+
 apt-get update
 apt-get -qy upgrade
 
