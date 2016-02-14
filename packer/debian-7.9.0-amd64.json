@@ -88,6 +88,46 @@
         "numvcpus": "2",
         "cpuid.coresPerSocket": "1"
       }
+    },
+    {
+      "type": "parallels-iso",
+      "boot_command": [
+        "<esc><wait>",
+        "install <wait>",
+        "preseed/url=http://{{ .HTTPIP }}:{{ .HTTPPort }}/{{ user `PACKER_BOX_NAME` }}/preseed.cfg <wait>",
+        "debian-installer=en_US <wait>",
+        "auto <wait>",
+        "locale=en_US <wait>",
+        "kbd-chooser/method=us <wait>",
+        "keyboard-configuration/xkb-keymap=us <wait>",
+        "netcfg/get_hostname={{ .Name }} <wait>",
+        "netcfg/get_domain=vagrantup.com <wait>",
+        "fb=false <wait>",
+        "debconf/frontend=noninteractive <wait>",
+        "console-setup/ask_detect=false <wait>",
+        "console-keymaps-at/keymap=us <wait>",
+        "<enter><wait>"
+      ],
+      "boot_wait": "10s",
+      "disk_size": "{{ user `DISK_SIZE` }}",
+      "guest_os_type": "debian",
+      "http_directory": "http",
+      "iso_checksum": "bfa1f3e20dd9a375335396a5a5b6dbdebd5e5600fa615a7db08fcb5b6d35dc8fc8322d6d32906a83504dd3af19806bb48effd9131d3e65d367f6b6eb96dcf780",
+      "iso_checksum_type": "sha512",
+      "iso_url": "http://cdimage.debian.org/cdimage/archive/7.9.0/amd64/iso-cd/{{ user `PACKER_BOX_NAME` }}-netinst.iso",
+      "ssh_username": "vagrant",
+      "ssh_password": "vagrant",
+      "ssh_port": 22,
+      "ssh_wait_timeout": "10000s",
+      "shutdown_command": "echo 'vagrant'|sudo -S /sbin/shutdown -hP now",
+      "vm_name": "{{ user `PACKER_BOX_NAME` }}",
+      "parallels_tools_flavor": "lin",
+      "parallels_tools_guest_path": "prl-tools-{{.Flavor}}.iso",
+      "prlctl_version_file": ".prlctl_version",
+      "prlctl": [
+        ["set", "{{.Name}}", "--memsize", "1024"],
+        ["set", "{{.Name}}", "--cpus", "2"]
+      ]
     }
   ],
   "provisioners": [
