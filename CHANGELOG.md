@@ -2,6 +2,9 @@
 
 This file is used to list changes made in each version of vagrant-boxes.
 
+## v1.0.21:
+* upgrade Chef 12.7.2-1
+
 ## v1.0.20:
 * added Debian Jessie 8.3.0 x86_64
 * depreciate Debian Jessie 8.2.0 x86_64
