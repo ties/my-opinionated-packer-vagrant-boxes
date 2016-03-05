@@ -13,7 +13,7 @@ baseboxes build with packer for use with vagrant.
 This repository includes the packer templates to build the baseboxes.
 The build boxes are available through 
 
-* [Atlas (former Vagrantcloud)](https://atlas.hashicorp.com/ffuenf)
+* [Atlas](https://atlas.hashicorp.com/ffuenf)
 * Amazon S3 (eu-central-1)
 
 Tools
@@ -42,9 +42,9 @@ You have to adjust the Thorfile line 50 to match your own S3 bucket.
 run the following command to build/upload individual boxes:
 ```
 $ bundle exec thor packer:build \
-  --atlas_version=1.0.0 \                 # version tag
-  --os=debian \                           # os distribution (debian/ubuntu)
-  --os_version=6.0.10 \                   # os version
+  --atlas_version=1.0.0 \                         # version tag
+  --os=debian \                                   # os distribution (debian/ubuntu)
+  --os_version=8.3.0 \                            # os version
   --providers=virtualbox,vmware_desktop,parallels # providers to build
 ```
 
@@ -70,11 +70,11 @@ Boxes
 #### Ubuntu Wily Werewolf 15.10 Server x86_64
 
 * VMware Tools 10.0.5 build-3228253
-* VirtualBox Guest Additions 5.0.14
-* Parallels 11.1.2-32408
+* VirtualBox Guest Additions 5.0.16
+* Parallels Desktop 11.1.3-32521
 * Chef 12.7.2-1
-* Ruby 1.9.3.194-8.1ubuntu2.1
-* Rubygems 2.5.2
+* Ruby 2.1.5-4ubuntu1
+* Rubygems 2.6.1
 
 | Provider          | URL                                                                                                                                                                                                                                                                                                                                                                                                             |
 | ----------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
@@ -88,11 +88,11 @@ Boxes
 #### Ubuntu Trusty Tahr 14.04.4 Server x86_64
 
 * VMware Tools 10.0.5 build-3228253
-* VirtualBox Guest Additions 5.0.14
-* Parallels 11.1.2-32408
+* VirtualBox Guest Additions 5.0.16
+* Parallels Desktop 11.1.3-32521
 * Chef 12.7.2-1
-* Ruby 1.9.3.484-2
-* Rubygems 2.5.2
+* Ruby 1.9.3.484-2ubuntu1.2
+* Rubygems 2.6.1
 
 | Provider          | URL                                                                                                                                                                                                                                                                                                                                                                                                                     |
 | ----------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
@@ -109,11 +109,11 @@ Boxes
 ##### Debian Jessie 8.3.0 x86_64
 
 * VMware Tools 10.0.5 build-3228253
-* VirtualBox Guest Additions 5.0.14
-* Parallels 11.1.2-32408
+* VirtualBox Guest Additions 5.0.16
+* Parallels Desktop 11.1.3-32521
 * Chef 12.7.2-1
-* Ruby 2.1.5+deb8u1
-* Rubygems 2.5.2
+* Ruby 2.1.5-2+deb8u2
+* Rubygems 2.6.1
 
 | Provider          | URL                                                                                                                                                                                                                                                                                                                                                                                 |
 | ----------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
@@ -127,11 +127,11 @@ Boxes
 ##### Debian Wheezy 7.9.0 x86_64
 
 * VMware Tools 10.0.5 build-3228253
-* VirtualBox Guest Additions 5.0.14
-* Parallels 11.1.2-32408
+* VirtualBox Guest Additions 5.0.16
+* Parallels Desktop 11.1.3-32521
 * Chef 12.7.2-1
-* Ruby 1.9.3.194-8.1+deb7u2
-* Rubygems 2.5.2
+* Ruby 1.9.3.194-8.1+deb7u5
+* Rubygems 2.6.1
 
 | Provider          | URL                                                                                                                                                                                                                                                                                                                                                                                 |
 | ----------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |

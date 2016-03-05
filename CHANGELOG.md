@@ -7,6 +7,8 @@ This file is used to list changes made in each version of vagrant-boxes.
 * depreciate Ubuntu Trusty Tahr 14.04.3 Server x86_64
 * depreciate Debian Squeeze 6.0.10 x86_64 (EOL 2016.02.29)
 * depreciate Ubuntu Vivid Vervet 15.04 Server x86_64 (EOL 2016.02.04)
+* upgrade VirtualBox Guest Additions 5.0.16
+* upgrade Parallels Desktop 11.1.3-32521
 * upgrade Rubygems 2.6.1
 * upgrade packer 0.9.0
 
