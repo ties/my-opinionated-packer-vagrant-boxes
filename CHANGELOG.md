@@ -2,6 +2,16 @@
 
 This file is used to list changes made in each version of vagrant-boxes.
 
+## v1.0.22:
+* added Ubuntu Trusty Tahr 14.04.4 Server x86_64
+* depreciate Ubuntu Trusty Tahr 14.04.3 Server x86_64
+* depreciate Debian Squeeze 6.0.10 x86_64 (EOL 2016.02.29)
+* depreciate Ubuntu Vivid Vervet 15.04 Server x86_64 (EOL 2016.02.04)
+* upgrade VirtualBox Guest Additions 5.0.16
+* upgrade Parallels Desktop 11.1.3-32521
+* upgrade Rubygems 2.6.1
+* upgrade packer 0.9.0
+
 ## v1.0.21:
 * upgrade Chef 12.7.2-1
 
