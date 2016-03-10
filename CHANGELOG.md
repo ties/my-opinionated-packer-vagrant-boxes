@@ -2,6 +2,9 @@
 
 This file is used to list changes made in each version of vagrant-boxes.
 
+## v1.0.23:
+* upgrade Chef 12.8.1-1
+
 ## v1.0.22:
 * added Ubuntu Trusty Tahr 14.04.4 Server x86_64
 * depreciate Ubuntu Trusty Tahr 14.04.3 Server x86_64
