@@ -182,6 +182,7 @@
       "scripts": [
         "scripts/filesystem.sh",
         "scripts/update.sh",
+        "scripts/grsec_repo_kernel.sh",
         "scripts/sshd.sh",
         "scripts/networking.sh",
         "scripts/sudoers.sh",
