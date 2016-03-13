@@ -189,7 +189,8 @@
         "scripts/vmtools.sh",
         "scripts/ruby.sh",
         "scripts/chef.sh",
-        "scripts/puppet.sh",
+        "scripts/puppet_pc1.sh",
+        "scripts/rc_local.sh",
         "scripts/filesystem.sh",
         "scripts/cleanup.sh"
       ]
@@ -200,7 +201,7 @@
       {
         "type": "vagrant",
         "compression_level": 9,
-        "output": "../builds/{{.Provider}}/{{ user `PACKER_BOX_NAME` }}_{{.Provider}}.box"
+        "output": "../builds/{{.Provider}}/{{ user `PACKER_BOX_NAME` }}_puppet4_{{.Provider}}.box"
       }
     ]
   ]
