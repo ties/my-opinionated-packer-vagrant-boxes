@@ -10,4 +10,4 @@ mount -o remount /
 
 echo "tmpfs /tmp tmpfs defaults,noatime,nodev,mode=1777,size=1024M 0 0" >> /etc/fstab
 rm -rf /tmp/*
-mount /tmp
+mount -o remount /tmp
