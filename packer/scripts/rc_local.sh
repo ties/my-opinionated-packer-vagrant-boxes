@@ -14,31 +14,31 @@ cat > /etc/rc.local << EOF
 
 # Powertop tweaks
 # Set sata hosts to min_power
-for HOST in `ls /sys/class/scsi_host/`
+for HOST in \`ls /sys/class/scsi_host/\`
 do
-	echo min_power > /sys/class/scsi_host/${HOST}/link_power_management_policy
+	echo min_power > /sys/class/scsi_host/\${HOST}/link_power_management_policy
 done
 
 # Set PCI devices to auto powering
-for DEVICE in `ls /sys/bus/pci/devices/`
+for DEVICE in \`ls /sys/bus/pci/devices/\`
 do
-        echo "auto" > /sys/bus/pci/devices/${DEVICE}/power/control
+        echo "auto" > /sys/bus/pci/devices/\${DEVICE}/power/control
 done
 
-for DEVICE in `ls /sys/bus/usb/devices/`
+for DEVICE in \`ls /sys/bus/usb/devices/\`
 do
-	if [ -e /sys/bus/usb/devices/${DEVICE}/power/control ]
+	if [ -e /sys/bus/usb/devices/\${DEVICE}/power/control ]
 	then
-		echo "auto" > /sys/bus/usb/devices/${DEVICE}/power/control
+		echo "auto" > /sys/bus/usb/devices/\${DEVICE}/power/control
 	fi
 done
 
 echo 0 > /proc/sys/kernel/nmi_watchdog
 echo 1500 > /proc/sys/vm/dirty_writeback_centisecs
 
-for IF in `basename -a $(ls /sys/devices/**/net/* -d)`
+for IF in \`basename -a \$(ls /sys/devices/**/net/* -d)\`
 do
-	ethtool -s $IF wol d
+	ethtool -s \$IF wol d
 done
 
 exit 0
