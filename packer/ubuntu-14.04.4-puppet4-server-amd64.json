@@ -1,7 +1,7 @@
 {
   "variables": {
     "PACKER_OS_FLAVOUR": "ubuntu",
-    "PACKER_BOX_NAME": "ubuntu-14.04.3-server-amd64",
+    "PACKER_BOX_NAME": "ubuntu-14.04.4-server-amd64",
     "AWS_ACCESS_KEY_ID": "{{env `AWS_ACCESS_KEY_ID`}}",
     "AWS_SECRET_ACCESS_KEY": "{{env `AWS_SECRET_ACCESS_KEY`}}",
     "PACKER_ATLAS_TOKEN": "{{env `PACKER_ATLAS_TOKEN`}}",
@@ -164,11 +164,8 @@
     },
     {
       "type": "qemu",
-      "qemuargs": [["-device", "virtio-rng-pci"],
-                   ["-device", "virtio-scsi-pci,id=scsi0"],
-                   ["-device", "virtio-net,netdev=user.0"]],
       "format": "qcow2",
-      "disk_compress": true,
+      "disk_compression": true,
       "disk_interface": "virtio-scsi",
       "accelerator": "kvm",
       "boot_command": [

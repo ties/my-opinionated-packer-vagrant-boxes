@@ -164,9 +164,6 @@
     },
     {
       "type": "qemu",
-      "qemuargs": [["-device", "virtio-rng-pci"],
-                   ["-device", "virtio-scsi-pci,id=scsi0"],
-                   ["-device", "virtio-net,netdev=user.0"]],
       "format": "qcow2",
       "machine_type": "q35",
       "accelerator": "kvm",
