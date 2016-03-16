@@ -131,8 +131,14 @@
     },
     {
       "type": "qemu",
+      "qemuargs": [["-device", "virtio-rng-pci"],
+                   ["-device", "virtio-scsi-pci,id=scsi0"],
+                   ["-device", "virtio-net,netdev=user.0"]],
       "format": "qcow2",
-      "machine_type": "q35",
+      "disk_size": "{{ user `DISK_SIZE` }}",
+      "disk_discard": "unmap",
+      "disk_interface": "virtio-scsi",
+      "disk_compression": true,
       "accelerator": "kvm",
       "boot_command": [
         "<esc><wait>",
@@ -152,7 +158,6 @@
         "<enter><wait>"
       ],
       "boot_wait": "10s",
-      "disk_size": "{{ user `DISK_SIZE` }}",
       "http_directory": "http",
       "iso_checksum": "070db3644c39374fdc87fd3de51388dcc0e05b866eaf37f2193d1818f0128e938c42e4eb9f1de555741c143a51edee07903a33271fca2696a771e4ae5c868277",
       "iso_checksum_type": "sha512",
@@ -164,9 +169,6 @@
       "shutdown_command": "echo 'vagrant'|sudo -S /sbin/shutdown -hP now",
       "vm_name": "{{ user `PACKER_BOX_NAME` }}",
       "headless": true,
-      "disk_discard": "unmap",
-      "disk_interface": "virtio",
-      "qemuargs": [["-device", "virtio-net,netdev=user.0"]],
       "shutdown_command": "echo 'vagrant'|sudo -S shutdown -P now"
     }
   ],
@@ -183,7 +185,6 @@
         "scripts/vagrant.sh",
         "scripts/vmtools.sh",
         "scripts/ruby.sh",
-        "scripts/chef.sh",
         "scripts/puppet.sh",
         "scripts/filesystem.sh",
         "scripts/cleanup.sh"
