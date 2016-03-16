@@ -77,7 +77,12 @@ fi
 
 dd if=/dev/zero of=/EMPTY bs=1M || echo "dd exit code $? is suppressed";
 rm -f /EMPTY;
-fstrim /;
+
+# Try to trim - older versions of fstrim do not support -a
+fstrim / || true;
+fstrim -a || true;
+# Balance btrfs - but no hard failure.
+btrfs balance start / || true;
 sleep 5;
 # Block until the empty file has been removed, otherwise, Packer
 # will try to kill the box while the disk is still full and that's bad
