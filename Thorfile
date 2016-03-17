@@ -48,7 +48,12 @@ class Packer < Thor
         end
         providers = options[:providers].split(",")
         providers.each do |provider|
-	  provider_name = if provider != "qemu" then "#{provider}-iso" else provider end
+	  if provider == "qemu" then
+	    provider_name = provider
+	    provider = 'libvirt'
+	  else
+	    provider_name = "#{provider}-iso"
+	  end
           system "packer build --only=#{provider_name} -var 'PACKER_ATLAS_VERSION=#{options[:atlas_version]}' #{template}"
           system "shasum -a 256 ../builds/#{provider}/#{options[:os]}-#{options[:os_version]}-amd64_#{provider}.box > ../builds/#{provider}/#{options[:os]}-#{options[:os_version]}-amd64_#{provider}_SHA256SUM"
           system "shasum -a 512 ../builds/#{provider}/#{options[:os]}-#{options[:os_version]}-amd64_#{provider}.box > ../builds/#{provider}/#{options[:os]}-#{options[:os_version]}-amd64_#{provider}_SHA512SUM"
