@@ -13,4 +13,5 @@ tmpfs /tmp tmpfs defaults,noatime,nodev,mode=1777,size=1024M 0 0
 EOF
 
 rm -rf /tmp/*;
+/sbin/ifconfig eth0 down;
 reboot;

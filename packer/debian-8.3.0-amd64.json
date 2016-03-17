@@ -136,6 +136,7 @@
       "disk_discard": "unmap",
       "disk_interface": "virtio-scsi",
       "disk_compression": true,
+      "disk_cache": "unsafe",
       "accelerator": "kvm",
       "boot_command": [
         "<esc><wait>",

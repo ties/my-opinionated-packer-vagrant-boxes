@@ -166,6 +166,7 @@
       "type": "qemu",
       "format": "qcow2",
       "disk_compression": true,
+      "disk_cache": "unsafe",
       "disk_interface": "virtio-scsi",
       "accelerator": "kvm",
       "boot_command": [
