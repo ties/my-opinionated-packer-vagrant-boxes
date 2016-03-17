@@ -75,8 +75,10 @@ if [ "x${swapuuid}" != "x" ]; then
     /sbin/mkswap -U "$swapuuid" "$swappart";
 fi
 
+mount -o remount,compress=no / || echo "disable compression before writing zeroes (exit: $?)";
 dd if=/dev/zero of=/EMPTY bs=1M || echo "dd exit code $? is suppressed";
 rm -f /EMPTY;
+mount -o remount,compress=lzo / || echo "re-enabled btrfs compression (exit: $?)";
 
 # Try to trim - older versions of fstrim do not support -a
 fstrim / || true;

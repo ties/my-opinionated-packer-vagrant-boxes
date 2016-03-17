@@ -173,7 +173,6 @@
         "scripts/ruby.sh",
         "scripts/chef.sh",
         "scripts/puppet.sh",
-        "scripts/filesystem.sh",
         "scripts/cleanup.sh"
       ],
       "type": "shell"

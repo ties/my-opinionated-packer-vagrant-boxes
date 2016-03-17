@@ -192,7 +192,6 @@
         "scripts/ruby.sh",
         "scripts/puppet_pc1.sh",
         "scripts/rc_local.sh",
-        "scripts/filesystem.sh",
         "scripts/cleanup.sh"
       ]
     }
