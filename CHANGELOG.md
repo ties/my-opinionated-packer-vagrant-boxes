@@ -2,6 +2,9 @@
 
 This file is used to list changes made in each version of vagrant-boxes.
 
+## v1.0.24:
+* use dist-upgrade and install build packages in preseed
+
 ## v1.0.23:
 * upgrade Chef 12.8.1-1
 
