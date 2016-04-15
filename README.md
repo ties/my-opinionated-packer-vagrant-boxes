@@ -44,7 +44,7 @@ run the following command to build/upload individual boxes:
 $ bundle exec thor packer:build \
   --atlas_version=1.0.0 \                         # version tag
   --os=debian \                                   # os distribution (debian/ubuntu)
-  --os_version=8.3.0 \                            # os version
+  --os_version=8.4.0 \                            # os version
   --providers=virtualbox,vmware_desktop,parallels # providers to build
 ```
 
@@ -72,9 +72,9 @@ Boxes
 * VMware Tools 10.0.5 build-3228253
 * VirtualBox Guest Additions 5.0.16
 * Parallels Desktop 11.1.3-32521
-* Chef 12.8.1-1
+* Chef 12.9.38-1
 * Ruby 2.1.5-4ubuntu1
-* Rubygems 2.6.1
+* Rubygems 2.6.3
 
 | Provider          | URL                                                                                                                                                                                                                                                                                                                                                                                                             |
 | ----------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
@@ -90,9 +90,9 @@ Boxes
 * VMware Tools 10.0.5 build-3228253
 * VirtualBox Guest Additions 5.0.16
 * Parallels Desktop 11.1.3-32521
-* Chef 12.8.1-1
+* Chef 12.9.38-1
 * Ruby 1.9.3.484-2ubuntu1.2
-* Rubygems 2.6.1
+* Rubygems 2.6.3
 
 | Provider          | URL                                                                                                                                                                                                                                                                                                                                                                                                                     |
 | ----------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
@@ -106,21 +106,21 @@ Boxes
 ### Debian
 #### Debian Jessie 8.x
 
-##### Debian Jessie 8.3.0 x86_64
+##### Debian Jessie 8.4.0 x86_64
 
 * VMware Tools 10.0.5 build-3228253
 * VirtualBox Guest Additions 5.0.16
 * Parallels Desktop 11.1.3-32521
-* Chef 12.8.1-1
+* Chef 12.9.38-1
 * Ruby 2.1.5-2+deb8u2
-* Rubygems 2.6.1
+* Rubygems 2.6.3
 
 | Provider          | URL                                                                                                                                                                                                                                                                                                                                                                                 |
 | ----------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Atlas             | [ffuenf/debian-8.3.0-amd64](https://atlas.hashicorp.com/ffuenf/debian-8.3.0-amd64)                                                                                                                                                                                                                                                                                                  |
-| Virtualbox        | [debian-8.3.0-amd64_virtualbox.box](https://s3.eu-central-1.amazonaws.com/ffuenf-vagrantboxes/debian/debian-8.3.0-amd64_virtualbox.box) [SHA256SUM](https://s3.eu-central-1.amazonaws.com/ffuenf-vagrantboxes/debian/debian-8.3.0-amd64_virtualbox_SHA256SUM) [SHA512SUM](https://s3.eu-central-1.amazonaws.com/ffuenf-vagrantboxes/debian/debian-8.3.0-amd64_virtualbox_SHA512SUM) |
-| VMWare Fusion     | [debian-8.3.0-amd64_vmware.box](https://s3.eu-central-1.amazonaws.com/ffuenf-vagrantboxes/debian/debian-8.3.0-amd64_vmware.box) [SHA256SUM](https://s3.eu-central-1.amazonaws.com/ffuenf-vagrantboxes/debian/debian-8.3.0-amd64_vmware_SHA256SUM) [SHA512SUM](https://s3.eu-central-1.amazonaws.com/ffuenf-vagrantboxes/debian/debian-8.3.0-amd64_vmware_SHA512SUM)                 |
-| Parallels Desktop | [debian-8.3.0-amd64_parallels.box](https://s3.eu-central-1.amazonaws.com/ffuenf-vagrantboxes/debian/debian-8.3.0-amd64_parallels.box) [SHA256SUM](https://s3.eu-central-1.amazonaws.com/ffuenf-vagrantboxes/debian/debian-8.3.0-amd64_parallels_SHA256SUM) [SHA512SUM](https://s3.eu-central-1.amazonaws.com/ffuenf-vagrantboxes/debian/debian-8.3.0-amd64_parallels_SHA512SUM)     |
+| Atlas             | [ffuenf/debian-8.4.0-amd64](https://atlas.hashicorp.com/ffuenf/debian-8.4.0-amd64)                                                                                                                                                                                                                                                                                                  |
+| Virtualbox        | [debian-8.4.0-amd64_virtualbox.box](https://s3.eu-central-1.amazonaws.com/ffuenf-vagrantboxes/debian/debian-8.4.0-amd64_virtualbox.box) [SHA256SUM](https://s3.eu-central-1.amazonaws.com/ffuenf-vagrantboxes/debian/debian-8.4.0-amd64_virtualbox_SHA256SUM) [SHA512SUM](https://s3.eu-central-1.amazonaws.com/ffuenf-vagrantboxes/debian/debian-8.4.0-amd64_virtualbox_SHA512SUM) |
+| VMWare Fusion     | [debian-8.4.0-amd64_vmware.box](https://s3.eu-central-1.amazonaws.com/ffuenf-vagrantboxes/debian/debian-8.4.0-amd64_vmware.box) [SHA256SUM](https://s3.eu-central-1.amazonaws.com/ffuenf-vagrantboxes/debian/debian-8.4.0-amd64_vmware_SHA256SUM) [SHA512SUM](https://s3.eu-central-1.amazonaws.com/ffuenf-vagrantboxes/debian/debian-8.4.0-amd64_vmware_SHA512SUM)                 |
+| Parallels Desktop | [debian-8.4.0-amd64_parallels.box](https://s3.eu-central-1.amazonaws.com/ffuenf-vagrantboxes/debian/debian-8.4.0-amd64_parallels.box) [SHA256SUM](https://s3.eu-central-1.amazonaws.com/ffuenf-vagrantboxes/debian/debian-8.4.0-amd64_parallels_SHA256SUM) [SHA512SUM](https://s3.eu-central-1.amazonaws.com/ffuenf-vagrantboxes/debian/debian-8.4.0-amd64_parallels_SHA512SUM)     |
 
 #### Debian Wheezy 7.x
 
@@ -129,9 +129,9 @@ Boxes
 * VMware Tools 10.0.5 build-3228253
 * VirtualBox Guest Additions 5.0.16
 * Parallels Desktop 11.1.3-32521
-* Chef 12.8.1-1
+* Chef 12.9.38-1
 * Ruby 1.9.3.194-8.1+deb7u5
-* Rubygems 2.6.1
+* Rubygems 2.6.3
 
 | Provider          | URL                                                                                                                                                                                                                                                                                                                                                                                 |
 | ----------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
