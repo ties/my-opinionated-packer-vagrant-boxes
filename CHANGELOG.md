@@ -6,8 +6,9 @@ This file is used to list changes made in each version of vagrant-boxes.
 * added Debian Jessie 8.4.0 x86_64
 * depreciate Debian Jessie 8.3.0 x86_64
 * use dist-upgrade and install build packages in preseed
-* upgrade Rubygems 2.6.2
+* upgrade Rubygems 2.6.3
 * upgrade packer 0.10.0
+* upgrade Chef 12.9.38-1
 
 ## v1.0.23:
 * upgrade Chef 12.8.1-1
