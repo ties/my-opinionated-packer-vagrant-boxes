@@ -1,6 +1,5 @@
 #!/bin/bash -eux
 
-<<<<<<< HEAD
 # Use compressed APT indexes (from: <https://github.com/tianon/docker-brew-ubuntu-core/issues/1>)
 cat <<EOF > /etc/apt/apt.conf.d/02compress-indexes
 Acquire::GzipIndexes "true";
