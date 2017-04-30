@@ -166,7 +166,7 @@
         "scripts/vagrant.sh",
         "scripts/vmtools.sh",
         "scripts/ruby.sh",
-        "scripts/chef.sh",
+        "scripts/puppet.sh",
         "scripts/filesystem.sh",
         "scripts/cleanup.sh"
       ],
