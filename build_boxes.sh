@@ -1,31 +1,25 @@
 #!/bin/bash -eux
 
 bundle exec thor packer:build \
-  --atlas_version=1.0.27 \
+  --atlas_version=1.0.45 \
   --os=debian \
-  --os_version=7.10.0 \
-  --providers=virtualbox,vmware,parallels
+  --os_version=8.7.1 \
+  --providers=virtualbox,vmware
 
 bundle exec thor packer:build \
-  --atlas_version=1.0.27 \
-  --os=debian \
-  --os_version=8.4.0 \
-  --providers=virtualbox,vmware,parallels
-
-bundle exec thor packer:build \
-  --atlas_version=1.0.27 \
+  --atlas_version=1.0.45 \
   --os=ubuntu \
   --os_version=14.04.4-server \
-  --providers=virtualbox,vmware,parallels
+  --providers=virtualbox,vmware
 
 bundle exec thor packer:build \
-  --atlas_version=1.0.27 \
+  --atlas_version=1.0.45 \
   --os=ubuntu \
-  --os_version=15.10-server \
-  --providers=virtualbox,vmware,parallels
+  --os_version=16.04.2-server \
+  --providers=virtualbox,vmware
 
 bundle exec thor packer:build \
-  --atlas_version=1.0.27 \
+  --atlas_version=1.0.45 \
   --os=ubuntu \
-  --os_version=16.04-server \
-  --providers=virtualbox,vmware,parallels
+  --os_version=16.10-server \
+  --providers=virtualbox,vmware

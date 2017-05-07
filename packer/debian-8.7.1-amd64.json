@@ -1,11 +1,13 @@
 {
   "variables": {
     "PACKER_OS_FLAVOUR": "debian",
-    "PACKER_BOX_NAME": "debian-7.6.0-amd64",
+    "PACKER_OS_RELEASE": "jessie",
+    "PACKER_BOX_NAME": "debian-8.7.1-amd64",
     "AWS_ACCESS_KEY_ID": "{{env `AWS_ACCESS_KEY_ID`}}",
     "AWS_SECRET_ACCESS_KEY": "{{env `AWS_SECRET_ACCESS_KEY`}}",
     "PACKER_ATLAS_TOKEN": "{{env `PACKER_ATLAS_TOKEN`}}",
-    "PACKER_ATLAS_VERSION": ""
+    "PACKER_ATLAS_VERSION": "",
+    "DISK_SIZE": "25140"
   },
   "builders": [
     {
@@ -29,12 +31,12 @@
       ],
       "boot_wait": "10s",
       "headless": true,
-      "disk_size": 10140,
+      "disk_size": "{{ user `DISK_SIZE` }}",
       "guest_os_type": "Debian_64",
       "http_directory": "http",
-      "iso_checksum": "f8f0e2ddc5bafd5eb4188cca40a7e0acd12be3bb425ce5ad56734df6e807237e8798e61ac6bb07b02056ef7e7621ceba5f84c00449be449005f9c4e47055333f",
+      "iso_checksum": "534795785d2706e64e3a4dff9648fd0302a1272c668a99a81ba3a984695986ac814d8193c5335bd13dce0592fc470eebe9fc4a6c9991f87a6686329a667ac30d",
       "iso_checksum_type": "sha512",
-      "iso_url": "http://cdimage.debian.org/cdimage/archive/7.6.0/amd64/iso-cd/{{ user `PACKER_BOX_NAME` }}-netinst.iso",
+      "iso_url": "http://cdimage.debian.org/debian-cd/current/amd64/iso-cd/{{ user `PACKER_BOX_NAME` }}-netinst.iso",
       "ssh_username": "vagrant",
       "ssh_password": "vagrant",
       "ssh_port": 22,
@@ -69,12 +71,12 @@
       ],
       "boot_wait": "10s",
       "headless": true,
-      "disk_size": 10140,
+      "disk_size": "{{ user `DISK_SIZE` }}",
       "guest_os_type": "debian7-64",
       "http_directory": "http",
-      "iso_checksum": "f8f0e2ddc5bafd5eb4188cca40a7e0acd12be3bb425ce5ad56734df6e807237e8798e61ac6bb07b02056ef7e7621ceba5f84c00449be449005f9c4e47055333f",
+      "iso_checksum": "534795785d2706e64e3a4dff9648fd0302a1272c668a99a81ba3a984695986ac814d8193c5335bd13dce0592fc470eebe9fc4a6c9991f87a6686329a667ac30d",
       "iso_checksum_type": "sha512",
-      "iso_url": "http://cdimage.debian.org/cdimage/archive/7.6.0/amd64/iso-cd/{{ user `PACKER_BOX_NAME` }}-netinst.iso",
+      "iso_url": "http://cdimage.debian.org/debian-cd/current/amd64/iso-cd/{{ user `PACKER_BOX_NAME` }}-netinst.iso",
       "ssh_username": "vagrant",
       "ssh_password": "vagrant",
       "ssh_port": 22,
@@ -108,42 +110,81 @@
         "<enter><wait>"
       ],
       "boot_wait": "10s",
-      "headless": true,
-      "disk_size": 10140,
+      "disk_size": "{{ user `DISK_SIZE` }}",
       "guest_os_type": "debian",
       "http_directory": "http",
-      "iso_checksum": "f8f0e2ddc5bafd5eb4188cca40a7e0acd12be3bb425ce5ad56734df6e807237e8798e61ac6bb07b02056ef7e7621ceba5f84c00449be449005f9c4e47055333f",
+      "iso_checksum": "534795785d2706e64e3a4dff9648fd0302a1272c668a99a81ba3a984695986ac814d8193c5335bd13dce0592fc470eebe9fc4a6c9991f87a6686329a667ac30d",
       "iso_checksum_type": "sha512",
-      "iso_url": "http://cdimage.debian.org/cdimage/archive/7.6.0/amd64/iso-cd/{{ user `PACKER_BOX_NAME` }}-netinst.iso",
+      "iso_url": "http://cdimage.debian.org/debian-cd/current/amd64/iso-cd/{{ user `PACKER_BOX_NAME` }}-netinst.iso",
       "ssh_username": "vagrant",
       "ssh_password": "vagrant",
       "ssh_port": 22,
       "ssh_wait_timeout": "10000s",
       "shutdown_command": "echo 'vagrant'|sudo -S /sbin/shutdown -hP now",
+      "vm_name": "{{ user `PACKER_BOX_NAME` }}",
       "parallels_tools_flavor": "lin",
       "parallels_tools_guest_path": "prl-tools-{{.Flavor}}.iso",
       "prlctl_version_file": ".prlctl_version",
-      "vm_name": "{{ user `PACKER_BOX_NAME` }}",
       "prlctl": [
         ["set", "{{.Name}}", "--memsize", "1024"],
         ["set", "{{.Name}}", "--cpus", "2"]
       ]
+    },
+    {
+      "type": "qemu",
+      "format": "qcow2",
+      "disk_size": "{{ user `DISK_SIZE` }}",
+      "disk_discard": "unmap",
+      "disk_interface": "virtio-scsi",
+      "disk_compression": true,
+      "disk_cache": "unsafe",
+      "accelerator": "kvm",
+      "boot_command": [
+        "<esc><wait>",
+        "install <wait>",
+        "preseed/url=http://{{ .HTTPIP }}:{{ .HTTPPort }}/{{ user `PACKER_BOX_NAME` }}/preseed.cfg <wait>",
+        "debian-installer=en_US <wait>",
+        "auto <wait>",
+        "locale=en_US <wait>",
+        "kbd-chooser/method=us <wait>",
+        "keyboard-configuration/xkb-keymap=us <wait>",
+        "netcfg/get_hostname={{ .Name }} <wait>",
+        "netcfg/get_domain=vagrantup.com <wait>",
+        "fb=false <wait>",
+        "debconf/frontend=noninteractive <wait>",
+        "console-setup/ask_detect=false <wait>",
+        "console-keymaps-at/keymap=us <wait>",
+        "<enter><wait>"
+      ],
+      "boot_wait": "10s",
+      "http_directory": "http",
+      "iso_checksum": "534795785d2706e64e3a4dff9648fd0302a1272c668a99a81ba3a984695986ac814d8193c5335bd13dce0592fc470eebe9fc4a6c9991f87a6686329a667ac30d",
+      "iso_checksum_type": "sha512",
+      "iso_url": "http://cdimage.debian.org/debian-cd/current/amd64/iso-cd/{{ user `PACKER_BOX_NAME` }}-netinst.iso",
+      "ssh_username": "vagrant",
+      "ssh_password": "vagrant",
+      "ssh_port": 22,
+      "ssh_wait_timeout": "10000s",
+      "shutdown_command": "echo 'vagrant'|sudo -S /sbin/shutdown -hP now",
+      "vm_name": "{{ user `PACKER_BOX_NAME` }}",
+      "headless": true,
+      "shutdown_command": "echo 'vagrant'|sudo -S shutdown -P now"
     }
   ],
   "provisioners": [
     {
       "type": "shell",
-      "execute_command": "echo 'vagrant' | {{.Vars}} sudo -E -S bash '{{.Path}}'",
+      "execute_command": "echo 'vagrant' | {{.Vars}} sudo -S -E bash -eux '{{.Path}}'",
       "scripts": [
         "scripts/filesystem.sh",
         "scripts/update.sh",
         "scripts/sshd.sh",
+        "scripts/sshd-debian.sh",
         "scripts/networking.sh",
         "scripts/sudoers.sh",
         "scripts/vagrant.sh",
         "scripts/vmtools.sh",
         "scripts/ruby.sh",
-        "scripts/chef.sh",
         "scripts/puppet.sh",
         "scripts/cleanup.sh"
       ]
@@ -153,8 +194,18 @@
     [
       {
         "type": "vagrant",
-        "compression_level": "9",
+        "compression_level": 9,
         "output": "../builds/{{.Provider}}/{{ user `PACKER_BOX_NAME` }}_{{.Provider}}.box"
+      },
+      {
+          "type": "checksum",
+          "checksum_types": ["sha256","sha512"],
+          "output": "../builds/CHECKSUMS"
+      },
+      {
+          "type": "manifest",
+          "output": "../builds/{{ user `PACKER_BOX_NAME` }}.manifest.json",
+          "strip_path": true
       }
     ]
   ]

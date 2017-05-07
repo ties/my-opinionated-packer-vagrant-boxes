@@ -1,6 +1,4 @@
 packer/packer_cache/
 *.box
-/packer/output*
-/vendor/
-Gemfile.lock
-builds/
+builds/*manifest.json
+builds/CHECKSUMS

@@ -2,6 +2,94 @@
 
 This file is used to list changes made in each version of vagrant-boxes.
 
+## v1.0.45:
+* added Ubuntu Xenial Xerus 16.04.2 Server x86_64
+* depreciate Ubuntu Xenial Xerus 16.04.1 Server x86_64
+
+## v1.0.44:
+* added Debian Jessie 8.7.1 x86_64
+* depreciate Debian Jessie 8.6.0 x86_64
+* upgrade Chef 12.18.31-1
+* upgrade Rubygems 2.6.10
+* upgrade VirtualBox Guest Additions 5.1.14
+
+## v1.0.43:
+* upgrade VirtualBox Guest Additions 5.1.12
+
+## v1.0.42:
+* upgrade Chef 12.17.44-1
+* depreciate Ubuntu Wily Werewolf 15.10 Server x86_64
+
+## v1.0.41:
+* upgrade VirtualBox Guest Additions 5.1.10
+
+## v1.0.40:
+* upgrade Chef 12.16.42-1
+* upgrade VMware Tools 10.0.10 build-4301679
+* upgrade Rubygems 2.6.8
+* move checksum logic to new packer post-processor
+* add manifests via new packer post-processor
+* completely abandon parallels (cli commands only works with pro or business versions)
+
+## v1.0.39:
+* upgrade VirtualBox Guest Additions 5.1.8
+
+## v1.0.38:
+* upgrade Chef 12.15.19-1
+* upgrade Parallels Desktop 12.0.2-41353
+* added Ubuntu Yakkety Yak 16.10 Server x86_64
+* depreciate Debian Wheezy 7.11.0 x86_64
+* suspend Parallels Desktop builds as v12 is not supported by packer atm
+
+## v1.0.37:
+* upgrade Chef 12.14.89-1
+
+## v1.0.36:
+* added Debian Jessie 8.6.0 x86_64
+* depreciate Debian Jessie 8.5.0 x86_64
+* added Ubuntu Xenial Xerus 16.04.1 Server x86_64
+* depreciate Ubuntu Xenial Xerus 16.04 Server x86_64
+* upgrade Chef 12.14.77-1
+
+## v1.0.35:
+* upgrade Chef 12.14.60-1
+* upgrade VMware Tools 10.0.10 build-4301679
+
+## v1.0.34:
+* upgrade Chef 12.13.37-1
+* downgrade to VirtualBox Guest Additions 5.0.26
+
+## v1.0.33:
+* upgrade Chef 12.13.30-1
+* upgrade Parallels Desktop 11.2.1-32626
+
+## v1.0.32:
+* upgrade Chef 12.12.15-1
+* upgrade VirtualBox Guest Additions 5.1.0
+* debian fix for vagrant halt hang (@abraithwaite)
+
+## v1.0.31:
+* upgrade VirtualBox Guest Additions 5.0.24
+* upgrade Rubygems 2.6.6
+* upgrade Chef 12.12.13-1
+
+## v1.0.30:
+* added Debian Jessie 8.5.0 x86_64
+* added Debian Wheezy 7.11.0 x86_64
+* depreciate Debian Jessie 8.4.0 x86_64
+* depreciate Debian Wheezy 7.10.0 x86_64
+* upgrade Chef 12.11.18-1
+
+## v1.0.29:
+* upgrade Chef 12.10.24-1
+
+## v1.0.28:
+* upgrade VirtualBox Guest Additions 5.0.20
+* upgrade VMware Tools 10.0.6 build-3595377
+* upgrade Parallels Desktop 11.2.0-32581
+* upgrade Chef 12.9.41-1
+* upgrade Rubygems 2.6.4
+
 ## v1.0.27:
 * added Ubuntu Xenial Xerus 16.04 Server x86_64
 * re-added Ubuntu Wily Werewolf 15.10 Server x86_64 for VMware Fusion
