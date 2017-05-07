@@ -48,11 +48,7 @@ qemu)
     apt-get install qemu-guest-agent;
     echo "GRUB_CMDLINE_LINUX=\"serial=tty0 console=ttyS0,115200n8 net.ifnames=0\"" >> /etc/default/grub;
     # disable auto-renaming of network interfaces https://www.freedesktop.org/wiki/Software/systemd/PredictableNetworkInterfaceNames/
-cat <<EOD > /etc/network/interfaces.d/eth0.conf
-auto eth0
-iface eth0 inet dhcp
-EOD
-
+    sed -i 's/ens4/eth1/g' /etc/network/interfaces;
     update-grub;
     ;;
 
