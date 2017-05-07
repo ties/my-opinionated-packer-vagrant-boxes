@@ -50,10 +50,16 @@ class Packer < Thor
         # end
         providers = options[:providers].split(",")
         providers.each do |provider|
-          system "packer build --only=#{provider}-iso -var 'PACKER_ATLAS_VERSION=#{options[:atlas_version]}' #{template}"
-          # system "aws s3 cp ../builds/#{provider}/ s3://ffuenf-vagrantboxes/#{options[:os]}/ --recursive --exclude '*' --include '#{options[:os]}-#{options[:os_version]}-amd64_#{provider}.box' --profile=vagrantboxes"
+	  if provider == "qemu" then
+	    provider_name = provider
+	    provider = 'qemu'
+	  else
+	    provider_name = "#{provider}-iso"
+	  end
+          system "packer build --only=#{provider} -var 'PACKER_ATLAS_VERSION=#{options[:atlas_version]}' #{template}"
+          # system "aws s3 cp ../builds/#{provider_name}/ s3://ffuenf-vagrantboxes/#{options[:os]}/ --recursive --exclude '*' --include '#{options[:os]}-#{options[:os_version]}-amd64_#{provider_name}.box' --profile=vagrantboxes"
           # system "aws s3 cp ../builds/ s3://ffuenf-vagrantboxes/ --recursive --exclude '*' --include 'CHECKSUMS' --include '#{options[:os]}-#{options[:os_version]}-amd64.manifest.json' --profile=vagrantboxes"
-          # system "curl -s \"https://vagrantcloud.com/api/v1/box/ffuenf/#{options[:os]}-#{options[:os_version]}-amd64/version/#{options[:atlas_version]}/providers\" -X POST -d provider[name]=\"#{provider}\" -d provider[url]=\"https://s3.eu-central-1.amazonaws.com/ffuenf-vagrantboxes/#{options[:os]}/#{options[:os]}-#{options[:os_version]}-amd64_#{provider}.box\" -d access_token=\"$PACKER_ATLAS_TOKEN\""
+          # system "curl -s \"https://vagrantcloud.com/api/v1/box/ffuenf/#{options[:os]}-#{options[:os_version]}-amd64/version/#{options[:atlas_version]}/provider_names\" -X POST -d provider_name[name]=\"#{provider_name}\" -d provider_name[url]=\"https://s3.eu-central-1.amazonaws.com/ffuenf-vagrantboxes/#{options[:os]}/#{options[:os]}-#{options[:os_version]}-amd64_#{provider_name}.box\" -d access_token=\"$PACKER_ATLAS_TOKEN\""
         end
         # system "curl -s \"https://atlas.hashicorp.com/api/v1/box/ffuenf/#{options[:os]}-#{options[:os_version]}-amd64/version/#{options[:atlas_version]}/release\" -X PUT -d access_token=\"$PACKER_ATLAS_TOKEN\""
       end
