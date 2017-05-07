@@ -43,9 +43,15 @@ parallels-iso)
     rm -f $HOME_DIR/*.iso;
     ;;
 
+qemu)
+    # tty on serial port is spawned by systemd
+    apt-get install qemu-guest-agent
+    echo "GRUB_CMDLINE_LINUX=\"serial=tty0 console=ttyS0,115200n8\"" >> /etc/default/grub;
+    ;;
+
 *)
     echo "Unknown Packer Builder Type >>$PACKER_BUILDER_TYPE<< selected.";
-    echo "Known are virtualbox-iso|vmware-iso|parallels-iso.";
+    echo "Known are virtualbox-iso|vmware-iso|parallels-iso|qemu.";
     ;;
 
 esac
