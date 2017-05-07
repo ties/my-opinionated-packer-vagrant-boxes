@@ -45,8 +45,15 @@ parallels-iso)
 
 qemu)
     # tty on serial port is spawned by systemd
-    apt-get install qemu-guest-agent
-    echo "GRUB_CMDLINE_LINUX=\"serial=tty0 console=ttyS0,115200n8\"" >> /etc/default/grub;
+    apt-get install qemu-guest-agent;
+    echo "GRUB_CMDLINE_LINUX=\"serial=tty0 console=ttyS0,115200n8 net.ifnames=0\"" >> /etc/default/grub;
+    # disable auto-renaming of network interfaces https://www.freedesktop.org/wiki/Software/systemd/PredictableNetworkInterfaceNames/
+cat <<EOD > /etc/network/interfaces.d/eth0.conf
+auto eth0
+iface eth0 inet dhcp
+EOD
+
+    update-grub;
     ;;
 
 *)

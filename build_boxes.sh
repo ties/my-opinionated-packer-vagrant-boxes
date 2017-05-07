@@ -23,9 +23,16 @@
 #   --os=ubuntu \
 #   --os_version=16.10-server \
 #   --providers=virtualbox,vmware
+# bundle exec thor packer:build \
+#   --atlas_version=1.0.45 \
+#   --os=ubuntu \
+#   --os_version=16.04.2-server \
+#   --providers=parallels
 
+# bundle install --path vendor
 bundle exec thor packer:build \
   --atlas_version=1.0.45 \
   --os=ubuntu \
   --os_version=16.04.2-server \
-  --providers=parallels
+  --providers=qemu
+
